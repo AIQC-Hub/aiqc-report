@@ -1,0 +1,67 @@
+---
+title: "Practical salinity"
+output:
+  html_document:
+    theme: flatly
+---
+
+```{r include = FALSE}
+knitr::opts_chunk$set(echo=FALSE)
+```
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+r_func_path <- "./_func"
+r_funcs <- c("libraries.Rmd", "common.Rmd", "var.Rmd")
+```
+
+```{r, import, child=file.path(r_func_path, r_funcs)}
+```
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+# Path
+rsc_dir <- "./resources"
+#rsc_dir <- "/Users/a21379/data/aiqc/htmlreport/nrt_bo/resources"
+#rsc_dir <- "/scratch/data/aiqc/htmlreport/nrt_bo/resources"
+
+# Variables
+var <- "psal"
+var_name <- "Practical salinity"
+var_label <- "Psal"
+trans_func <- "arcsine_transform(df_x)"
+trans_name <- "Arcsine transformation: Z(arcsine(sqrt(Z(psal))))"
+
+# Data frame
+bo_file_name <- file.path(rsc_dir, "netcdf_nrt_bo.parquet")
+df_bo <- read_parquet(bo_file_name)
+
+```
+
+The page shows the basic analysis of `r tolower(var_name)` data from `r source`.
+
+---
+
+```{r, basic_info, results = 'asis'}
+res <- knitr::knit_expand(basic_info, var=var, var_name=var_name, input=input,
+                          input_name=input_name, input_url=input_url)
+cat(res, sep = '\n')
+```
+
+```{r, summary_stats, results = 'asis'}
+src <- knitr::knit_expand(summary_stats, df=df_name, var=var, var_name=var_name,
+                          var_label=var_label)
+res <- knitr::knit_child(text = src, quiet = TRUE)
+cat(res, sep = '\n')
+```
+
+```{r, distributions, results = 'asis'}
+src <- knitr::knit_expand(distributions, var=var, var_name=var_name)
+res <- knitr::knit_child(text = src, quiet = TRUE)
+cat(res, sep = '\n')
+```
+
+```{r, normalisation, results = 'asis'}
+src <- knitr::knit_expand(normalisation, var=var, var_name=var_name,
+                          trans_func=trans_func, trans_name=trans_name)
+res <- knitr::knit_child(text = src, quiet = TRUE)
+cat(res, sep = '\n')
+```

@@ -27,7 +27,23 @@ navbar:
     - text: "Arctic Sea (GL)"
       href: index.html
     - text: "Baltic Sea (BO)"
-      href: index.html
+      menu:
+        - text: "Summary"
+          href: bo_summary.html
+        - text: "---"
+        - text: "Pres"
+          href: bo_pres.html
+        - text: "Temp"
+          href: bo_temp.html
+        - text: "Psal"
+          href: bo_psal.html
+        - text: "---"
+        - text: "Pres QC"
+          href: bo_pres_qc.html
+        - text: "Temp QC"
+          href: bo_temp_qc.html
+        - text: "Psal QC"
+          href: bo_psal_qc.html
     - text: "Baltic Sea (GL)"
       href: index.html
     - text: "Mediterranean Sea (MO)"
