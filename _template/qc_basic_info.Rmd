@@ -1,0 +1,10 @@
+## 1. Basic Information
+
+### Variable name
+
+  - `{{qc_var}}`: {{qc_var_name}}
+
+### Input data file
+
+  - **{{input}}**: {{input_name}}
+  - **Filtered**: No

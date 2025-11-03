@@ -1,0 +1,15 @@
+```{r, message = FALSE, warning = FALSE}
+
+library(fontawesome)
+library(kableExtra)
+library(DT)
+library(htmltools)
+
+library(arrow)
+library(tidyverse)
+library(rlang)
+library(ggpubr)
+library(cowplot)
+library(scales)
+
+```

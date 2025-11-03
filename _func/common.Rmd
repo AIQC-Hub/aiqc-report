@@ -1,0 +1,38 @@
+```{r, message = FALSE, warning = FALSE}
+
+# Templates
+template_path <- "./_template"
+basic_info <- file.path(template_path, "var_basic_info.Rmd")
+summary_stats <- file.path(template_path, "var_summary_stats.Rmd")
+distributions <- file.path(template_path, "var_distribution.Rmd")
+normalisation <- file.path(template_path, "var_normalisation.Rmd")
+qc_basic_info <- file.path(template_path, "qc_basic_info.Rmd")
+qc_summary_stats <- file.path(template_path, "qc_summary_stats.Rmd")
+
+# Kable wrappers
+kbl_table <- function(x) {
+  kbl(x) %>% kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"))
+}
+
+create_dt_summary_tab <- function(df, cols=c('Lon', 'Lat')) {
+  DT::datatable(df, rownames = FALSE,
+      options = list(searching = TRUE, paging = TRUE, info = TRUE,
+                     lengthMenu = list(c(10, 50, 100, -1), c("10", "50", "100", "All")))) %>%
+    formatRound(columns = cols, digits = 1) %>%
+    htmlwidgets::prependContent(tags$style(HTML('table.dataTable {font-size: 12px;}')))
+}
+
+na_summary <- function(data, var) {
+  df <- data %>% mutate(uniq_prof = paste0(platform_code, profile_no))
+  df_f <- df %>% filter(!is.na({{ var }}))
+  tibble(
+    Category = c("# Platforms", "# Profiles", "# Observations"),
+    `Total Count` = c(n_distinct(df$platform_code), n_distinct(df$uniq_prof), nrow(df)),
+    `Non-NA Count` = c(n_distinct(df_f$platform_code), n_distinct(df_f$uniq_prof), nrow(df_f))
+  ) %>%
+  mutate(`Pct` = scales::percent(`Non-NA Count` / `Total Count`, accuracy = 0.1),
+         `Total Count` = comma(`Total Count`),
+         `Non-NA Count` = comma(`Non-NA Count`))
+}
+
+```

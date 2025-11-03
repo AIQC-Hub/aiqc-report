@@ -1,0 +1,2365 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+  <meta name="generator" content="distill" />
+
+  <style type="text/css">
+  /* Hide doc at startup (prevent jankiness while JS renders/transforms) */
+  body {
+    visibility: hidden;
+  }
+  </style>
+
+ <!--radix_placeholder_import_source-->
+ <!--/radix_placeholder_import_source-->
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  { color: #00769e; background-color: #f1f3f5; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span { color: #00769e; } /* Normal */
+code span.al { color: #ad0000; } /* Alert */
+code span.an { color: #5e5e5e; } /* Annotation */
+code span.at { color: #657422; } /* Attribute */
+code span.bn { color: #ad0000; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #00769e; } /* ControlFlow */
+code span.ch { color: #20794d; } /* Char */
+code span.cn { color: #8f5902; } /* Constant */
+code span.co { color: #5e5e5e; } /* Comment */
+code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+code span.dt { color: #ad0000; } /* DataType */
+code span.dv { color: #ad0000; } /* DecVal */
+code span.er { color: #ad0000; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #ad0000; } /* Float */
+code span.fu { color: #4758ab; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #5e5e5e; } /* Information */
+code span.kw { color: #00769e; } /* Keyword */
+code span.op { color: #5e5e5e; } /* Operator */
+code span.ot { color: #00769e; } /* Other */
+code span.pp { color: #ad0000; } /* Preprocessor */
+code span.sc { color: #5e5e5e; } /* SpecialChar */
+code span.ss { color: #20794d; } /* SpecialString */
+code span.st { color: #20794d; } /* String */
+code span.va { color: #111111; } /* Variable */
+code span.vs { color: #20794d; } /* VerbatimString */
+code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+</style>
+
+
+  <!--radix_placeholder_meta_tags-->
+  <title>In Situ NRT Summary: Temperature</title>
+
+
+
+
+  <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
+  <meta property="og:title" content="In Situ NRT Summary: Temperature"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:locale" content="en_US"/>
+  <meta property="og:site_name" content="In Situ NRT Summary"/>
+
+  <!--  https://dev.twitter.com/cards/types/summary -->
+  <meta property="twitter:card" content="summary"/>
+  <meta property="twitter:title" content="In Situ NRT Summary: Temperature"/>
+
+  <!--/radix_placeholder_meta_tags-->
+  <!--radix_placeholder_rmarkdown_metadata-->
+
+  <script type="text/json" id="radix-rmarkdown-metadata">
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","output"]}},"value":[{"type":"character","attributes":{},"value":["Temperature"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]}]}]}]}
+  </script>
+  <!--/radix_placeholder_rmarkdown_metadata-->
+  <!--radix_placeholder_navigation_in_header-->
+  <meta name="distill:offset" content=""/>
+
+  <script type="application/javascript">
+
+    window.headroom_prevent_pin = false;
+
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+
+      // initialize headroom for banner
+      var header = $('header').get(0);
+      var headerHeight = header.offsetHeight;
+      var headroom = new Headroom(header, {
+        tolerance: 5,
+        onPin : function() {
+          if (window.headroom_prevent_pin) {
+            window.headroom_prevent_pin = false;
+            headroom.unpin();
+          }
+        }
+      });
+      headroom.init();
+      if(window.location.hash)
+        headroom.unpin();
+      $(header).addClass('headroom--transition');
+
+      // offset scroll location for banner on hash change
+      // (see: https://github.com/WickyNilliams/headroom.js/issues/38)
+      window.addEventListener("hashchange", function(event) {
+        window.scrollTo(0, window.pageYOffset - (headerHeight + 25));
+      });
+
+      // responsive menu
+      $('.distill-site-header').each(function(i, val) {
+        var topnav = $(this);
+        var toggle = topnav.find('.nav-toggle');
+        toggle.on('click', function() {
+          topnav.toggleClass('responsive');
+        });
+      });
+
+      // nav dropdowns
+      $('.nav-dropbtn').click(function(e) {
+        $(this).next('.nav-dropdown-content').toggleClass('nav-dropdown-active');
+        $(this).parent().siblings('.nav-dropdown')
+           .children('.nav-dropdown-content').removeClass('nav-dropdown-active');
+      });
+      $("body").click(function(e){
+        $('.nav-dropdown-content').removeClass('nav-dropdown-active');
+      });
+      $(".nav-dropdown").click(function(e){
+        e.stopPropagation();
+      });
+    });
+  </script>
+
+  <style type="text/css">
+
+  /* Theme (user-documented overrideables for nav appearance) */
+
+  .distill-site-nav {
+    color: rgba(255, 255, 255, 0.8);
+    background-color: #0F2E3D;
+    font-size: 15px;
+    font-weight: 300;
+  }
+
+  .distill-site-nav a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .distill-site-nav a:hover {
+    color: white;
+  }
+
+  @media print {
+    .distill-site-nav {
+      display: none;
+    }
+  }
+
+  .distill-site-header {
+
+  }
+
+  .distill-site-footer {
+
+  }
+
+
+  /* Site Header */
+
+  .distill-site-header {
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 3;
+  }
+
+  .distill-site-header .nav-left {
+    display: inline-block;
+    margin-left: 8px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .distill-site-header .nav-left {
+      margin-left: 0;
+    }
+  }
+
+
+  .distill-site-header .nav-right {
+    float: right;
+    margin-right: 8px;
+  }
+
+  .distill-site-header a,
+  .distill-site-header .title {
+    display: inline-block;
+    text-align: center;
+    padding: 14px 10px 14px 10px;
+  }
+
+  .distill-site-header .title {
+    font-size: 18px;
+    min-width: 150px;
+  }
+
+  .distill-site-header .logo {
+    padding: 0;
+  }
+
+  .distill-site-header .logo img {
+    display: none;
+    max-height: 20px;
+    width: auto;
+    margin-bottom: -4px;
+  }
+
+  .distill-site-header .nav-image img {
+    max-height: 18px;
+    width: auto;
+    display: inline-block;
+    margin-bottom: -3px;
+  }
+
+
+
+  @media screen and (min-width: 1000px) {
+    .distill-site-header .logo img {
+      display: inline-block;
+    }
+    .distill-site-header .nav-left {
+      margin-left: 20px;
+    }
+    .distill-site-header .nav-right {
+      margin-right: 20px;
+    }
+    .distill-site-header .title {
+      padding-left: 12px;
+    }
+  }
+
+
+  .distill-site-header .nav-toggle {
+    display: none;
+  }
+
+  .nav-dropdown {
+    display: inline-block;
+    position: relative;
+  }
+
+  .nav-dropdown .nav-dropbtn {
+    border: none;
+    outline: none;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 16px 10px;
+    background-color: transparent;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    margin: 0;
+    margin-top: 1px;
+    z-index: 2;
+  }
+
+  .nav-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 200px;
+    border: 1px solid rgba(0,0,0,0.15);
+    border-radius: 4px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+    z-index: 1;
+    margin-top: 2px;
+    white-space: nowrap;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+
+  .nav-dropdown-content hr {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-dropdown-active {
+    display: block;
+  }
+
+  .nav-dropdown-content a, .nav-dropdown-content .nav-dropdown-header {
+    color: black;
+    padding: 6px 24px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+
+  .nav-dropdown-content .nav-dropdown-header {
+    display: block;
+    padding: 5px 24px;
+    padding-bottom: 0;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #999999;
+    white-space: nowrap;
+  }
+
+  .nav-dropdown:hover .nav-dropbtn {
+    color: white;
+  }
+
+  .nav-dropdown-content a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  .nav-right .nav-dropdown-content {
+    margin-left: -45%;
+    right: 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    .distill-site-header a, .distill-site-header .nav-dropdown  {display: none;}
+    .distill-site-header a.nav-toggle {
+      float: right;
+      display: block;
+    }
+    .distill-site-header .title {
+      margin-left: 0;
+    }
+    .distill-site-header .nav-right {
+      margin-right: 0;
+    }
+    .distill-site-header {
+      overflow: hidden;
+    }
+    .nav-right .nav-dropdown-content {
+      margin-left: 0;
+    }
+  }
+
+
+  @media screen and (max-width: 768px) {
+    .distill-site-header.responsive {position: relative; min-height: 500px; }
+    .distill-site-header.responsive a.nav-toggle {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .distill-site-header.responsive a,
+    .distill-site-header.responsive .nav-dropdown {
+      display: block;
+      text-align: left;
+    }
+    .distill-site-header.responsive .nav-left,
+    .distill-site-header.responsive .nav-right {
+      width: 100%;
+    }
+    .distill-site-header.responsive .nav-dropdown {float: none;}
+    .distill-site-header.responsive .nav-dropdown-content {position: relative;}
+    .distill-site-header.responsive .nav-dropdown .nav-dropbtn {
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+  }
+
+  /* Site Footer */
+
+  .distill-site-footer {
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    z-index: 3;
+    margin-top: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+  }
+
+  /* Headroom */
+
+  d-title {
+    padding-top: 6rem;
+  }
+
+  @media print {
+    d-title {
+      padding-top: 4rem;
+    }
+  }
+
+  .headroom {
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .headroom--transition {
+    transition: all .4s ease-in-out;
+  }
+
+  .headroom--unpinned {
+    top: -100px;
+  }
+
+  .headroom--pinned {
+    top: 0;
+  }
+
+  /* adjust viewport for navbar height */
+  /* helps vertically center bootstrap (non-distill) content */
+  .min-vh-100 {
+    min-height: calc(100vh - 100px) !important;
+  }
+
+  </style>
+
+  <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+  <link href="site_libs/font-awesome-6.5.2/css/all.min.css" rel="stylesheet"/>
+  <link href="site_libs/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet"/>
+  <script src="site_libs/headroom-0.9.4/headroom.min.js"></script>
+  <script src="site_libs/autocomplete-0.37.1/autocomplete.min.js"></script>
+  <script src="site_libs/fuse-6.4.1/fuse.min.js"></script>
+
+  <script type="application/javascript">
+
+  function getMeta(metaName) {
+    var metas = document.getElementsByTagName('meta');
+    for (let i = 0; i < metas.length; i++) {
+      if (metas[i].getAttribute('name') === metaName) {
+        return metas[i].getAttribute('content');
+      }
+    }
+    return '';
+  }
+
+  function offsetURL(url) {
+    var offset = getMeta('distill:offset');
+    return offset ? offset + '/' + url : url;
+  }
+
+  function createFuseIndex() {
+
+    // create fuse index
+    var options = {
+      keys: [
+        { name: 'title', weight: 20 },
+        { name: 'categories', weight: 15 },
+        { name: 'description', weight: 10 },
+        { name: 'contents', weight: 5 },
+      ],
+      ignoreLocation: true,
+      threshold: 0
+    };
+    var fuse = new window.Fuse([], options);
+
+    // fetch the main search.json
+    return fetch(offsetURL('search.json'))
+      .then(function(response) {
+        if (response.status == 200) {
+          return response.json().then(function(json) {
+            // index main articles
+            json.articles.forEach(function(article) {
+              fuse.add(article);
+            });
+            // download collections and index their articles
+            return Promise.all(json.collections.map(function(collection) {
+              return fetch(offsetURL(collection)).then(function(response) {
+                if (response.status === 200) {
+                  return response.json().then(function(articles) {
+                    articles.forEach(function(article) {
+                      fuse.add(article);
+                    });
+                  })
+                } else {
+                  return Promise.reject(
+                    new Error('Unexpected status from search index request: ' +
+                              response.status)
+                  );
+                }
+              });
+            })).then(function() {
+              return fuse;
+            });
+          });
+
+        } else {
+          return Promise.reject(
+            new Error('Unexpected status from search index request: ' +
+                        response.status)
+          );
+        }
+      });
+  }
+
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+
+    // get search element (bail if we don't have one)
+    var searchEl = window.document.getElementById('distill-search');
+    if (!searchEl)
+      return;
+
+    createFuseIndex()
+      .then(function(fuse) {
+
+        // make search box visible
+        searchEl.classList.remove('hidden');
+
+        // initialize autocomplete
+        var options = {
+          autoselect: true,
+          hint: false,
+          minLength: 2,
+        };
+        window.autocomplete(searchEl, options, [{
+          source: function(query, callback) {
+            const searchOptions = {
+              isCaseSensitive: false,
+              shouldSort: true,
+              minMatchCharLength: 2,
+              limit: 10,
+            };
+            var results = fuse.search(query, searchOptions);
+            callback(results
+              .map(function(result) { return result.item; })
+            );
+          },
+          templates: {
+            suggestion: function(suggestion) {
+              var img = suggestion.preview && Object.keys(suggestion.preview).length > 0
+                ? `<img src="${offsetURL(suggestion.preview)}"</img>`
+                : '';
+              var html = `
+                <div class="search-item">
+                  <h3>${suggestion.title}</h3>
+                  <div class="search-item-description">
+                    ${suggestion.description || ''}
+                  </div>
+                  <div class="search-item-preview">
+                    ${img}
+                  </div>
+                </div>
+              `;
+              return html;
+            }
+          }
+        }]).on('autocomplete:selected', function(event, suggestion) {
+          window.location.href = offsetURL(suggestion.path);
+        });
+        // remove inline display style on autocompleter (we want to
+        // manage responsive display via css)
+        $('.algolia-autocomplete').css("display", "");
+      })
+      .catch(function(error) {
+        console.log(error);
+      });
+
+  });
+
+  </script>
+
+  <style type="text/css">
+
+  .nav-search {
+    font-size: x-small;
+  }
+
+  /* Algolioa Autocomplete */
+
+  .algolia-autocomplete {
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: sub;
+    background-color: white;
+    color: black;
+    padding: 6px;
+    padding-top: 8px;
+    padding-bottom: 0;
+    border-radius: 6px;
+    border: 1px #0F2E3D solid;
+    width: 180px;
+  }
+
+
+  @media screen and (max-width: 768px) {
+    .distill-site-nav .algolia-autocomplete {
+      display: none;
+      visibility: hidden;
+    }
+    .distill-site-nav.responsive .algolia-autocomplete {
+      display: inline-block;
+      visibility: visible;
+    }
+    .distill-site-nav.responsive .algolia-autocomplete .aa-dropdown-menu {
+      margin-left: 0;
+      width: 400px;
+      max-height: 400px;
+    }
+  }
+
+  .algolia-autocomplete .aa-input, .algolia-autocomplete .aa-hint {
+    width: 90%;
+    outline: none;
+    border: none;
+  }
+
+  .algolia-autocomplete .aa-hint {
+    color: #999;
+  }
+  .algolia-autocomplete .aa-dropdown-menu {
+    width: 550px;
+    max-height: 70vh;
+    overflow-x: visible;
+    overflow-y: scroll;
+    padding: 5px;
+    margin-top: 3px;
+    margin-left: -150px;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid #999;
+    border-top: none;
+  }
+
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion {
+    cursor: pointer;
+    padding: 5px 4px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion:last-of-type {
+    border-bottom: none;
+    margin-bottom: 2px;
+  }
+
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item {
+    overflow: hidden;
+    font-size: 0.8em;
+    line-height: 1.4em;
+  }
+
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item h3 {
+    font-size: 1rem;
+    margin-block-start: 0;
+    margin-block-end: 5px;
+  }
+
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-description {
+    display: inline-block;
+    overflow: hidden;
+    height: 2.8em;
+    width: 80%;
+    margin-right: 4%;
+  }
+
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview {
+    display: inline-block;
+    width: 15%;
+  }
+
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview img {
+    height: 3em;
+    width: auto;
+    display: none;
+  }
+
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview img[src] {
+    display: initial;
+  }
+
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion.aa-cursor {
+    background-color: #eee;
+  }
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion em {
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  </style>
+
+
+  <!--/radix_placeholder_navigation_in_header-->
+  <!--radix_placeholder_distill-->
+
+  <style type="text/css">
+
+  body {
+    background-color: white;
+  }
+
+  .pandoc-table {
+    width: 100%;
+  }
+
+  .pandoc-table>caption {
+    margin-bottom: 10px;
+  }
+
+  .pandoc-table th:not([align]) {
+    text-align: left;
+  }
+
+  .pagedtable-footer {
+    font-size: 15px;
+  }
+
+  d-byline .byline {
+    grid-template-columns: 2fr 2fr;
+  }
+
+  d-byline .byline h3 {
+    margin-block-start: 1.5em;
+  }
+
+  d-byline .byline .authors-affiliations h3 {
+    margin-block-start: 0.5em;
+  }
+
+  .authors-affiliations .orcid-id {
+    width: 16px;
+    height:16px;
+    margin-left: 4px;
+    margin-right: 4px;
+    vertical-align: middle;
+    padding-bottom: 2px;
+  }
+
+  d-title .dt-tags {
+    margin-top: 1em;
+    grid-column: text;
+  }
+
+  .dt-tags .dt-tag {
+    text-decoration: none;
+    display: inline-block;
+    color: rgba(0,0,0,0.6);
+    padding: 0em 0.4em;
+    margin-right: 0.5em;
+    margin-bottom: 0.4em;
+    font-size: 70%;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  d-article table.gt_table td,
+  d-article table.gt_table th {
+    border-bottom: none;
+    font-size: 100%;
+  }
+
+  .html-widget {
+    margin-bottom: 2.0em;
+  }
+
+  .l-screen-inset {
+    padding-right: 16px;
+  }
+
+  .l-screen .caption {
+    margin-left: 10px;
+  }
+
+  .shaded {
+    background: rgb(247, 247, 247);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .shaded .html-widget {
+    margin-bottom: 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .shaded .shaded-content {
+    background: white;
+  }
+
+  .text-output {
+    margin-top: 0;
+    line-height: 1.5em;
+  }
+
+  .hidden {
+    display: none !important;
+  }
+
+  hr.section-separator {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 0px;
+  }
+
+
+  d-byline {
+    border-top: none;
+  }
+
+  d-article {
+    padding-top: 2.5rem;
+    padding-bottom: 30px;
+    border-top: none;
+  }
+
+  d-appendix {
+    padding-top: 30px;
+  }
+
+  d-article>p>img {
+    width: 100%;
+  }
+
+  d-article h2 {
+    margin: 1rem 0 1.5rem 0;
+  }
+
+  d-article h3 {
+    margin-top: 1.5rem;
+  }
+
+  d-article iframe {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 2.0em;
+    width: 100%;
+  }
+
+  /* Tweak code blocks */
+
+  d-article div.sourceCode code,
+  d-article pre code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  d-article pre,
+  d-article div.sourceCode,
+  d-article div.sourceCode pre {
+    overflow: auto;
+  }
+
+  d-article div.sourceCode {
+    background-color: white;
+  }
+
+  d-article div.sourceCode pre {
+    padding-left: 10px;
+    font-size: 12px;
+    border-left: 2px solid rgba(0,0,0,0.1);
+  }
+
+  d-article pre {
+    font-size: 12px;
+    color: black;
+    background: none;
+    margin-top: 0;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  d-article pre a {
+    border-bottom: none;
+  }
+
+  d-article pre a:hover {
+    border-bottom: none;
+    text-decoration: underline;
+  }
+
+  d-article details {
+    grid-column: text;
+    margin-bottom: 0.8em;
+  }
+
+  @media(min-width: 768px) {
+
+  d-article pre,
+  d-article div.sourceCode,
+  d-article div.sourceCode pre {
+    overflow: visible !important;
+  }
+
+  d-article div.sourceCode pre {
+    padding-left: 18px;
+    font-size: 14px;
+  }
+
+  /* tweak for Pandoc numbered line within distill */
+  d-article pre.numberSource code > span {
+      left: -2em;
+  }
+
+  d-article pre {
+    font-size: 14px;
+  }
+
+  }
+
+  figure img.external {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    padding: 18px;
+    box-sizing: border-box;
+  }
+
+  /* CSS for d-contents */
+
+  .d-contents {
+    grid-column: text;
+    color: rgba(0,0,0,0.8);
+    font-size: 0.9em;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+    padding-left: 0.25em;
+    justify-self: start;
+  }
+
+  @media(min-width: 1000px) {
+    .d-contents.d-contents-float {
+      height: 0;
+      grid-column-start: 1;
+      grid-column-end: 4;
+      justify-self: center;
+      padding-right: 3em;
+      padding-left: 2em;
+    }
+  }
+
+  .d-contents nav h3 {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
+
+  .d-contents li {
+    list-style-type: none
+  }
+
+  .d-contents nav > ul {
+    padding-left: 0;
+  }
+
+  .d-contents ul {
+    padding-left: 1em
+  }
+
+  .d-contents nav ul li {
+    margin-top: 0.6em;
+    margin-bottom: 0.2em;
+  }
+
+  .d-contents nav a {
+    font-size: 13px;
+    border-bottom: none;
+    text-decoration: none
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  .d-contents nav a:hover {
+    text-decoration: underline solid rgba(0, 0, 0, 0.6)
+  }
+
+  .d-contents nav > ul > li > a {
+    font-weight: 600;
+  }
+
+  .d-contents nav > ul > li > ul {
+    font-weight: inherit;
+  }
+
+  .d-contents nav > ul > li > ul > li {
+    margin-top: 0.2em;
+  }
+
+
+  .d-contents nav ul {
+    margin-top: 0;
+    margin-bottom: 0.25em;
+  }
+
+  .d-article-with-toc h2:nth-child(2) {
+    margin-top: 0;
+  }
+
+
+  /* Figure */
+
+  .figure {
+    position: relative;
+    margin-bottom: 2.5em;
+    margin-top: 1.5em;
+  }
+
+  .figure .caption {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 12px;
+    line-height: 1.5em;
+  }
+
+  .figure img.external {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    padding: 18px;
+    box-sizing: border-box;
+  }
+
+  .figure .caption a {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  .figure .caption b,
+  .figure .caption strong, {
+    font-weight: 600;
+    color: rgba(0, 0, 0, 1.0);
+  }
+
+  /* Citations */
+
+  d-article .citation {
+    color: inherit;
+    cursor: inherit;
+  }
+
+  div.hanging-indent{
+    margin-left: 1em; text-indent: -1em;
+  }
+
+  /* Citation hover box */
+
+  .tippy-box[data-theme~=light-border] {
+    background-color: rgba(250, 250, 250, 0.95);
+  }
+
+  .tippy-content > p {
+    margin-bottom: 0;
+    padding: 2px;
+  }
+
+
+  /* Tweak 1000px media break to show more text */
+
+  @media(min-width: 1000px) {
+    .base-grid,
+    distill-header,
+    d-title,
+    d-abstract,
+    d-article,
+    d-appendix,
+    distill-appendix,
+    d-byline,
+    d-footnote-list,
+    d-citation-list,
+    distill-footer {
+      grid-template-columns: [screen-start] 1fr [page-start kicker-start] 80px [middle-start] 50px [text-start kicker-end] 65px 65px 65px 65px 65px 65px 65px 65px [text-end gutter-start] 65px [middle-end] 65px [page-end gutter-end] 1fr [screen-end];
+      grid-column-gap: 16px;
+    }
+
+    .grid {
+      grid-column-gap: 16px;
+    }
+
+    d-article {
+      font-size: 1.06rem;
+      line-height: 1.7em;
+    }
+    figure .caption, .figure .caption, figure figcaption {
+      font-size: 13px;
+    }
+  }
+
+  @media(min-width: 1180px) {
+    .base-grid,
+    distill-header,
+    d-title,
+    d-abstract,
+    d-article,
+    d-appendix,
+    distill-appendix,
+    d-byline,
+    d-footnote-list,
+    d-citation-list,
+    distill-footer {
+      grid-template-columns: [screen-start] 1fr [page-start kicker-start] 60px [middle-start] 60px [text-start kicker-end] 60px 60px 60px 60px 60px 60px 60px 60px [text-end gutter-start] 60px [middle-end] 60px [page-end gutter-end] 1fr [screen-end];
+      grid-column-gap: 32px;
+    }
+
+    .grid {
+      grid-column-gap: 32px;
+    }
+  }
+
+
+  /* Get the citation styles for the appendix (not auto-injected on render since
+     we do our own rendering of the citation appendix) */
+
+  d-appendix .citation-appendix,
+  .d-appendix .citation-appendix {
+    font-size: 11px;
+    line-height: 15px;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    padding-left: 18px;
+    border: 1px solid rgba(0,0,0,0.1);
+    background: rgba(0, 0, 0, 0.02);
+    padding: 10px 18px;
+    border-radius: 3px;
+    color: rgba(150, 150, 150, 1);
+    overflow: hidden;
+    margin-top: -12px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  /* Include appendix styles here so they can be overridden */
+
+  d-appendix {
+    contain: layout style;
+    font-size: 0.8em;
+    line-height: 1.7em;
+    margin-top: 60px;
+    margin-bottom: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    color: rgba(0,0,0,0.5);
+    padding-top: 60px;
+    padding-bottom: 48px;
+  }
+
+  d-appendix h3 {
+    grid-column: page-start / text-start;
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 1em;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.65);
+  }
+
+  d-appendix h3 + * {
+    margin-top: 1em;
+  }
+
+  d-appendix ol {
+    padding: 0 0 0 15px;
+  }
+
+  @media (min-width: 768px) {
+    d-appendix ol {
+      padding: 0 0 0 30px;
+      margin-left: -30px;
+    }
+  }
+
+  d-appendix li {
+    margin-bottom: 1em;
+  }
+
+  d-appendix a {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  d-appendix > * {
+    grid-column: text;
+  }
+
+  d-appendix > d-footnote-list,
+  d-appendix > d-citation-list,
+  d-appendix > distill-appendix {
+    grid-column: screen;
+  }
+
+  /* Include footnote styles here so they can be overridden */
+
+  d-footnote-list {
+    contain: layout style;
+  }
+
+  d-footnote-list > * {
+    grid-column: text;
+  }
+
+  d-footnote-list a.footnote-backlink {
+    color: rgba(0,0,0,0.3);
+    padding-left: 0.5em;
+  }
+
+
+
+  /* Anchor.js */
+
+  .anchorjs-link {
+    /*transition: all .25s linear; */
+    text-decoration: none;
+    border-bottom: none;
+  }
+  *:hover > .anchorjs-link {
+    margin-left: -1.125em !important;
+    text-decoration: none;
+    border-bottom: none;
+  }
+
+  /* Social footer */
+
+  .social_footer {
+    margin-top: 30px;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.67);
+  }
+
+  .disqus-comments {
+    margin-right: 30px;
+  }
+
+  .disqus-comment-count {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+  }
+
+  #disqus_thread {
+    margin-top: 30px;
+  }
+
+  .article-sharing a {
+    border-bottom: none;
+    margin-right: 8px;
+  }
+
+  .article-sharing a:hover {
+    border-bottom: none;
+  }
+
+  .sidebar-section.subscribe {
+    font-size: 12px;
+    line-height: 1.6em;
+  }
+
+  .subscribe p {
+    margin-bottom: 0.5em;
+  }
+
+
+  .article-footer .subscribe {
+    font-size: 15px;
+    margin-top: 45px;
+  }
+
+
+  .sidebar-section.custom {
+    font-size: 12px;
+    line-height: 1.6em;
+  }
+
+  .custom p {
+    margin-bottom: 0.5em;
+  }
+
+  /* Styles for listing layout (hide title) */
+  .layout-listing d-title, .layout-listing .d-title {
+    display: none;
+  }
+
+  /* Styles for posts lists (not auto-injected) */
+
+
+  .posts-with-sidebar {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  .posts-list .description h2,
+  .posts-list .description p {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+  }
+
+  .posts-list .description h2 {
+    font-weight: 700;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .posts-list h2.post-tag {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding-bottom: 12px;
+  }
+  .posts-list {
+    margin-top: 60px;
+    margin-bottom: 24px;
+  }
+
+  .posts-list .post-preview {
+    text-decoration: none;
+    overflow: hidden;
+    display: block;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 24px 0;
+  }
+
+  .post-preview-last {
+    border-bottom: none !important;
+  }
+
+  .posts-list .posts-list-caption {
+    grid-column: screen;
+    font-weight: 400;
+  }
+
+  .posts-list .post-preview h2 {
+    margin: 0 0 6px 0;
+    line-height: 1.2em;
+    font-style: normal;
+    font-size: 24px;
+  }
+
+  .posts-list .post-preview p {
+    margin: 0 0 12px 0;
+    line-height: 1.4em;
+    font-size: 16px;
+  }
+
+  .posts-list .post-preview .thumbnail {
+    box-sizing: border-box;
+    margin-bottom: 24px;
+    position: relative;
+    max-width: 500px;
+  }
+  .posts-list .post-preview img {
+    width: 100%;
+    display: block;
+  }
+
+  .posts-list .metadata {
+    font-size: 12px;
+    line-height: 1.4em;
+    margin-bottom: 18px;
+  }
+
+  .posts-list .metadata > * {
+    display: inline-block;
+  }
+
+  .posts-list .metadata .publishedDate {
+    margin-right: 2em;
+  }
+
+  .posts-list .metadata .dt-authors {
+    display: block;
+    margin-top: 0.3em;
+    margin-right: 2em;
+  }
+
+  .posts-list .dt-tags {
+    display: block;
+    line-height: 1em;
+  }
+
+  .posts-list .dt-tags .dt-tag {
+    display: inline-block;
+    color: rgba(0,0,0,0.6);
+    padding: 0.3em 0.4em;
+    margin-right: 0.2em;
+    margin-bottom: 0.4em;
+    font-size: 60%;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .posts-list img {
+    opacity: 1;
+  }
+
+  .posts-list img[data-src] {
+    opacity: 0;
+  }
+
+  .posts-more {
+    clear: both;
+  }
+
+
+  .posts-sidebar {
+    font-size: 16px;
+  }
+
+  .posts-sidebar h3 {
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  .sidebar-section {
+    margin-bottom: 30px;
+  }
+
+  .categories ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .categories li {
+    color: rgba(0, 0, 0, 0.8);
+    margin-bottom: 0;
+  }
+
+  .categories li>a {
+    border-bottom: none;
+  }
+
+  .categories li>a:hover {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  }
+
+  .categories .active {
+    font-weight: 600;
+  }
+
+  .categories .category-count {
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+
+  @media(min-width: 768px) {
+    .posts-list .post-preview h2 {
+      font-size: 26px;
+    }
+    .posts-list .post-preview .thumbnail {
+      float: right;
+      width: 30%;
+      margin-bottom: 0;
+    }
+    .posts-list .post-preview .description {
+      float: left;
+      width: 45%;
+    }
+    .posts-list .post-preview .metadata {
+      float: left;
+      width: 20%;
+      margin-top: 8px;
+    }
+    .posts-list .post-preview p {
+      margin: 0 0 12px 0;
+      line-height: 1.5em;
+      font-size: 16px;
+    }
+    .posts-with-sidebar .posts-list {
+      float: left;
+      width: 75%;
+    }
+    .posts-with-sidebar .posts-sidebar {
+      float: right;
+      width: 20%;
+      margin-top: 60px;
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+  }
+
+
+  /* Improve display for browsers without grid (IE/Edge <= 15) */
+
+  .downlevel {
+    line-height: 1.6em;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+  }
+
+  .downlevel .d-title {
+    padding-top: 6rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .downlevel .d-title h1 {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.1em;
+    margin: 0 0 0.5rem;
+  }
+
+  .downlevel .d-title p {
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 1.55em;
+    margin-top: 0;
+  }
+
+  .downlevel .d-byline {
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    font-size: 0.8rem;
+    line-height: 1.8em;
+  }
+
+  .downlevel .section-separator {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .downlevel .d-article {
+    font-size: 1.06rem;
+    line-height: 1.7em;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+
+
+  .downlevel .d-appendix {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: none;
+    font-size: 0.8em;
+    line-height: 1.7em;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.5);
+    padding-top: 40px;
+    padding-bottom: 48px;
+  }
+
+  .downlevel .footnotes ol {
+    padding-left: 13px;
+  }
+
+  .downlevel .base-grid,
+  .downlevel .distill-header,
+  .downlevel .d-title,
+  .downlevel .d-abstract,
+  .downlevel .d-article,
+  .downlevel .d-appendix,
+  .downlevel .distill-appendix,
+  .downlevel .d-byline,
+  .downlevel .d-footnote-list,
+  .downlevel .d-citation-list,
+  .downlevel .distill-footer,
+  .downlevel .appendix-bottom,
+  .downlevel .posts-container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media(min-width: 768px) {
+    .downlevel .base-grid,
+    .downlevel .distill-header,
+    .downlevel .d-title,
+    .downlevel .d-abstract,
+    .downlevel .d-article,
+    .downlevel .d-appendix,
+    .downlevel .distill-appendix,
+    .downlevel .d-byline,
+    .downlevel .d-footnote-list,
+    .downlevel .d-citation-list,
+    .downlevel .distill-footer,
+    .downlevel .appendix-bottom,
+    .downlevel .posts-container {
+    padding-left: 150px;
+    padding-right: 150px;
+    max-width: 900px;
+  }
+  }
+
+  .downlevel pre code {
+    display: block;
+    border-left: 2px solid rgba(0, 0, 0, .1);
+    padding: 0 0 0 20px;
+    font-size: 14px;
+  }
+
+  .downlevel code, .downlevel pre {
+    color: black;
+    background: none;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  .downlevel .posts-list .post-preview {
+    color: inherit;
+  }
+
+
+
+  </style>
+
+  <script type="application/javascript">
+
+  function is_downlevel_browser() {
+    if (bowser.isUnsupportedBrowser({ msie: "12", msedge: "16"},
+                                   window.navigator.userAgent)) {
+      return true;
+    } else {
+      return window.load_distill_framework === undefined;
+    }
+  }
+
+  // show body when load is complete
+  function on_load_complete() {
+
+    // add anchors
+    if (window.anchors) {
+      window.anchors.options.placement = 'left';
+      window.anchors.add('d-article > h2, d-article > h3, d-article > h4, d-article > h5');
+    }
+
+
+    // set body to visible
+    document.body.style.visibility = 'visible';
+
+    // force redraw for leaflet widgets
+    if (window.HTMLWidgets) {
+      var maps = window.HTMLWidgets.findAll(".leaflet");
+      $.each(maps, function(i, el) {
+        var map = this.getMap();
+        map.invalidateSize();
+        map.eachLayer(function(layer) {
+          if (layer instanceof L.TileLayer)
+            layer.redraw();
+        });
+      });
+    }
+
+    // trigger 'shown' so htmlwidgets resize
+    $('d-article').trigger('shown');
+  }
+
+  function init_distill() {
+
+    init_common();
+
+    // create front matter
+    var front_matter = $('<d-front-matter></d-front-matter>');
+    $('#distill-front-matter').wrap(front_matter);
+
+    // create d-title
+    $('.d-title').changeElementType('d-title');
+
+    // separator
+    var separator = '<hr class="section-separator" style="clear: both"/>';
+    // prepend separator above appendix
+    $('.d-byline').before(separator);
+    $('.d-article').before(separator);
+
+    // create d-byline
+    var byline = $('<d-byline></d-byline>');
+    $('.d-byline').replaceWith(byline);
+
+    // create d-article
+    var article = $('<d-article></d-article>');
+    $('.d-article').wrap(article).children().unwrap();
+
+    // move posts container into article
+    $('.posts-container').appendTo($('d-article'));
+
+    // create d-appendix
+    $('.d-appendix').changeElementType('d-appendix');
+
+    // flag indicating that we have appendix items
+    var appendix = $('.appendix-bottom').children('h3').length > 0;
+
+    // replace footnotes with <d-footnote>
+    $('.footnote-ref').each(function(i, val) {
+      appendix = true;
+      var href = $(this).attr('href');
+      var id = href.replace('#', '');
+      var fn = $('#' + id);
+      var fn_p = $('#' + id + '>p');
+      fn_p.find('.footnote-back').remove();
+      var text = fn_p.html();
+      var dtfn = $('<d-footnote></d-footnote>');
+      dtfn.html(text);
+      $(this).replaceWith(dtfn);
+    });
+    // remove footnotes
+    $('.footnotes').remove();
+
+    // move refs into #references-listing
+    $('#references-listing').replaceWith($('#refs'));
+
+    $('h1.appendix, h2.appendix').each(function(i, val) {
+      $(this).changeElementType('h3');
+    });
+    $('h3.appendix').each(function(i, val) {
+      var id = $(this).attr('id');
+      $('.d-contents a[href="#' + id + '"]').parent().remove();
+      appendix = true;
+      $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('d-appendix'));
+    });
+
+    // show d-appendix if we have appendix content
+    $("d-appendix").css('display', appendix ? 'grid' : 'none');
+
+    // localize layout chunks to just output
+    $('.layout-chunk').each(function(i, val) {
+
+      // capture layout
+      var layout = $(this).attr('data-layout');
+
+      // apply layout to markdown level block elements
+      var elements = $(this).children().not('details, div.sourceCode, pre, script');
+      elements.each(function(i, el) {
+        var layout_div = $('<div class="' + layout + '"></div>');
+        if (layout_div.hasClass('shaded')) {
+          var shaded_content = $('<div class="shaded-content"></div>');
+          $(this).wrap(shaded_content);
+          $(this).parent().wrap(layout_div);
+        } else {
+          $(this).wrap(layout_div);
+        }
+      });
+
+
+      // unwrap the layout-chunk div
+      $(this).children().unwrap();
+    });
+
+    // remove code block used to force  highlighting css
+    $('.distill-force-highlighting-css').parent().remove();
+
+    // remove empty line numbers inserted by pandoc when using a
+    // custom syntax highlighting theme, except when numbering line
+    // in code chunk
+    $('pre:not(.numberLines) code.sourceCode a:empty').remove();
+
+    // load distill framework
+    load_distill_framework();
+
+    // wait for window.distillRunlevel == 4 to do post processing
+    function distill_post_process() {
+
+      if (!window.distillRunlevel || window.distillRunlevel < 4)
+        return;
+
+      // hide author/affiliations entirely if we have no authors
+      var front_matter = JSON.parse($("#distill-front-matter").html());
+      var have_authors = front_matter.authors && front_matter.authors.length > 0;
+      if (!have_authors)
+        $('d-byline').addClass('hidden');
+
+      // article with toc class
+      $('.d-contents').parent().addClass('d-article-with-toc');
+
+      // strip links that point to #
+      $('.authors-affiliations').find('a[href="#"]').removeAttr('href');
+
+      // add orcid ids
+      $('.authors-affiliations').find('.author').each(function(i, el) {
+        var orcid_id = front_matter.authors[i].orcidID;
+        var author_name = front_matter.authors[i].author
+        if (orcid_id) {
+          var a = $('<a></a>');
+          a.attr('href', 'https://orcid.org/' + orcid_id);
+          var img = $('<img></img>');
+          img.addClass('orcid-id');
+          img.attr('alt', author_name ? 'ORCID ID for ' + author_name : 'ORCID ID');
+          img.attr('src','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==');
+          a.append(img);
+          $(this).append(a);
+        }
+      });
+
+      // hide elements of author/affiliations grid that have no value
+      function hide_byline_column(caption) {
+        $('d-byline').find('h3:contains("' + caption + '")').parent().css('visibility', 'hidden');
+      }
+
+      // affiliations
+      var have_affiliations = false;
+      for (var i = 0; i<front_matter.authors.length; ++i) {
+        var author = front_matter.authors[i];
+        if (author.affiliation !== "&nbsp;") {
+          have_affiliations = true;
+          break;
+        }
+      }
+      if (!have_affiliations)
+        $('d-byline').find('h3:contains("Affiliations")').css('visibility', 'hidden');
+
+      // published date
+      if (!front_matter.publishedDate)
+        hide_byline_column("Published");
+
+      // document object identifier
+      var doi = $('d-byline').find('h3:contains("DOI")');
+      var doi_p = doi.next().empty();
+      if (!front_matter.doi) {
+        // if we have a citation and valid citationText then link to that
+        if ($('#citation').length > 0 && front_matter.citationText) {
+          doi.html('Citation');
+          $('<a href="#citation"></a>')
+            .text(front_matter.citationText)
+            .appendTo(doi_p);
+        } else {
+          hide_byline_column("DOI");
+        }
+      } else {
+        $('<a></a>')
+           .attr('href', "https://doi.org/" + front_matter.doi)
+           .html(front_matter.doi)
+           .appendTo(doi_p);
+      }
+
+       // change plural form of authors/affiliations
+      if (front_matter.authors.length === 1) {
+        var grid = $('.authors-affiliations');
+        grid.children('h3:contains("Authors")').text('Author');
+        grid.children('h3:contains("Affiliations")').text('Affiliation');
+      }
+
+      // remove d-appendix and d-footnote-list local styles
+      $('d-appendix > style:first-child').remove();
+      $('d-footnote-list > style:first-child').remove();
+
+      // move appendix-bottom entries to the bottom
+      $('.appendix-bottom').appendTo('d-appendix').children().unwrap();
+      $('.appendix-bottom').remove();
+
+      // hoverable references
+      $('span.citation[data-cites]').each(function() {
+        const citeChild = $(this).children()[0]
+        // Do not process if @xyz has been used without escaping and without bibliography activated
+        // https://github.com/rstudio/distill/issues/466
+        if (citeChild === undefined) return true
+
+        if (citeChild.nodeName == "D-FOOTNOTE") {
+          var fn = citeChild
+          $(this).html(fn.shadowRoot.querySelector("sup"))
+          $(this).id = fn.id
+          fn.remove()
+        }
+        var refs = $(this).attr('data-cites').split(" ");
+        var refHtml = refs.map(function(ref) {
+          // Could use CSS.escape too here, we insure backward compatibility in navigator
+          return "<p>" + $('div[id="ref-' + ref + '"]').html() + "</p>";
+        }).join("\n");
+        window.tippy(this, {
+          allowHTML: true,
+          content: refHtml,
+          maxWidth: 500,
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start'
+        });
+      });
+
+      // fix footnotes in tables (#411)
+      // replacing broken distill.pub feature
+      $('table d-footnote').each(function() {
+        // we replace internal showAtNode methode which is triggered when hovering a footnote
+        this.hoverBox.showAtNode = function(node) {
+          // ported from https://github.com/distillpub/template/pull/105/files
+          calcOffset = function(elem) {
+              let x = elem.offsetLeft;
+              let y = elem.offsetTop;
+              // Traverse upwards until an `absolute` element is found or `elem`
+              // becomes null.
+              while (elem = elem.offsetParent && elem.style.position != 'absolute') {
+                  x += elem.offsetLeft;
+                  y += elem.offsetTop;
+              }
+
+              return { left: x, top: y };
+          }
+          // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetTop
+          const bbox = node.getBoundingClientRect();
+          const offset = calcOffset(node);
+          this.show([offset.left + bbox.width, offset.top + bbox.height]);
+        }
+      })
+
+      // clear polling timer
+      clearInterval(tid);
+
+      // show body now that everything is ready
+      on_load_complete();
+    }
+
+    var tid = setInterval(distill_post_process, 50);
+    distill_post_process();
+
+  }
+
+  function init_downlevel() {
+
+    init_common();
+
+     // insert hr after d-title
+    $('.d-title').after($('<hr class="section-separator"/>'));
+
+    // check if we have authors
+    var front_matter = JSON.parse($("#distill-front-matter").html());
+    var have_authors = front_matter.authors && front_matter.authors.length > 0;
+
+    // manage byline/border
+    if (!have_authors)
+      $('.d-byline').remove();
+    $('.d-byline').after($('<hr class="section-separator"/>'));
+    $('.d-byline a').remove();
+
+    // remove toc
+    $('.d-contents').remove();
+
+    // move appendix elements
+    $('h1.appendix, h2.appendix').each(function(i, val) {
+      $(this).changeElementType('h3');
+    });
+    $('h3.appendix').each(function(i, val) {
+      $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('.d-appendix'));
+    });
+
+
+    // inject headers into references and footnotes
+    var refs_header = $('<h3></h3>');
+    refs_header.text('References');
+    $('#refs').prepend(refs_header);
+
+    var footnotes_header = $('<h3></h3');
+    footnotes_header.text('Footnotes');
+    $('.footnotes').children('hr').first().replaceWith(footnotes_header);
+
+    // move appendix-bottom entries to the bottom
+    $('.appendix-bottom').appendTo('.d-appendix').children().unwrap();
+    $('.appendix-bottom').remove();
+
+    // remove appendix if it's empty
+    if ($('.d-appendix').children().length === 0)
+      $('.d-appendix').remove();
+
+    // prepend separator above appendix
+    $('.d-appendix').before($('<hr class="section-separator" style="clear: both"/>'));
+
+    // trim code
+    $('pre>code').each(function(i, val) {
+      $(this).html($.trim($(this).html()));
+    });
+
+    // move posts-container right before article
+    $('.posts-container').insertBefore($('.d-article'));
+
+    $('body').addClass('downlevel');
+
+    on_load_complete();
+  }
+
+
+  function init_common() {
+
+    // jquery plugin to change element types
+    (function($) {
+      $.fn.changeElementType = function(newType) {
+        var attrs = {};
+
+        $.each(this[0].attributes, function(idx, attr) {
+          attrs[attr.nodeName] = attr.nodeValue;
+        });
+
+        this.replaceWith(function() {
+          return $("<" + newType + "/>", attrs).append($(this).contents());
+        });
+      };
+    })(jQuery);
+
+    // prevent underline for linked images
+    $('a > img').parent().css({'border-bottom' : 'none'});
+
+    // mark non-body figures created by knitr chunks as 100% width
+    $('.layout-chunk').each(function(i, val) {
+      var figures = $(this).find('img, .html-widget');
+      // ignore leaflet img layers (#106)
+      figures = figures.filter(':not(img[class*="leaflet"])')
+      if ($(this).attr('data-layout') !== "l-body") {
+        figures.css('width', '100%');
+      } else {
+        figures.css('max-width', '100%');
+        figures.filter("[width]").each(function(i, val) {
+          var fig = $(this);
+          fig.css('width', fig.attr('width') + 'px');
+        });
+
+      }
+    });
+
+    // auto-append index.html to post-preview links in file: protocol
+    // and in rstudio ide preview
+    $('.post-preview').each(function(i, val) {
+      if (window.location.protocol === "file:")
+        $(this).attr('href', $(this).attr('href') + "index.html");
+    });
+
+    // get rid of index.html references in header
+    if (window.location.protocol !== "file:") {
+      $('.distill-site-header a[href]').each(function(i,val) {
+        $(this).attr('href', $(this).attr('href').replace(/^index[.]html/, "./"));
+      });
+    }
+
+    // add class to pandoc style tables
+    $('tr.header').parent('thead').parent('table').addClass('pandoc-table');
+    $('.kable-table').children('table').addClass('pandoc-table');
+
+    // add figcaption style to table captions
+    $('caption').parent('table').addClass("figcaption");
+
+    // initialize posts list
+    if (window.init_posts_list)
+      window.init_posts_list();
+
+    // implmement disqus comment link
+    $('.disqus-comment-count').click(function() {
+      window.headroom_prevent_pin = true;
+      $('#disqus_thread').toggleClass('hidden');
+      if (!$('#disqus_thread').hasClass('hidden')) {
+        var offset = $(this).offset();
+        $(window).resize();
+        $('html, body').animate({
+          scrollTop: offset.top - 35
+        });
+      }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    if (is_downlevel_browser())
+      init_downlevel();
+    else
+      window.addEventListener('WebComponentsReady', init_distill);
+  });
+
+  </script>
+
+  <!--/radix_placeholder_distill-->
+  <script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
+  <script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+  <link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+  <link href="site_libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
+  <script src="site_libs/bsTable-3.3.7/bootstrapTable.js"></script>
+  <link href="site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet" />
+  <script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+  <link href="site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+  <script src="site_libs/datatables-binding-0.33/datatables.js"></script>
+  <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+  <link href="site_libs/dt-core-1.13.6/css/jquery.dataTables.min.css" rel="stylesheet" />
+  <link href="site_libs/dt-core-1.13.6/css/jquery.dataTables.extra.css" rel="stylesheet" />
+  <script src="site_libs/dt-core-1.13.6/js/jquery.dataTables.min.js"></script>
+  <link href="site_libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet" />
+  <script src="site_libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
+  <script src="site_libs/popper-2.6.0/popper.min.js"></script>
+  <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="site_libs/tippy-6.2.7/tippy.umd.min.js"></script>
+  <script src="site_libs/anchor-4.2.2/anchor.min.js"></script>
+  <script src="site_libs/bowser-1.9.3/bowser.min.js"></script>
+  <script src="site_libs/webcomponents-2.0.0/webcomponents.js"></script>
+  <script src="site_libs/distill-2.2.21/template.v2.js"></script>
+  <!--radix_placeholder_site_in_header-->
+  <!--/radix_placeholder_site_in_header-->
+
+
+</head>
+
+<body>
+
+<!--radix_placeholder_front_matter-->
+
+<script id="distill-front-matter" type="text/json">
+{"title":"Temperature","authors":[]}
+</script>
+
+<!--/radix_placeholder_front_matter-->
+<!--radix_placeholder_navigation_before_body-->
+<header class="header header--fixed" role="banner">
+<nav class="distill-site-nav distill-site-header">
+<div class="nav-left">
+<a href="index.html" class="title">In Situ NRT Summary</a>
+</div>
+<div class="nav-right">
+<a href="index.html">Arctic Sea (AR)</a>
+<div class="nav-dropdown">
+<button class="nav-dropbtn">
+Baltic Sea (BO)
+ 
+<span class="down-arrow">&#x25BE;</span>
+</button>
+<div class="nav-dropdown-content">
+<a href="bo_summary.html">Summary</a>
+<hr/>
+<a href="bo_pres.html">Pres</a>
+<a href="bo_temp.html">Temp</a>
+<a href="bo_psal.html">Psal</a>
+<hr/>
+<a href="bo_pres_qc.html">Pres QC</a>
+<a href="bo_temp_qc.html">Temp QC</a>
+<a href="bo_psal_qc.html">Psal QC</a>
+</div>
+</div>
+<a href="index.html">Mediterranean Sea (MO)</a>
+<a href="index.html">Arctic Sea (GL)</a>
+<a href="index.html">Baltic Sea (GL)</a>
+<a href="index.html">Mediterranean Sea (GL)</a>
+<a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
+</div>
+</nav>
+</header>
+<!--/radix_placeholder_navigation_before_body-->
+<!--radix_placeholder_site_before_body-->
+<!--/radix_placeholder_site_before_body-->
+
+<div class="d-title">
+<h1>Temperature</h1>
+
+<!--radix_placeholder_categories-->
+<!--/radix_placeholder_categories-->
+
+</div>
+
+
+<div class="d-article">
+<div class="d-contents d-contents-float">
+<nav class="l-text toc figcaption" id="TOC">
+<h3>Contents</h3>
+<ul>
+<li><a href="#basic-information" id="toc-basic-information">1. Basic Information</a></li>
+<li><a href="#summary-statistics" id="toc-summary-statistics">2. Summary statistics</a></li>
+<li><a href="#distributions-by-profile-over-time-and-location" id="toc-distributions-by-profile-over-time-and-location">3. Distributions by profile over time and location</a></li>
+</ul>
+</nav>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<p>The page shows the basic analysis of temperature data from Baltic NRT in situ observations.</p>
+<hr />
+<section id="basic-information" class="layout-chunk" data-layout="l-body">
+<h2>1. Basic Information</h2>
+<h3 id="variable-name">Variable name</h3>
+<ul>
+<li><code>temp</code>: Temperature</li>
+</ul>
+<h3 id="input-data-file">Input data file</h3>
+<ul>
+<li><strong>BO data</strong>: netcdf_nrt_bo.parquet</li>
+<li><strong>Filtered</strong>: No</li>
+</ul>
+</section>
+<hr />
+<section id="summary-statistics" class="layout-chunk" data-layout="l-body">
+<h2>2. Summary statistics</h2>
+<h3 id="na-value-counts">NA value counts</h3>
+<div class="layout-chunk" data-layout="l-body">
+<table class="table table-striped table-hover table-condensed table-responsive table" style="margin-left: auto; margin-right: auto; font-size: 12px; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Category
+</th>
+<th style="text-align:left;">
+Total Count
+</th>
+<th style="text-align:left;">
+Non-NA Count
+</th>
+<th style="text-align:left;">
+Pct
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+# Platforms
+</td>
+<td style="text-align:left;">
+753
+</td>
+<td style="text-align:left;">
+753
+</td>
+<td style="text-align:left;">
+100.0%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+# Profiles
+</td>
+<td style="text-align:left;">
+112,411
+</td>
+<td style="text-align:left;">
+111,059
+</td>
+<td style="text-align:left;">
+98.8%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+# Observations
+</td>
+<td style="text-align:left;">
+9,334,806
+</td>
+<td style="text-align:left;">
+9,317,217
+</td>
+<td style="text-align:left;">
+99.8%
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="descriptive-statistics">Descriptive statistics</h3>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<ul>
+<li><code>Min</code>: -2</li>
+<li><code>Q1</code>: 4.98</li>
+<li><code>Median</code>: 6.77</li>
+<li><code>Mean</code>: 8.29</li>
+<li><code>Q3</code>: 11.6</li>
+<li><code>Max</code>: 28.4</li>
+<li><code>SD</code>: 4.78</li>
+</ul>
+<h3 id="summary-tables-of-temperature-by-platform">Summary tables of temperature by platform</h3>
+<div class="layout-chunk" data-layout="l-body">
+<style>table.dataTable {font-size: 12px;}</style>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-7423ba0ba35d98fc78f9" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-7423ba0ba35d98fc78f9">{"x":{"filter":"none","vertical":false,"data":[["ARH160003","ARH170001","ARH170002","ARH170004","ARH170006","ARH170011","ARH170025","ARH170084","ARH170115","ARH170117","ARH170118","ARH170119","ARH170139","ARH170142","ARH190004","ARH190005","ARH230902","ARH230904","ARH230905","ARH250030","ARH250032","ARH250034","BOR1040005","BOR1040050","BOR3074005","BOR3091005","BOR4049005","BOR4084505","BOR5059505","BORBMPK2","BRK1040050","BRK3074005","BRK3091005","BRK4049005","BRK4084505","BRK5059505","BRKBMPK2","BSHDarsserS","DMU1001","DMU1002","DMU1004","DMU1005","DMU1006","DMU1007","DMU1008","DMU1009","DMU1013","DMU1019","DMU1022","DMU1023","DMU1024","DMU1025","DMU1026","DMU1027","DMU1034","DMU1035","DMU1041","DMU1042","DMU1043","DMU1044","DMU1045","DMU1046","DMU1052","DMU1053","DMU1054","DMU1055","DMU1056","DMU1059","DMU1060","DMU1061","DMU1062","DMU1063","DMU1064","DMU1071","DMU1072","DMU1073","DMU1074","DMU1080","DMU1081","DMU1082","DMU1083","DMU1084","DMU1085","DMU1086","DMU1101","DMU1102","DMU1104","DMU1106","DMU1130","DMU1131","DMU1133","DMU1135","DMU1728","DMU31S","DMU403","DMU409","DMU413","DMU415","DMU418","DMU427","DMU430","DMU431","DMU432","DMU441","DMU443","DMU444","DMU449","DMU450","DMU905","DMU921","DMU922","DMU925","DMU935","DMU939","DMU952","DMU954","DMUM2","DMUN3","EPALT1","EPALT1B","EPALT2","EPALT2C","EPALT3","EPALT4","EPALT46","EPALT4C","EPALT5","EPALT6","EPALT64","EPALT64A","EPALT65","EPALT66","EPALT6B","EPALT7","EPALTB-1","EPALTB-4","EPALTN-6","FRB1877","FRB1937","FRB1939","FRB1993","FRB20036","FRB20037","FRB20038","FRB2013","FRB65","FRB75","FRB8000","FRB8550","FRB9000","FRB9080","FYN0018001","FYN0018002","FYN0018112","FYN0018121","FYN0018152","FYN0018153","FYN0018161","FYN0018231","FYN0018232","FYN0018310","FYN0018320","FYN0018322","FYN0018361","FYN0018365","FYN0018402","FYN0018501","FYN0018511","FYN0018531","FYN0018532","FYN0018541","FYN0018571","FYN0018572","FYN0018691","FYN0018751","FYN0018752","FYN0018825","FYN0018841","FYN0018843","FYN0018861","FYN0018881","FYN0018882","FYN6100014","FYN6100016","FYN6100018","FYN6100020","FYN6100021","FYN6100051","FYN6100052","FYN6200026","FYN6200027","FYN6200029","FYN6200901","FYN6300043","FYN6300044","FYN6300050","FYN6300051","FYN6400042","FYN6500002","FYN6500003","FYN6500033","FYN6500040","FYN6500041","FYN6500051","FYN6500052","FYN6500053","FYN6500054","FYN6500062","FYN6500099","FYN6510001","FYN6510005","FYN6510009","FYN6510011","FYN6510015","FYN6510017","FYN6600007","FYN6700009","FYN6700051","FYN6700053","FYN6700054","FYN6900017","FYN6900803","FYN6900804","FYN6910008","FYN6940622","FYN7100804","FYN7101002","FYN7101003","FYN7101004","FYN7101101","FYN7101102","FYN7101103","FYN7101104","FYN7200506","FYN7200508","FYN7200603","FYN7200605","FYN7200606","FYN7200607","FYN7200608","FYN7200609","FYN7200706","FYN7301603","FYN7301604","FYN7301701","FYN7301702","FYN7301703","FYN7301704","FYN7301801","FYN7301802","FYN7400302","FYN7400403","FYN7400405","FYN7501901","FYN7501910","FYN7501911","FYN7501912","FYN7502001","FYN7502002","FYN7701207","FYN7701302","FYN8152","FYN8231","FYN8232","FYN8361","FYN8365","FYN8571","FYN8572","FYN8751","FYN8752","FYN8841","FYN8843","IOPANBojaGotlandia1","IOPANIO5","IOPANIO6","IOPANIO7","IOPANK","IOPANL4","IOPANL8","IOPANL9","IOPANOster1","IOPANP1","IOPANP104","IOPANP104a","IOPANP104b","IOPANP104c","IOPANP110","IOPANP110a","IOPANP110d","IOPANP115","IOPANP116","IOPANP13","IOPANP14","IOPANP15","IOPANP16a","IOPANP1a","IOPANP2","IOPANP2a","IOPANP40","IOPANP63","IOPANP63a","IOPANPY15a","IOPANPokemark1","IOPANR4","IOPANR6","IOPANR8","IOPANTA10","IOPANTA6","IOPANTA7","IOPANTA8","IOPANTA9","IOPANZN2","KBH1722","KBH1723","KBH1728","KBH1942","KBH1944","KBH431","KBH5000","KBH5002","KBH5005","KBK1728","KBK3002","KBK3005","LHEI101A","LHEI102A","LHEI103","LHEI103C","LHEI107","LHEI107A","LHEI111","LHEI119","LHEI120","LHEI121","LHEI135","LHEI142","LHEI158","LHEI160","LHEI161","LHEI162","LHEI163","LHEI164","LHEI165","LHEI166","LHEI167","LHEI168","LHEI169","LHEI170","LHEI172","LHEI173","LHEI174","LHEI37","LHEI43","MSI107","MSI111","MSI114","MSI14","MSI15","MSI17","MSI19","MSI23","MSI25","MSI32","MSI34a","MSI85","MSIE80","MSIF1","MSIF3","MSIG1","MSIH1","MSIH2","MSIN12","NJY3306","NJY3310","NJY40302","NJY409","NJY4406","NJY4410","NJY6602","NJY6605","NJY6607","NJY7705","NJY7715","NJY7725","NOR3306","NOR3310","NOR40302","NOR409","NOR4406","NOR4410","NOR4411","NOR5503","RIB1510001","RIB1510002","RIB1510003","RIB1510005","RIB1510006","RIB1510007","RIB1510008","RIB1510009","RIB1510022","RIB1610002","RIB1610003","RIB1610008","RIB1620012","RIB1620014","RIB1630016","RKB1","RKB10","RKB22","RKB23","RKB43","RKB44","RKB59","ROS1726","ROS1727","ROS2","ROS2043","ROS5060","ROS60","ROS8014","ROS8015","SJY1","SJY12","SJY12A","SJY13B","SJY15","SJY16","SJY19","SJY19A","SJY2","SJY20","SJY27","SJY3","SJYFF31","SJYFF41","SJYFF43","SJYHADF0008","SJYKFF1","SJYKFF2","SJYKFF3","SJYKFF4","SJYKFF5","SJYKFF6","SJYSJA1","SMFBY29","SMFBY31","SMHI3125","SMHI4002","SMHI409ALBORGBUGT","SMHI441STEVNSKLINT","SMHI925KATTEGATSW","SMHIA13","SMHIA14","SMHIA15","SMHIA16","SMHIA17","SMHIALSBACK","SMHIANHOLTE","SMHIASTOL","SMHIB1V","SMHIBCSIII10","SMHIBJORKHOLMEN","SMHIBLAJUNGFRUN","SMHIBO3A3","SMHIBY1","SMHIBY10","SMHIBY11","SMHIBY13","SMHIBY15","SMHIBY19","SMHIBY2","SMHIBY20","SMHIBY21","SMHIBY23","SMHIBY27","SMHIBY28","SMHIBY29","SMHIBY3","SMHIBY30","SMHIBY31","SMHIBY32","SMHIBY36","SMHIBY38","SMHIBY39","SMHIBY4","SMHIBY5","SMHIBY7","SMHIBY9","SMHIBYFJORDEN","SMHIBYTTELOCKET","SMHIC3","SMHIDANAFJORD","SMHIDROGDENE","SMHIEALVSBORGSBRON","SMHIF13","SMHIF16","SMHIF18","SMHIF2","SMHIF26C15","SMHIF33","SMHIF3A5","SMHIF64","SMHIF9A13","SMHIFA1","SMHIFLADEN","SMHIG1","SMHIGALTERO","SMHIGF6","SMHIGF8","SMHIGF9","SMHIHANOBUKTEN","SMHIHANOBUKTENKBV","SMHIHAVSTENSFJORD","SMHIHS5","SMHIHUVUDSKARBUOY","SMHIK11MV","SMHIK12","SMHIK15MV","SMHIK19","SMHIK21","SMHIK24","SMHIK26","SMHIK27","SMHIK28","SMHIK29","SMHIK30","SMHIK3V","SMHIK6","SMHIK7","SMHIKAARV4","SMHIKL12","SMHIKL8","SMHIKNOLLSGRUNDBUOY","SMHIKOLJOFJORD","SMHIKOSTERFJORDEN","SMHIKULLEN","SMHIL12","SMHIL9","SMHILAHOLM3","SMHILAMIDDELGRUND","SMHILASOE","SMHILASORANNA","SMHILL12","SMHILL15","SMHILT1","SMHILT2","SMHILT3","SMHILT4","SMHIM1V","SMHIM3V","SMHIM5V","SMHIM6V","SMHIM7V","SMHIMASESKARWBUOY","SMHIMB1VMS","SMHIMB210VMSF","SMHIMB24V","SMHIMB2V","SMHIMS2","SMHIMS4C14","SMHIMS6","SMHIN13","SMHIN14","SMHIN5","SMHIN6","SMHIN7","SMHINORRAMIDSJOBANKEN","SMHINY","SMHIO1V","SMHIOKG1V","SMHIOLANDSODRA","SMHIORESUND12X","SMHIORESUND2","SMHIORESUND4","SMHIORESUND7","SMHIOVF11","SMHIOVF32","SMHIOVF411","SMHIOVF48","SMHIOVF52","SMHIP2","SMHIPLP1","SMHIPLP63","SMHIREFM1V1","SMHIREFO3V","SMHIREFV2","SMHIREFV2V","SMHIRR1","SMHIRR5","SMHIRR7","SMHIS10","SMHISEGERSTADII","SMHISKALDERVIKEN2","SMHISKALKORGARNA","SMHISLAGGO","SMHISODRAMIDSJOBANKEN","SMHISR1A","SMHISR3","SMHISR5C4","SMHISR8","SMHISS29","SMHISTMIDDELGRUND","SMHISTOLPETROSKEL","SMHISTRETUDDEN","SMHISWVINGAGF4","SMHITROSKELNALANDSHAV","SMHIUS2","SMHIUS3C6","SMHIUS5BC1","SMHIUS7","SMHIV1V","SMHIV3V","SMHIV6VMS","SMHIVA6","SMHIVADEROARNABUOY","SMHIVALO","SMHIVH1","SMHIVH3A","SMHIVH4","SMHIWFAROSUND","SMHIWLANDSKRONA","STO0101015","STO0101019","STO0101021","STO0101023","STO0101047","STO0101124","STO0102006","STO0102013","STO0102017","STO0103004","STO0103052","STO0201120","STO0302051","STO0501018","STO0601053","STO0601056","STO0601088","STO0703006","STO0704010","STO0801008","STO0801049","STO0802008","STO0802023","STO0901008","STO0901016","STO0901032","STR0101015","STR0101023","STR0101047","STR0102013","STR0103004","STR0103052","STR0302051","STR0704010","STR0802008","STR0802023","STR0901008","STR0901016","STR0901032","SYKE39A","SYKEBCSIII10","SYKEBO3A3","SYKEBY1","SYKEBY15","SYKEBY2","SYKEBY38","SYKEBY5","SYKEF18","SYKEF2","SYKEF62","SYKEF64","SYKEGF1","SYKEGF2","SYKEIU2","SYKEIU6","SYKEIU7","SYKEJML","SYKELL12","SYKELL15","SYKELL17","SYKELL23","SYKELL3A","SYKELL7","SYKELL9","SYKEMS9","SYKESR5C4","SYKESR8","SYKEUS5BC1","SYKEUUS23","SYKEXII3","SYKEXV1","UMFB7","UMFC3","UMFF3A5","UMFF9A13","UMFGA1","UMFMS4C14","UMFNB1B3","UMFRA2","VEJ0003350","VEJ0003750","VEJ0003772","VEJ0003951","VEJ0004273","VEJ0004669","VEJ0005367","VEJ0005790","VEJ0006089","VEJ0006489","VEJ0006592","VEJ0006870","VEJ0006883","VEJ0007677","VEJ6100014","VIB23101","VIB23102","VIB3702-1","VIB3705-1","VIB3708-1","VIB3711-1","VIB3713-00001","VIB3718-00001","VIB3719-00001","VIB3723-1","VIB3726-1","VIB3727-1","VIB3728-1","VSJ10001","VSJ10002","VSJ10003","VSJ10006","VSJ20004","VSJ20925","VSJ30002","VSJ30003","VSJ30005","VSJ30006","VSJ30008","VSJ30018","VSJ41007","VSJ41008","VSJ42001","VSJ42009","VSJ43010","VSJ44011","VSJ45012","VSJ50015","VSJ51013","VSJ51014","VSJ53016","VSJ8000"],[9336,986,32215,5631,90976,11029,8461,24765,4902,16329,7066,1315,24309,8855,22300,8419,18543,3990,26491,407,771,612,64,12668,102,103,48,105,99,15590,10852,14,12,9,13,11,21029,132,12265,3289,5533,4002,384,7877,7748,4985,145,147,139,208,226,225,189,161,118,173,109,141,147,208,219,198,144,174,198,172,195,87,123,172,207,227,231,176,200,190,169,107,129,151,204,199,183,88,114,290,306,492,149,165,291,353,1136,390,8418,3262,9191,2802,5508,8372,377,12532,5589,5519,7245,9122,4258,7139,15318,5292,7113,9030,8937,7208,5340,5684,1636,1205,283,155,318,125,128,279,44,135,132,900,368,158,201,31,231,140,72,92,138,10058,9695,17602,12803,1083,2316,2149,28693,15782,23487,17783,3019,23999,3390,258,689,9237,295,499,307,237,582,22635,6958,809,972,4390,1886,90,660,22,426,2298,292,3109,1424,2839,466,1944,8334,4949,8653,144,211,109,33190,28194,28796,70318,54989,75042,35615,1477,40135,40662,49208,88304,77356,3070,8299,36354,11568,112,15609,546,10781,53325,28945,26473,997,3188,819,1217,1754,2124,2756,2844,2167,10170,40405,51093,137099,41437,53976,3720,7467,5088,52661,881,738,998,1437,602,1228,2412,2335,3031,4654,519,1858,6234,1949,2138,1125,2871,1013,4221,1945,8190,12262,1205,9143,2061,2973,890,3193,4286,4169,19833,1397,2102,3618,6530,999,384,698,10834,4068,1852,2168,1494,423,870,5043,7872,106,82,141,144,64,67,86,121,326,334,180,221,508,234,240,182,84,184,306,222,90,138,79,313,234,241,277,246,298,359,261,76,117,234,217,337,422,593,313,146,1173,5930,13177,8726,1838,123102,7026,3474,1208,20382,5594,33967,1018,1775,2288,502,1270,421,1744,1902,1553,3629,2019,1837,404,313,318,653,1055,257,737,282,1062,380,172,540,499,440,532,670,616,909,1239,883,2505,710,3606,2815,3204,3143,3500,1693,2809,2690,2768,2719,1823,2824,3086,1135,652,1192,24200,11991,655,10156,954,818,920,5697,16793,24870,1143,2367,43621,21035,1162,16141,15841,60149,2954,656,6843,998,769,3117,708,7107,632,4244,454,4018,737,667,51,13279,6024,2775,2742,10415,12323,5562,3605,20848,6502,2321,1804,14771,5284,578,71658,20267,11119,30349,44170,45750,33580,24143,1130,3320,10778,11648,10145,16441,12982,1180,9041,34039,1435,2315,51659,19797,28082,65668,476378,71,103,1278,2524,3685,100456,109126,140881,221989,347780,25036,113962,29613,433,91615,30252,7039,9626,50889,157595,19057,9639,288409,16002,52425,222461,12931,3986,13487,20090,92663,6653,19404,241125,222587,14663,119772,12214,102160,98750,11604,23067,19438,12134,2699,17540,4322,3817,5947,3542,10117,8283,13624,13537,1079,30981,10535,63,104022,182,16583,4912,4420,2909,85338,4080,16838,14706,8089,765,681,314,640,1106,128,96,121,175,133,133,77,3748,759,1442,62,83,1837,17222,75415,5387,80,3314,2555,11458,15408,11729,3525,4472,1225,1353,769,953,265,354,60,55,49,1124,428,703,521,767,7037,1163,7212,5679,23708,3535,7148,7280,83,1139,368,1017,1054,1891,711,1310,1661,1495,1205,500,1176,992,108790,7262,5626,15316,1043,2156,2757,7956,6304,3065,109,654,2823,5769,96343,544,5999,7402,13520,3124,10164,5033,7363,20497,12033,6827,20176,15639,22616,1727,497,1296,1145,140,127,9952,1723,1200,1430,464,60309,15065,4326,4787,24486,4702,5914,924,1126,151,128,2062,5293,736,2219,250,902,3927,380,1557,15129,10571,8800,887,16979,33191,11012,3335,5129,4826,1490,249,1445,901,941,4912,883,4884,26486,10696,179,1933,1208,299,14777,906,2379,1723,190,2247,531,17079,459,461,37,110,678,440,9613,858,11599,13935,4355,15786,475,556,11153,247,2817,253,169,338,1137,40706,19494,35532,3314,16403,798,518,6709,2077,4226,7545,21877,9201,18216,17362,3442,43038,1297,51782,14743,5600,9689,1184,896,12165,8518,15051,11499,2111,767,2,15522,25638,14976,13488,2481,3010,18921,12049,8420,77600,17189,5185,435,26300,3323,2265,20784,15867,2012,4822,6549,2256,6262,4255,2127,1099,1340,13957],[0.4000000059604645,0.2110000103712082,-0.8750000596046448,1.330000042915344,-1,0.1000000014901161,0.7000000476837158,-0.800000011920929,0.2010000050067902,-0.3930000066757202,0.3300000131130219,-0.2250000089406967,0.300000011920929,1.391000032424927,-1.522000074386597,0,-0.578000009059906,-1.100000023841858,-1.175000071525574,-0.1000000014901161,-0.3920000195503235,-0.3090000152587891,1.400000095367432,1.360000014305115,0.5,0.1000000014901161,0.1000000014901161,0.5,0.5,1.650000095367432,0.9690000414848328,0.5,4.200000286102295,3.800000190734863,0.800000011920929,3.200000047683716,0.7360000610351562,0.7880000472068787,-1.642000079154968,-1.210000038146973,-1.210000038146973,-1.100000023841858,-0.8700000643730164,-1.821000099182129,-1,-1.138000011444092,-0.1000000014901161,-0.1600000113248825,-1.050000071525574,-0.320000022649765,-0.3600000143051147,2.190000057220459,2.820000171661377,3.000000238418579,-1.50000011920929,-1.040000081062317,-1.360000014305115,-1.480000019073486,-0.9100000262260437,0.1300000101327896,2.06000018119812,2.380000114440918,-1.400000095367432,-1.140000104904175,0,0.7800000309944153,0.9800000190734863,-1.520000100135803,-1.340000033378601,-0.02000000141561031,0.4900000095367432,0.9300000667572021,2.580000162124634,0.4300000071525574,1.820000052452087,2.480000019073486,3.130000114440918,-1.300000071525574,-1.03000009059906,-0.7200000286102295,0.550000011920929,1,2.81000018119812,-1.310000061988831,1.660000085830688,4.019999980926514,2.140000104904175,1.650000095367432,3.390000104904175,3.050000190734863,3.930000305175781,2.430000066757202,0.64000004529953,-0.4400000274181366,-1.550000071525574,-1,-1,-1,-0.7500000596046448,-1,10.68200016021729,-0.9460000395774841,-1.194000005722046,-1,-0.8920000195503235,-0.9600000381469727,-1.186000108718872,-1.304000020027161,-1.563000082969666,-0.8300000429153442,-1.38100004196167,-0.7500000596046448,-1,-1,-1,-1,0,0,0.3900000154972076,0.8400000333786011,0.5400000214576721,0.8300000429153442,0.1900000125169754,0.1100000068545341,2.990000247955322,0.4200000166893005,0.0300000011920929,0.1000000014901161,0.3600000143051147,0.9900000691413879,1.320000052452087,2.860000133514404,2.430000066757202,0,0.3700000047683716,0.6100000143051147,2.06000018119812,-0.5630000233650208,0.06100000441074371,-0.6720000505447388,-0.5720000267028809,6.812000274658203,6.851000308990479,6.901000499725342,0.1000000014901161,-0.5800000429153442,-0.6500000357627869,-0.550000011920929,-0.7700000405311584,-0.04000000283122063,6.584000110626221,-1.420000076293945,-0.690000057220459,0.1500000059604645,0.300000011920929,0,0.1100000068545341,2.200000047683716,-0.6000000238418579,-0.9000000357627869,-0.2300000041723251,2.300000190734863,0.4800000190734863,-0.800000011920929,-0.2000000029802322,0,-0.800000011920929,1,0,-0.4000000059604645,-0.1000000014901161,-0.9000000357627869,-1.370000123977661,-0.300000011920929,-0.300000011920929,-0.7000000476837158,-0.3950000107288361,-1.160000085830688,-1.170000076293945,2.717000246047974,0.8140000104904175,1.650000095367432,-1.03000009059906,-1.140000104904175,-1.070000052452087,-1.040000081062317,-0.9500000476837158,-1,-0.9600000381469727,0.5390000343322754,-0.8500000238418579,-0.800000011920929,-0.8300000429153442,-1.306000113487244,-0.9200000166893005,1.100000023841858,0.9000000357627869,-0.7700000405311584,-1.200000047683716,7.368000507354736,-0.89000004529953,2.300000190734863,-0.3450000286102295,-0.9000000357627869,-0.8300000429153442,-1.990000128746033,0.6000000238418579,-0.64000004529953,4.208000183105469,2.5,2.400000095367432,3.100000143051147,3.400000095367432,3.400000095367432,3.600000143051147,-1,-0.6000000238418579,-0.6500000357627869,-0.7600000500679016,-0.7000000476837158,-1.410000085830688,-0.9100000262260437,-1.550000071525574,-1.400000095367432,-1.086000084877014,9.40000057220459,8.200000762939453,8.200000762939453,8.100000381469727,8.40000057220459,7.53000020980835,7.40000057220459,7.37000036239624,7.100000381469727,4.173000335693359,10.82000064849854,9.200000762939453,5.101000308990479,9.790000915527344,9,10,5.469000339508057,10.39000034332275,5.103000164031982,8.90000057220459,3.946000099182129,-0.3290000259876251,10.70000076293945,4.686000347137451,8.5,4.796000003814697,8.40000057220459,6.900000095367432,6.931000232696533,3.800000190734863,0.06700000166893005,11.66100025177002,9.200000762939453,7.224000453948975,5.657000064849854,7.800000190734863,0.1000000014901161,0,-0.6200000047683716,-0.3400000035762787,0.1000000014901161,-0.7800000309944153,-1.370000123977661,0,0,-1.160000085830688,-1.170000076293945,5.178000450134277,6.042000293731689,4.781000137329102,4.804000377655029,6.404000282287598,11.89300060272217,7.765000343322754,5.903000354766846,4.472000122070312,3.738000154495239,4.640000343322754,3.745000123977661,3.593000173568726,4.711000442504883,4.511000156402588,5.291000366210938,6.396000385284424,4.618000030517578,3.912000179290771,4.446000099182129,7.838000297546387,6.61400032043457,10.17900085449219,3.757000207901001,4.193000316619873,4.236999988555908,3.784000158309937,3.499000072479248,3.773000240325928,3.688000202178955,3.461000204086304,11.4060001373291,8.902000427246094,3.839000225067139,3.92900013923645,3.556000232696533,3.650000095367432,3.700000286102295,3.706000089645386,6.435000419616699,-0.2000000029802322,-1.150000095367432,-0.4000000059604645,-0.1400000005960464,-0.2300000041723251,-0.5070000290870667,-0.2000000029802322,4.400000095367432,0.1000000014901161,-0.4000000059604645,-0.3900000154972076,-0.4500000178813934,0.9200000166893005,0.08000000566244125,0.07000000029802322,0.7900000214576721,0.9800000190734863,6.080000400543213,-0.1300000101327896,0.1900000125169754,0.2200000137090683,0.07000000029802322,0.02000000141561031,-0.04000000283122063,3.430000066757202,-0.3100000023841858,0.3400000035762787,0.5400000214576721,0.7500000596046448,0.9200000166893005,-0.07000000029802322,0.4300000071525574,0.3400000035762787,4.03000020980835,3.380000114440918,0.2000000029802322,0.2200000137090683,-0.1000000014901161,-0.1500000059604645,4.080000400543213,4.090000152587891,0.7800000309944153,0.9600000381469727,0.4000000059604645,0.1500000059604645,0.07000000029802322,0.7800000309944153,1.900000095367432,1.330000042915344,1.950000047683716,3.330000162124634,3.150000095367432,3.210000038146973,0.5200000405311584,0.08000000566244125,0.7500000596046448,0.9700000286102295,1.760000109672546,2.580000162124634,0,0.300000011920929,0,-1.230000019073486,-0.07000000029802322,-1.180000066757202,-0.7300000190734863,0.2000000029802322,0.1300000101327896,-1.200000047683716,0.7100000381469727,-0.06000000238418579,-0.1500000059604645,0.300000011920929,0,-1.230000019073486,-1.190000057220459,-1.180000066757202,-0.7300000190734863,-1.200000047683716,-0.4900000095367432,0,0,0,-0.800000011920929,-0.1000000014901161,-0.5,-0.1000000014901161,0.1000000014901161,-1.200000047683716,-0.800000011920929,0.4000000059604645,-0.800000011920929,2.730000019073486,2.470000028610229,-1.600000023841858,-0.800000011920929,-0.3800000250339508,-0.300000011920929,-0.300000011920929,-1.740000128746033,-1.770000100135803,0.4000000059604645,0,-1,-1,-0.800000011920929,8.186000823974609,-1,0.4230000078678131,1,-1,-1.400000095367432,-1,-1,-0.800000011920929,-1,-1.300000071525574,-1,-0.1000000014901161,-0.300000011920929,-0.3700000047683716,-1.16100001335144,-1.082000017166138,-0.1300000101327896,-0.07100000232458115,1.170000076293945,-1.400000095367432,-1.400000095367432,0,-1.600000023841858,-1.50000011920929,0.1960000097751617,-0.1600000113248825,-0.2700000107288361,-0.2400000095367432,-0.3400000035762787,2.622000217437744,0.6390000581741333,-0.5700000524520874,0.3100000023841858,-1.228000044822693,-1.3160001039505,-1.218000054359436,-1.189000010490417,-1.096000075340271,-0.7800000309944153,-1.034000039100647,-0.7280000448226929,-0.859000027179718,0,-0.89000004529953,-0.3060000240802765,0.1530000120401382,-0.456000030040741,1.080000042915344,1.190000057220459,1.090000033378601,0,0.9280000329017639,-0.1990000158548355,-0.1520000100135803,-0.09600000083446503,0.8980000615119934,0.02100000157952309,-0.2540000081062317,-0.2000000029802322,-0.3070000112056732,-0.01700000092387199,-0.3190000057220459,0.1840000152587891,0.3010000288486481,0.3140000104904175,0,-0.232000008225441,0,0.7400000095367432,0.9300000667572021,0.2600000202655792,-1.189000010490417,1.03000009059906,-0.9000000357627869,0.5630000233650208,-0.7800000309944153,0.3570000231266022,-0.09000000357627869,-1.385000109672546,-0.1210000067949295,-0.1230000033974648,0.5110000371932983,0.5890000462532043,0.3500000238418579,0.03299999982118607,-0.1319999992847443,-1.074000000953674,3.460000276565552,-0.7080000042915344,-1.550000071525574,-1.201000094413757,-0.562000036239624,-1.14900004863739,1.084000110626221,-0.7000000476837158,2.926000118255615,1.330000042915344,-0.1210000067949295,-0.2770000100135803,-0.3740000128746033,-0.3810000121593475,-0.3470000028610229,9.36400032043457,11.9970006942749,10.22300052642822,7.663000583648682,9.891000747680664,8.881999969482422,-0.2980000078678131,-0.328000009059906,0,0.1370000094175339,4.787000179290771,0.164000004529953,2.781000137329102,-0.7380000352859497,-0.800000011920929,-1,11.57800102233887,-0.8680000305175781,-0.464000016450882,-1.266000032424927,0.737000048160553,-0.5950000286102295,0,1.793000102043152,2.085000038146973,2.032000064849854,2.132000207901001,1.739000082015991,-0.2310000061988831,-0.5820000171661377,0.2180000096559525,0.7010000348091125,0.2710000276565552,3.195000171661377,-0.5660000443458557,0.5300000309944153,0.3600000143051147,-0.5640000104904175,-0.1800000071525574,0.9640000462532043,0.08600000292062759,-0.9510000348091125,-1.152999997138977,0.1340000033378601,-0.2170000076293945,-0.8800000548362732,7.712000370025635,-0.3620000183582306,-0.2620000243186951,1.864000082015991,3.294000148773193,0.08400000631809235,-0.9540000557899475,-0.2540000081062317,0.1850000023841858,-0.03600000217556953,0.4370000064373016,0.1220000088214874,0.4310000240802765,-0.1480000019073486,-1.196000099182129,0.8510000109672546,1.783000111579895,-0.3270000219345093,-0.3850000202655792,-0.3520000278949738,-0.06800000369548798,-0.04200000315904617,0.2540000081062317,0.9000000357627869,7.421000480651855,4.100000381469727,-0.5440000295639038,-0.9320000410079956,-1.158000111579895,2.928000211715698,0.1560000032186508,-0.1670000106096268,0.6600000262260437,0.2370000183582306,0.659000039100647,-0.005000000353902578,0.4400000274181366,-0.8600000143051147,-1.072000026702881,0.8820000290870667,-0.09900000691413879,-0.2410000115633011,-0.2360000163316727,0.02200000174343586,-0.8750000596046448,-0.328000009059906,0.2490000128746033,-0.1980000138282776,4.109000205993652,-1.206000089645386,0.102000005543232,0.4760000109672546,-0.1810000091791153,2.806000232696533,-0.3830000162124634,-0.6240000128746033,5.053000450134277,-0.4310000240802765,-0.4960000216960907,-0.6290000081062317,-0.06100000441074371,1.475000023841858,0.940000057220459,0.6290000081062317,0.300000011920929,0.2200000137090683,-0.006000000052154064,0.300000011920929,1.900000095367432,1.900000095367432,1.389000058174133,-0.3970000147819519,2.194000005722046,-0.5020000338554382,-0.3430000245571136,-0.0560000017285347,-0.3770000040531158,0.64000004529953,0.8730000257492065,0.4210000336170197,1.850000143051147,-0.7000000476837158,0,-0.6290000081062317,0.940000057220459,0.300000011920929,0.4110000133514404,-0.300000011920929,0.6000000238418579,-0.2730000019073486,0.64000004529953,0.4000000059604645,0.4210000336170197,1.850000143051147,1.278000116348267,1.532000064849854,-0.1060000061988831,1.186000108718872,1,1.621000051498413,1.490000128746033,1.66100013256073,0.3920000195503235,-0.1700000017881393,1.372000098228455,-0.2280000150203705,1.365000009536743,0.7050000429153442,-0.3040000200271606,2.335000038146973,0.4770000278949738,0.8320000171661377,-0.2670000195503235,2.872000217437744,-0.1900000125169754,0,-0.2760000228881836,-0.800000011920929,0.05100000277161598,0.8020000457763672,0.1270000040531158,-0.3220000267028809,-0.1000000014901161,-0.1240000054240227,-0.1530000120401382,-0.1810000091791153,-0.2520000040531158,-0.2780000269412994,-0.1990000158548355,-0.174000009894371,-0.1330000013113022,-0.2790000140666962,-0.1319999992847443,-0.1200000047683716,-1,0,-0.4100000262260437,-0.7500000596046448,-0.9080000519752502,0,-0.9500000476837158,-1,-1,-1,4.080000400543213,-1.578000068664551,-0.796000063419342,0.8200000524520874,-1.020000100135803,-0.4100000262260437,0.1700000017881393,-1.230000019073486,-1.160000085830688,-1.410000085830688,-1.400000095367432,-1,-0.4500000178813934,17.20000076293945,-1,-1.129999995231628,-1.420000076293945,-1.260000109672546,-1.740000128746033,-1.060000061988831,-1.200000047683716,-0.5420000553131104,-0.1000000014901161,-0.9100000262260437,0.08000000566244125,6.740000247955322,0,-0.484000027179718,8.065999984741211,0.1300000101327896,-1.996000051498413,-0.2000000029802322,7.916000366210938,-1,-0.300000011920929,-0.7800000309944153,-0.4000000059604645,-1,-1,-0.9000000357627869,-0.5,-0.3100000023841858],[12.95400047302246,14.16800022125244,10.32000064849854,13.60900020599365,9,12.85000038146973,12.72300052642822,11.32000064849854,11.99000072479248,10.65800094604492,11.75200080871582,10.30400085449219,12.40000057220459,13.50600051879883,9.90000057220459,13.71500110626221,10.03000068664551,7.800000190734863,9.611000061035156,9,9.800000190734863,7.886000394821167,7.700000524520874,9.080000877380371,7.900000095367432,8,7.800000429153442,7.700000286102295,8.300000190734863,6.961000442504883,9.060000419616699,4.25,11.70000076293945,6.100000381469727,5.700000286102295,7.000000476837158,6.000000476837158,8.509500503540039,9.641000747680664,5.180000305175781,5.462000370025635,5.336000442504883,6.900000095367432,11.00000095367432,9.544500350952148,11.21000099182129,5.410000324249268,4.78000020980835,4.850000381469727,6.105000257492065,6.150000333786011,6.380000114440918,6.390000343322754,6.180000305175781,4.090000152587891,4.820000171661377,4.080000400543213,4.830000400543213,5.540000438690186,5.630000114440918,6.290000438690186,6.320000171661377,4.790000438690186,5.320000171661377,5.615000247955322,6.040000438690186,6.460000514984131,3.250000238418579,4.600000381469727,5.190000057220459,5.560000419616699,6.000000476837158,6.210000514984131,5.790000438690186,5.960000514984131,6.165000200271606,6.180000305175781,3.860000133514404,4.240000247955322,4.740000247955322,5.540000200271606,5.920000076293945,6.110000133514404,3.705000281333923,5.400000333786011,6.650000095367432,6.68000054359436,7.130000114440918,5.460000038146973,5.980000495910645,6.520000457763672,7.220000267028809,12.38400030136108,5.239500284194946,10.25300073623657,11.47850036621094,8.042000770568848,11.75850057601929,10,8.778000831604004,13.00000095367432,8.973999977111816,9.65000057220459,11.35000038146973,10.64900016784668,10,11.24650049209595,10.9680004119873,9.116500377655029,9.749000549316406,9.386000633239746,10,9.90000057220459,10.05700063705444,10.40250015258789,11.33600044250488,13.00000095367432,14.00000095367432,8.860000610351562,8.24000072479248,8.265000343322754,9.24000072479248,9.24500036239624,9.380000114440918,4.130000114440918,8.510000228881836,8.850000381469727,8.050000190734863,8.325000286102295,8.40500020980835,7.560000419616699,4.050000190734863,6.080000400543213,9.28000020980835,9.355000495910645,8.190000534057617,8.140000343322754,10.15850067138672,11.09000015258789,10.10300064086914,10.71500015258789,13.2140007019043,15.14400100708008,15.4680004119873,10.47000026702881,11.19300079345703,10.27000045776367,10.43000030517578,12.04000091552734,10.47000026702881,13.11750030517578,10.93000030517578,10.67000007629395,12.89000034332275,13.77000045776367,11.80000019073486,10.50000095367432,13.26000022888184,11.11500024795532,12.29200077056885,14.08100032806396,11.80700016021729,10.82700061798096,11.14400005340576,10.80000019073486,14.37500095367432,11.22000026702881,9.200000762939453,9.166000366210938,9.53600025177002,8.222000122070312,11.04000091552734,10.43000030517578,14.03100109100342,10.70000076293945,11.10550022125244,12.62700080871582,11.29000091552734,11.79000091552734,9.503000259399414,8.15000057220459,10,8.782000541687012,10.34800052642822,10.05200052261353,10.13700008392334,9.949000358581543,9.800000190734863,10.11800003051758,10.75800037384033,10.55100059509277,10.25700092315674,9.122000694274902,8.720000267028809,9.629000663757324,12.00000095367432,13.45500087738037,10.67000007629395,10.40000057220459,10.94800090789795,11.01000022888184,13.30000019073486,10.77000045776367,10.1850004196167,10.60000038146973,11.03600025177002,15.40000057220459,10.58100032806396,17.33100128173828,16.0310001373291,16.32600116729736,15.47900104522705,15.02400064468384,14.76500034332275,14.05900096893311,8.803000450134277,9.583000183105469,9.213000297546387,7.90000057220459,9.581000328063965,10.24000072479248,10.3700008392334,11.24000072479248,9.867000579833984,9.28600025177002,16.70600128173828,16.35099983215332,16.52000045776367,14.39000034332275,16.23100090026855,15.50450086593628,14.60050058364868,15.00800037384033,14.8700008392334,12.88000106811523,16.63000106811523,16.65000152587891,14.73550081253052,16.65999984741211,15.40000057220459,16.88300132751465,16.29000091552734,16.67000007629395,15.22900104522705,16.4010009765625,13.93600082397461,12.55100059509277,16.93000030517578,13.16200065612793,16.11000061035156,16.83100128173828,16.5,15.39100074768066,14.07500076293945,14.61200046539307,12.07000064849854,16.42000007629395,16.48050022125244,15.80000114440918,12.13900089263916,16.00100135803223,10.93000030517578,11.26500034332275,11.34400081634521,10.49050092697144,10.40000057220459,11.04000091552734,10.90000057220459,10.60000038146973,11.80000019073486,11.40000057220459,11.30000019073486,7.685500383377075,10.71750068664551,6.522000312805176,8.26300048828125,12.41700029373169,12.70000076293945,10.06100034713745,9.590000152587891,5.404500246047974,6.625000476837158,7.333000421524048,6.019000053405762,5.475000381469727,6.064000368118286,5.896500110626221,5.81000018119812,8.523500442504883,6.058000326156616,5.371500253677368,5.624500274658203,11.00350046157837,8.034000158309937,11.8390007019043,5.516000270843506,5.629000186920166,5.39900016784668,6.164000511169434,5.275500297546387,5.643500328063965,6.444000244140625,5.472000122070312,11.67000102996826,10.63300037384033,5.512500286102295,6.13700008392334,5.287000179290771,6.90500020980835,7.232000350952148,6.37000036239624,10.80400037765503,8.700000762939453,9.023000717163086,9.390000343322754,9.630000114440918,11.59500026702881,7.878000259399414,12.11550045013428,12.67900085449219,12.9370002746582,9.560000419616699,11.22000074386597,10.17000007629395,7.915000438690186,3.81000018119812,5.110000133514404,5.070000171661377,6.290000438690186,10.6200008392334,6.650000333786011,6.660000324249268,6.890000343322754,4.770000457763672,4.910000324249268,5.800000190734863,9.590000152587891,12.09000015258789,4.660000324249268,6.320000171661377,9.110000610351562,4.740000247955322,9.580000877380371,5.87000036239624,8.180000305175781,7.840000152587891,7.060000419616699,6.770000457763672,5.230000019073486,5.220000267028809,6.070000171661377,5.930000305175781,6.080000400543213,7.78000020980835,5.820000171661377,7.060000419616699,4.730000019073486,9.720000267028809,5.250000476837158,5.330000400543213,5.400000095367432,5.520000457763672,5.810000419616699,6.060000419616699,5.320000171661377,4.988500356674194,4.820000171661377,4.680000305175781,4.216000080108643,5.190000057220459,6.470000267028809,6.250000476837158,8.345000267028809,8.465000152587891,10.02000045776367,10.44000053405762,8.700000762939453,10.3700008392334,14.55000066757202,13.0450005531311,13.36000061035156,8.5,9.050000190734863,9.090000152587891,8.40000057220459,8.800000190734863,9.830000877380371,10.10000038146973,8.700000762939453,9.590000152587891,10.6870002746582,7.258000373840332,12.99000072479248,10.20000076293945,12.54000091552734,12.10000038146973,10.70000076293945,13.3100004196167,10,12.80000019073486,11.00000095367432,11.13000011444092,12.30000019073486,10.89000034332275,12.30000019073486,12.10000038146973,12.70000076293945,10.97000026702881,10.97000026702881,9.460000038146973,9.940000534057617,10.51000022888184,10.24000072479248,9.390000343322754,7.190000534057617,9.881000518798828,14.99000072479248,15.32000064849854,14.09900093078613,12.10000038146973,11.23550033569336,4.576000213623047,9.593000411987305,10.43000030517578,11.03000068664551,9.939000129699707,9.134000778198242,9.070000648498535,10.66200065612793,11.03000068664551,11.30000019073486,9.300000190734863,9.13700008392334,10.8720006942749,10.03000068664551,10.47000026702881,8.08750057220459,13.65600061416626,9.098000526428223,9.443000793457031,11.10000038146973,10.40000057220459,8.504000663757324,10.64500045776367,10.59600067138672,5.713000297546387,5.840000152587891,10.85300064086914,16.81000137329102,4.702000141143799,3.31000018119812,7.03600025177002,8.409000396728516,7.982000350952148,7.701000213623047,7.459000587463379,7.265000343322754,6.790000438690186,8.020000457763672,9.010000228881836,6.562000274658203,4.854000091552734,7.810000419616699,4.708000183105469,3.694000244140625,7.916000366210938,5.564000129699707,5.625000476837158,4.160000324249268,6.13700008392334,4.953000068664551,7.689000129699707,5.857000350952148,4.53000020980835,5.078000068664551,4.849000453948975,5.133500337600708,5.51200008392334,4.123000144958496,4.894000053405762,5.62000036239624,5.300000190734863,4.452000141143799,4.921000003814697,4.517000198364258,6.809000492095947,6.734000205993652,4.378000259399414,4.64900016784668,8.532000541687012,9.670000076293945,3.573000192642212,9.070000648498535,10.91250038146973,9.496000289916992,3.701000213623047,3.31000018119812,4.116000175476074,4.01200008392334,3.675000190734863,5.216000080108643,3.558000087738037,5.013000011444092,3.438000202178955,15.40700054168701,8.10200023651123,19.6465015411377,9.590000152587891,5.772000312805176,6.002000331878662,5.677000045776367,6.47700023651123,3.204500198364258,7.821000337600708,7.566500425338745,5.214000225067139,6.651000499725342,8.636000633239746,8.281000137329102,8.751500606536865,7.941500425338745,13.37400054931641,14.43950080871582,14.09700107574463,14.47300052642822,13.62700080871582,14.07300090789795,8.644000053405762,6.585000276565552,7.833000183105469,7.547000408172607,18.73050117492676,7.75700044631958,5.157000064849854,6.720000267028809,7.210000514984131,8.054000854492188,13.81550073623657,8.70650053024292,4.961000442504883,7.151000499725342,10.33750057220459,7.042000293731689,5.539000034332275,5.686000347137451,2.282000064849854,2.259999990463257,2.348000049591064,2.265000104904175,8.601000785827637,7.949500322341919,9.454000473022461,8.767000198364258,9.282999992370605,6.863500356674194,7.163500308990479,6.075000286102295,6.184000492095947,5.653000354766846,3.547000169754028,3.544000148773193,3.878000259399414,9.27500057220459,8.686000347137451,10.08800029754639,8.834000587463379,8.662500381469727,8.013999938964844,8.601000785827637,8.03000020980835,7.135000228881836,5.233500242233276,6.866000175476074,4.042000293731689,4.803000211715698,5.767000198364258,8.432000160217285,7.72700023651123,7.524500370025635,8.022000312805176,8.334500312805176,8.215000152587891,4.073000431060791,3.69100022315979,7.349500417709351,6.868000507354736,7.17650032043457,3.375000238418579,3.44100022315979,3.898000240325928,4.068000316619873,13.13000106811523,7.685500383377075,10.78800010681152,9.630000114440918,8.24000072479248,11.75550079345703,3.682000160217285,3.802000284194946,3.816500186920166,5.446000099182129,4.636000156402588,7.103000164031982,3.654000282287598,9.569000244140625,6.443000316619873,5.706000328063965,3.306000232696533,3.277000188827515,3.579000234603882,4.883000373840332,8.020000457763672,4.389000415802002,4.951000213623047,12.72850036621094,5.073000431060791,9.610000610351562,7.75700044631958,7.421500205993652,7.295000314712524,2.811000108718872,8.060000419616699,12.29300022125244,15.72800064086914,15.6510009765625,11.23000049591064,10.20000076293945,12.70300102233887,9.553000450134277,11.00000095367432,6.596000194549561,8.800000190734863,10.19400024414062,10.67400074005127,9,12.03300094604492,4.610000133514404,9.62600040435791,11.0600004196167,14.82900047302246,11.10000038146973,11.21300029754639,12.00000095367432,13.20000076293945,13.40000057220459,10.98000049591064,9.997000694274902,9.692000389099121,9.270000457763672,10.72900009155273,10.14500045776367,9.305000305175781,10,11.51000022888184,9.100000381469727,9.860000610351562,12.60000038146973,10.27000045776367,9.40000057220459,9.429000854492188,9.550000190734863,2.53600001335144,4.173000335693359,2.572000026702881,3.391000270843506,5.26800012588501,6.875500202178955,4.314000129699707,5.812000274658203,2.680000185966492,2.400000095367432,4.190000057220459,3.410000085830688,3.81000018119812,4.144000053405762,-0.3030000030994415,3.034500122070312,3.632000207901001,3.651000142097473,4,5.573500156402588,5.047000408172607,5.152000427246094,3.716000080108643,3.745500206947327,3.201000213623047,2.502000093460083,3.000000238418579,2.282999992370605,3.564000129699707,2.846000194549561,3.374000072479248,3.62250018119812,6.39400053024292,3.16100025177002,2.050000190734863,2.346000194549561,3.646500110626221,2.925000190734863,6.13450026512146,7.27750039100647,13.47000026702881,9.90000057220459,10.25000095367432,10.70000076293945,12.02000045776367,12.10000038146973,12.30000019073486,10.60500049591064,9.976000785827637,9.40000057220459,14.7760009765625,8.574000358581543,11.95900058746338,10.10000038146973,8.100000381469727,9.185000419616699,9.335000514984131,11.57000064849854,12.30000019073486,12.44000053405762,12.08000087738037,10.17000007629395,10.92000007629395,19.55000114440918,13.1200008392334,13.23000049591064,12.94000053405762,12.11500072479248,6.700000286102295,8,9.800000190734863,11.70000076293945,11.76000022888184,8.515000343322754,9.90000057220459,14.10000038146973,5.400000095367432,9.200000762939453,14.57900047302246,13.90000057220459,8.980000495910645,9.260000228881836,15.40000057220459,10.07100009918213,7.40000057220459,8.430000305175781,6.800000190734863,6.500000476837158,8.207000732421875,6.100000381469727,7.988000392913818,10.08000087738037],[11.9657126339352,12.98917811194673,10.16004306482197,13.18118851863561,9.452047905581194,12.05694271449663,12.02268781639163,10.55050640523199,11.41609336305995,10.40989809142551,10.83458019414283,11.11915489209979,11.60353536123093,12.75660873710066,9.89724257220843,12.19948625788827,10.1540889220272,9.458961322784125,9.753136350118236,11.06992189081286,10.21072422709176,9.826593595496044,9.359375430271029,9.775673662633748,9.084314119582082,9.106796549723565,9.052083727748444,8.960000424725669,9.346465091512661,7.76805425021341,9.793696813930721,5.80000022479466,11.18333379427592,8.700000656975639,6.93846184015274,9.381818554618143,7.237683453776537,8.079977666789835,9.689303405292232,6.498226814671975,6.870835316821074,6.936761194364405,6.880677415019211,10.38975390848775,9.472647291405735,10.57182051740108,8.261655565325556,7.341496952232861,7.804460835006597,8.240240765534018,8.49876148242965,8.885600417455038,8.184709360990574,7.566397865366492,6.535085010579077,7.234566842862593,6.568348977612246,7.835532211084315,8.271292914135927,8.272933097054752,8.93502326534219,8.401919621409792,8.055208732063571,8.22798885148147,8.482828659593419,8.75011671109255,8.936103006509635,5.196207131462535,7.888943524137745,8.161163197375487,8.438937577936384,8.45845854229864,8.780822950008112,7.861648111180826,8.261700388789176,8.28105301982478,7.902308097252479,6.813645150616904,7.229147604154062,7.64139104791183,7.906618030047884,7.987236569874251,8.550437567663975,6.257500237361952,7.575526655766001,8.433690046441965,7.620000366291968,7.28274424143923,8.075369484472596,8.019394334157308,7.831718592299628,7.460708571560997,10.70487896095909,6.576025934787229,10.12774387192991,10.53248941825256,9.044367381913977,10.66261682019627,9.967664750670803,8.567278602184096,13.75330040878579,9.040953986676534,8.948671559660381,10.32662322156554,9.84067817290617,9.553132200087209,9.954492458418368,9.803079460845773,9.508441686527012,9.896733997254868,9.60108450299809,9.729307877326514,9.197228833970279,9.432064401216083,9.790329474263192,10.10884195562343,11.22392468138036,12.35618387505227,9.387102938688265,9.330839149413571,9.070000450378695,9.869920518398285,9.633672358118929,9.778745998458195,4.439545663920316,9.372741194124576,9.428788295015693,8.729967091638182,9.097636321397578,9.295316901765291,8.609552660984779,3.764193696360434,7.82831208427231,9.911929008683988,9.565417191220654,9.529022210318109,8.674420717833698,10.12454232192387,10.42539296565657,10.0913073730328,10.41879328520701,13.74040601436231,14.46790696981657,14.7855125829307,10.15953730120338,10.84905005568038,10.39810351136683,10.43259364279464,11.1676954574841,10.37052097060775,13.19183691975641,10.4456981537185,10.72351285504348,11.73163777140844,11.73913614487244,11.53446749660498,10.70084740306442,12.88384024201566,10.86970844053218,11.41301857976415,12.74900864888214,11.05063584295869,10.57803138366943,11.08493539219327,10.70548831953935,13.22162276638879,10.82345961766938,10.11818216063759,9.980627302097883,10.2924447594465,9.153390787235677,10.68197316337519,10.464592481257,13.11870405500982,11.00193188241943,10.82095988237775,11.67822084054461,11.02366588913393,11.19207542137454,9.742292081316313,9.372948319143594,9.461376524846488,9.35891978053183,10.07801842566382,9.9243431893735,10.00916636024426,9.821150381211439,9.61706446769012,9.998099304701064,10.80049272711889,10.22385935720267,10.01063624457453,9.266020592782546,8.986024592449434,9.48156106363947,11.70769825785479,13.19398763136974,10.31027896939199,10.29751690479701,11.06508980904307,10.57377249012737,12.19078080208747,10.76842550818157,10.18652173756909,10.26583437423665,10.50859223019855,12.8720106272664,10.56380977497905,15.37966377423651,15.68538445591829,15.62003607135542,15.20065752564177,14.78461390024346,14.54587796896319,14.03384100241104,9.664150509834034,9.562337020356814,9.384734670202063,8.769419726988092,9.571648903140025,10.11913235321517,10.43053412659254,10.80451371044252,10.41046649026838,9.512815380263515,16.78529142278007,16.61463765141764,16.59160191549328,14.66222753173042,16.24530806018664,15.5644624450696,14.90011887744094,15.2204534077287,14.83137221070494,13.12736696658034,16.62754798992061,16.47304061462599,14.66464216754266,16.57829577767464,15.84972761232681,17.16556081814236,15.97381579273879,16.78122091622837,15.30083746764367,16.15863057065439,14.16577795186468,11.61318094741219,17.02150036902843,13.27587340757647,16.05924627701095,15.8138103238108,16.2126366679588,15.38968849092526,13.81292715352993,14.47083852708011,11.36747360518116,16.49025132200423,16.59709878970508,15.56474286920791,12.26331038255969,16.17886362753592,11.144115092097,11.09064524985829,11.13376812087033,10.93630632903517,10.63476292620419,10.77839257393197,10.71964507167498,10.90905493957565,11.62774996480037,11.12499158379948,10.9223916536314,7.765641900728333,9.284195632469363,7.590177674665519,7.9037503765689,10.79031294584274,12.52070210584954,9.584279531656309,8.473587158297704,6.618966564810349,6.72732666866508,7.833089253637525,6.779136046025548,6.102002253213267,6.8447524625012,6.79223783214887,7.088687139553028,8.96166707788195,6.891962284627168,6.329500309002944,6.925004840971114,10.51711167229546,8.909652602845345,11.6247347698936,6.433514680344457,6.522996032339895,6.682718160241471,6.289148321220591,5.984264524002385,6.480691572963791,6.231813670532949,5.933180352280423,11.60481634892915,10.30421416779869,6.239038756769946,6.587147775333598,5.583225804903387,6.346128271089346,6.803912645246689,6.439613726192389,10.31247308809463,9.352668773367023,9.76043097202809,9.749222130945393,9.900962990859139,11.11130355806845,8.639339695414995,11.86014304171909,12.65287566102642,11.73791445138562,9.891286012400805,11.09707578842375,9.945541556519228,9.249303024855015,6.772073576672816,6.37952825907696,5.437988280537594,7.894567338594301,12.14299344903216,6.711256052701149,7.31522113617537,7.443232757732013,6.349688950477471,6.446498591621665,6.392689478366139,11.10534704970841,9.309553129896045,6.872044342868733,7.961975847597691,8.858398547274241,8.465798034742186,10.06054326251978,9.762340854879811,8.337269668637472,9.254395109728764,10.37697707775027,7.759296693708058,6.413366957931576,6.411204845856198,6.933440169627617,6.319194311882133,6.601721083188986,8.810938789637307,7.716031036038279,7.983984546577674,6.374123662496041,8.841315906610287,6.209510831553871,6.925582575035773,6.628232517418046,6.4464893271276,6.786931183201926,8.563970898990439,6.902650392450188,6.522524474699701,6.12395801512266,6.180836993681678,6.69798661128414,6.819544920840277,6.350035617124393,7.871965163383256,9.133021890111497,9.217668193636225,9.883070298816916,10.29704160087462,8.972275220574314,10.27170490484348,13.27058762869557,11.87934040349241,11.5913701036783,9.843028372926881,9.919719510580403,9.998949404259912,9.291129040540778,9.761258572900299,9.855695220008808,10.13018859678803,9.072900584124657,9.897875202089464,10.60897954531583,9.0878412634728,12.07828423709747,10.13445167636453,11.92572173663055,11.04198442920594,10.42535801857749,12.21270510041115,10.09731681371308,12.06126691637511,10.63243717945452,10.83400614074415,10.82775376861841,10.69955255063561,11.86892869579258,11.6746182613287,11.83921616159233,10.73765695493352,10.80010840736959,10.07260587315503,10.24780499363993,10.55866684546856,10.52053203837932,9.879910579348417,8.252560726064418,9.923241310206857,13.53174041070431,13.66125010179002,13.67521851131498,11.38649686588368,10.28892990578471,5.224590204991271,9.980148518224951,10.38368401080925,10.75561216055854,9.854593236955433,9.479675431285566,9.247554690548386,10.30241683683194,10.43964883824106,10.88337217344515,10.48018272693707,9.59636826103565,10.58752625216353,10.29566464682416,10.29438075850685,9.149771117095918,12.29886328951787,9.817347110535781,9.488827177792201,10.46059977873277,9.919425083513394,8.977175941321653,10.21685667790767,10.13688556248285,5.958880390276102,5.916372356621526,12.7700428547154,13.37910739426474,5.841031588112617,4.657529141988864,6.522734631741549,9.176977360007765,8.794865886055719,8.437306567884352,7.922432009626448,7.513129103953714,8.061801665917427,9.244969016084571,9.818410656730265,8.665411504514635,6.055365838799188,9.17717883626619,6.109687178047699,3.567028219187963,8.415397262931686,5.921356943066741,5.254037820442767,4.182521934132814,6.063138559148108,4.922942364514582,8.475739384345868,5.860381247606185,4.567673406184393,6.161656335871003,4.472119139787493,5.024042646868865,5.627216631321962,5.39382093615729,4.763312479917388,5.515448104928764,5.389447276025171,4.266203980712768,5.417192497774668,5.57351778627945,7.322132394255797,7.313623252742011,5.164397005884247,5.119132076491872,9.20211104243727,10.29052240873824,3.731039822123677,9.806120417086076,10.712846865606,10.04236488991981,3.61617554948473,3.362983783145389,4.352474357522977,3.706169193218675,3.99157351317503,5.122609756449402,3.435410730147163,5.066822228215724,3.300344911229359,13.45417525682835,8.974532542783777,16.52450621783078,10.15637592597645,6.376366954953607,6.431695100357461,6.354165987712873,7.146746621667627,3.243895253568303,9.119372860450984,8.969314308453786,6.234937494934998,8.988776896611538,8.906599539314314,9.264873030666294,9.513591089981492,8.45621378009989,12.59639905393124,14.35254236062368,13.20495101834132,13.5064749445234,13.2376397140044,13.15018105327635,9.703000447870075,7.186856531300517,8.119615661910439,8.124412317826167,15.32788790425947,10.53534986671195,6.192133657557197,8.017171327738035,7.992759780296607,8.424625606992912,13.70871316194534,9.415133520308546,6.390332194796805,7.336156403248244,10.6453837459464,8.925747971048933,6.896492804432592,6.180167108427646,3.079494814580801,3.07320191502483,3.133294032671051,3.063487026023465,9.254747596045711,8.432249008505579,9.49200038338701,10.17929139137268,9.000041316358411,7.104150693399626,8.18805412062396,7.894348879372582,8.393136671603068,7.511059028656262,3.658211914167079,3.550221147305578,3.966533465485522,9.710533653249453,9.455132887311649,10.56097249434642,9.632851885134228,9.460630528278093,10.08938595185797,8.62045782258124,9.429133580762224,8.422435012538877,6.700505060986731,6.660150494877621,4.971159168604221,5.878443027412846,6.321680004242527,9.358157629547112,9.06441784973461,9.032748448908329,9.255767440740145,9.183208116285142,9.238886207731804,4.453706215068808,4.094919326463883,8.013814172798572,7.86550468359989,8.39197673817101,4.433974462145474,3.479550691521429,3.752542850986917,3.67032775104921,12.92627583512473,8.044685376164381,10.83092115078883,10.29967443397584,9.235908995002983,8.499936045530964,3.833499260764655,4.141476551781191,4.062953372828707,5.353755380009109,4.741062700109236,6.862072049024203,4.407193609076836,10.11604137097408,7.008709137064915,6.315345546197661,3.550791553312116,3.508587993477587,3.834389729713652,5.093366212978933,9.011761004318833,5.899568178409453,6.267147018086963,12.11101486658944,4.963685298529197,10.14426154357556,8.355903483269973,8.009481203804414,7.643004561284674,2.81374581620611,8.815441580572358,11.4688295490628,15.10323809364908,14.90370908179477,10.69000351758086,10.58371063956008,11.63490081081389,10.86538361935389,10.7262989048636,7.96898713648714,9.587500433437526,11.12886961033544,10.81687204205886,10.17558876866394,11.5518477546465,6.551360299110413,10.62215128085037,11.15453402281186,12.5895032324289,11.35797293004732,10.91762739437398,11.34378541935618,11.98713351426696,12.2605090256877,10.11799811722217,9.829220788966449,9.564807580615494,9.823295202317356,10.41687570135916,10.62596819143807,10.19560449459409,10.33413702991593,11.37710366791507,10.11586060849629,10.20354989193198,11.64033889776129,11.01588951879828,9.443565356771689,9.359567644554602,9.584788229296969,4.978033769064109,4.911753984294404,3.18746455576169,5.906418353020148,5.563160310314643,7.421544513297134,5.335540386697433,6.457009006847287,2.724010655911345,3.959491503465146,5.251648069775037,3.794408865667035,4.990059060988083,4.714249674642939,-0.3030540620958483,2.879427404837175,4.858994315859139,4.683157044920054,5.719526015636435,5.476927995681763,5.357481324417495,5.239606274108883,5.02513318115679,4.755168155612076,4.540532843274505,3.221620652529833,3.765594367560149,4.091222865982094,3.670911073890992,3.43806736726358,5.170680739117797,4.345159968147716,6.823674895858806,3.455360357160535,2.966589706675955,2.873633453125231,4.775448024464579,3.748572208384751,6.961930154681405,7.378926982886507,12.14912353152105,9.616273918229913,9.977861563513347,9.916011202303512,10.95634456592461,11.32244156550589,11.33168213587495,10.41653937345406,10.2348238404752,9.56364987395113,14.07637153447548,9.000202951721208,10.93875307565588,9.893441517970391,8.755290947029795,9.081731845171669,9.378080814494751,10.90487760844975,11.28020363086041,10.99814682699557,10.88786554556059,10.29540078909137,10.52325995388833,19.55000114440918,11.401510015143,11.59644059728675,11.45310684458486,11.0244904487936,8.909571562145928,9.49812466715775,10.1895241472921,11.15772590499135,11.00451855606658,9.091698426214483,9.974888710796302,14.1246114553343,8.045126769186437,9.559775996302031,14.38642889270214,13.06020901716966,9.385451024065894,9.730799596799661,15.22520347973461,9.925256578114976,8.487561857248467,9.789767323636882,8.190672849035185,8.305512239596862,8.9933784140513,8.105044023002463,9.56887061279823,10.3041904989597],[21.40000152587891,21.30000114440918,23.56000137329102,21.30600166320801,22.90800094604492,21.80000114440918,22.00000190734863,22.51200103759766,22.79900169372559,22.60100173950195,22.62100028991699,22.16600036621094,21.40000152587891,21.71200180053711,22.47000122070312,22.63000106811523,23.64000129699707,21.10000038146973,23.13000106811523,27.30000114440918,24.33100128173828,23.30000114440918,22.80000114440918,23.34000205993652,22.80000114440918,22.60000038146973,19.5,22.60000038146973,21.70000076293945,20.91500091552734,23.34000205993652,16,17.60000038146973,18.40000152587891,15.90000057220459,21.70000076293945,22.00000190734863,17.41000175476074,23.00000190734863,19.23000144958496,19.9900016784668,19.12600135803223,18.19000053405762,22.73200035095215,23.00000190734863,22.92200088500977,19.33000183105469,19.58000183105469,18.38000106811523,18.57000160217285,17.73000144958496,17.46000099182129,16.84000015258789,17.10000038146973,18.11000061035156,18.41000175476074,19.2400016784668,18.67000007629395,17.90000152587891,17.72000122070312,17.9900016784668,17.98000144958496,18.28000068664551,17.82000160217285,17.72000122070312,18.11000061035156,18.1200008392334,19.29000091552734,19.17000007629395,19.61000061035156,19.55000114440918,19.38000106811523,19.40000152587891,17.72000122070312,17.84000015258789,17.28000068664551,17.32000160217285,19.18000030517578,19.02000045776367,18.3700008392334,18.15000152587891,18.46000099182129,18.48000144958496,18.77000045776367,19.48000144958496,19.08000183105469,17.93000030517578,18.23000144958496,19.68000030517578,18.89000129699707,17.95000076293945,18.52000045776367,23.57200050354004,15.59000110626221,23.27200126647949,23.40000152587891,23.26000022888184,23.35000038146973,23.00000190734863,22.43100166320801,18,22.28400039672852,22.25000190734863,23.12900161743164,22.50000190734863,23.37300109863281,22.48600196838379,22.66000175476074,23.48300170898438,23.11000061035156,23.09000015258789,22.64000129699707,22.7140007019043,23.08200073242188,22.1200008392334,21.48000144958496,20,20.38000106811523,20.58000183105469,20.22000122070312,21.7400016784668,19.73000144958496,22.83000183105469,21.29000091552734,7.550000190734863,20.56000137329102,22.03000068664551,21.94000053405762,21.64000129699707,21.64000129699707,20.52000045776367,4.580000400543213,21.60000038146973,22.17000198364258,20.23000144958496,20.16000175476074,20.70000076293945,21.50000190734863,22.30000114440918,22.52000045776367,23.50000190734863,18.98100090026855,19.48000144958496,19.57900047302246,22.35000038146973,24.13800048828125,23.30000114440918,26.89800071716309,23.96200180053711,23.11000061035156,19.1560001373291,22.77000045776367,24.1460018157959,22.052001953125,23.80000114440918,26.50000190734863,25.40000152587891,25.40000152587891,24.90000152587891,24.40000152587891,23.00200080871582,19,19.77800178527832,26.39800071716309,25.3700008392334,20.14200019836426,24.00000190734863,21.60000038146973,23.80000114440918,24.30000114440918,24.19000053405762,24.77000045776367,25.95000076293945,23.60200119018555,24.40000152587891,24.70000076293945,24.07000160217285,25.40000152587891,25.40000152587891,18.9630012512207,18.99300003051758,18,23.16200065612793,22.68000030517578,22.16000175476074,22.92500114440918,24.90000152587891,22.18000030517578,22.75700187683105,18.90700149536133,23.52800178527832,23.60700035095215,23.19000053405762,23.95300102233887,23.55000114440918,21.90000152587891,23.38000106811523,23.61000061035156,23.80000114440918,13.40900039672852,23.77000045776367,22.17300033569336,23.89000129699707,24.30000114440918,23.71000099182129,23.95000076293945,22.50000190734863,24.10000038146973,20.67200088500977,23.82000160217285,23.85000038146973,22.53000068664551,22.9900016784668,22.84000015258789,21.07000160217285,22.50000190734863,21.90000152587891,22.22000122070312,22.45200157165527,22.1200008392334,24.20000076293945,21.94500160217285,21.57300186157227,25.20000076293945,22.36000061035156,22.40000152587891,22.50000190734863,23.26100158691406,22.60000038146973,21.70000076293945,22.9940013885498,23.08300018310547,22.89500045776367,23.39000129699707,23.41900062561035,23.10000038146973,23.34000205993652,23.58700180053711,23.56800079345703,23.75600051879883,23.44000053405762,23.25000190734863,21.50000190734863,22.74700164794922,22.35100173950195,23.09000015258789,23.06300163269043,22.96000099182129,23.17200088500977,23.54800033569336,23.70000076293945,23.11000061035156,23.31100082397461,23.45000076293945,23.52000045776367,23.77000045776367,23.67000198364258,24.18000030517578,24.28000068664551,21.39000129699707,20.6200008392334,26.50000190734863,24.90000152587891,24.40000152587891,26.39800071716309,25.3700008392334,24.77000045776367,25.95000076293945,24.40000152587891,24.70000076293945,25.40000152587891,25.40000152587891,9.565999984741211,10.80900096893311,10.06900024414062,10.26200008392334,12.78700065612793,12.76700019836426,10.96500015258789,10.35200023651123,9.78600025177002,9.256999969482422,10.86000061035156,10.14500045776367,10.35000038146973,10.78400039672852,10.54400062561035,10.04700088500977,11.36300086975098,10.87900066375732,9.800000190734863,10.82300090789795,11.46300029754639,11.35500049591064,12.2160005569458,10.01500034332275,9.508000373840332,9.715000152587891,9.243000030517578,9.724000930786133,9.663000106811523,8.704000473022461,9.046000480651855,11.69000053405762,10.85200023651123,9.576000213623047,9.478000640869141,8.14900016784668,8.296000480651855,9.28700065612793,8.929000854492188,14.79100036621094,24.80000114440918,24.10000038146973,22.80000114440918,22.77000045776367,22.89000129699707,22.34000015258789,22.69000053405762,21.01000022888184,20.90000152587891,22.80000114440918,23.3700008392334,22.64000129699707,20.32000160217285,21.33000183105469,20.71000099182129,12.65000057220459,21.14000129699707,19.01000022888184,20.31000137329102,19.59000015258789,21.16000175476074,21.66000175476074,21.46000099182129,19.68000030517578,21.57000160217285,18.88000106811523,21.90000152587891,20.69000053405762,21.76000022888184,20.13000106811523,20.34000015258789,19.70000076293945,19.77000045776367,19.64000129699707,19.30000114440918,19.25,19.26000022888184,18.57000160217285,19.63000106811523,20.80000114440918,19.14000129699707,21.7400016784668,22.30000114440918,22.08000183105469,21.68000030517578,22.84000015258789,21.31000137329102,21.29000091552734,21.52000045776367,21.10000038146973,22.14000129699707,22.76000022888184,22.08000183105469,21.59000015258789,22.16000175476074,20.66000175476074,22.56000137329102,20.91000175476074,20.9900016784668,23.30000114440918,21.66000175476074,20.90000152587891,21.07000160217285,22.57000160217285,22.36000061035156,22.69000053405762,24.51000022888184,24.00000190734863,23.31000137329102,22.40000152587891,22.10000038146973,21.70000076293945,21.66000175476074,20.90000152587891,21.15000152587891,22.57000160217285,22.36000061035156,22.69000053405762,22.09000015258789,24.16000175476074,22.38000106811523,20.50000190734863,22.00000190734863,22.90000152587891,21.50000190734863,22.2400016784668,21.40000152587891,22.05000114440918,22.90000152587891,23.60000038146973,21.80000114440918,23.80000114440918,23.70000076293945,23.80000114440918,22.40000152587891,23.9900016784668,23.9900016784668,23.19000053405762,23.09000015258789,21.07000160217285,21.17000007629395,21.26000022888184,23.00000190734863,23.10000038146973,25.29000091552734,24.20000076293945,18.16000175476074,25.00000190734863,22.16900062561035,12.0290002822876,23.60000038146973,24.40000152587891,24.20000076293945,23.80000114440918,23.60000038146973,23.80000114440918,23.95200157165527,23.39800071716309,22.90000152587891,25.5840015411377,23.30000114440918,23.03900146484375,24.25900077819824,23.68500137329102,23.68500137329102,23.64400100708008,24.40000152587891,24.20000076293945,24.20000076293945,23.80000114440918,23.60000038146973,23.42800140380859,21.93500137329102,23.88000106811523,24.41000175476074,21.55000114440918,21.98200035095215,16.18100166320801,17.69400024414062,18.9060001373291,21.34200096130371,21.13600158691406,21.17200088500977,21.05600166320801,20.81000137329102,22.66000175476074,22.6830005645752,21.91100120544434,20.07700157165527,23.98600196838379,22.90000152587891,20.98300170898438,6.872000217437744,26.74700164794922,23.47000122070312,16.25200080871582,11.79100036621094,23.22100067138672,17.70000076293945,22.71600151062012,22.57400131225586,18.17700004577637,17.8430004119873,16.65299987792969,18.40900039672852,21.69100189208984,19.55600166320801,17.28700065612793,20.06800079345703,22.33600044250488,17.52300071716309,21.97100067138672,21.64500045776367,22.14700126647949,21.69400024414062,22.13800048828125,17.77500152587891,23.17600059509277,21.24800109863281,6.404000282287598,23.88500022888184,21.18900108337402,21.9940013885498,6.923000335693359,7.547000408172607,10.82500076293945,10.20700073242188,12.2790002822876,12.66900062561035,5.916000366210938,13.83600044250488,6.478000164031982,22.64200019836426,28.40000152587891,20.51600074768066,22.9060001373291,18.27300071716309,16.35600090026855,16.30400085449219,21.54100036621094,14.399001121521,22.89000129699707,20.74800109863281,18.59400177001953,19.71200180053711,21.28600120544434,20.28700065612793,20.9320011138916,22.48400115966797,15.33200073242188,16.71500015258789,15.28700065612793,15.71700096130371,16.0840015411377,15.22500038146973,20.53300094604492,20.5310001373291,22.13400077819824,20.27400016784668,20.50200080871582,24.7710018157959,20.53800010681152,22.73400115966797,22.56000137329102,22.46200180053711,15.29300117492676,22.21700096130371,21.11600112915039,20.54900169372559,21.79200172424316,21.30500030517578,18.20400047302246,18.32000160217285,4.714000225067139,4.871000289916992,5.093000411987305,4.866000175476074,20.83300018310547,20.29400062561035,20.45400047302246,20.72700119018555,20.42100143432617,11.31600093841553,20.35500144958496,20.49200057983398,20.0210018157959,20.02900123596191,9.815000534057617,5.822000503540039,12.48800086975098,22.73800086975098,22.77000045776367,23.29500198364258,22.68800163269043,22.40000152587891,12.38200092315674,19.71200180053711,20.60800170898438,21.21100044250488,20.66100120544434,17.13000106811523,17.29700088500977,17.19799995422363,17.12800025939941,20.77700042724609,22.02400016784668,22.57600021362305,21.69000053405762,22.13800048828125,21.45600128173828,17.65400123596191,18.1820011138916,21.34900093078613,20.69300079345703,21.01700019836426,21.59500122070312,10.50200080871582,6.490000247955322,6.912000179290771,17.07800102233887,11.76900100708008,21.40200042724609,25.85200119018555,22.03000068664551,11.78400039672852,11.12100028991699,13.23100090026855,11.61100101470947,11.31800079345703,11.85600090026855,21.19200134277344,21.23800086975098,22.03800010681152,20.17900085449219,14.4680004119873,13.00100040435791,12.91400051116943,12.06500053405762,12.00600051879883,20.68100166320801,21.58100128173828,21.69900131225586,20.92900085449219,5.777000427246094,21.75500106811523,20.4370002746582,20.03900146484375,20.57700157165527,2.837000131607056,22.29900169372559,23.93000030517578,22.16400146484375,22.54000091552734,24.00000190734863,23.68600082397461,22.59900093078613,21.54100036621094,22.01700019836426,20.59700012207031,20.30000114440918,24.49300193786621,23.54800033569336,23.20000076293945,23.83000183105469,22.79000091552734,24.03000068664551,22.45500183105469,23.17800140380859,25.2400016784668,22.87900161743164,23.90000152587891,25.00100135803223,25.20000076293945,22.76000022888184,23.66000175476074,19.43800163269043,24.18000030517578,23.90000152587891,23.68600082397461,22.02000045776367,24.70000076293945,24.49300193786621,24.40000152587891,25.2400016784668,25.10000038146973,23.4900016784668,23.15000152587891,23.66000175476074,19.44000053405762,17.80400085449219,15.4040002822876,15.07800102233887,16.5570011138916,21.5310001373291,18,20.87900161743164,18.4640007019043,8.427000045776367,18.33300018310547,18.82200050354004,21.20000076293945,18.79400062561035,18.78000068664551,-0.3020000159740448,3.379000186920166,16.23100090026855,19.7400016784668,21.15300178527832,15.98400115966797,22.00000190734863,22.35100173950195,22.25600051879883,21.14000129699707,19.27900123596191,14.07600021362305,21.52400016784668,15.69400119781494,16.69000053405762,17.55100059509277,18.12900161743164,19.50200080871582,20.68000030517578,21.10800170898438,19.9590015411377,18.92500114440918,20.15900039672852,21.4680004119873,18.42800140380859,19.82800102233887,24.40000152587891,24.00000190734863,25.81000137329102,22.90000152587891,25.29000091552734,23.80000114440918,23.70000076293945,25.30000114440918,23.33000183105469,23.70000076293945,22.99900054931641,22.90000152587891,23.10000038146973,21.04000091552734,22.34000015258789,21.54000091552734,21.39000129699707,22.6200008392334,23.71000099182129,23.57000160217285,23.94000053405762,24.45000076293945,22.31000137329102,21.90000152587891,22.95000076293945,23.88000106811523,26.26000213623047,23.69000053405762,24.60000038146973,24.00000190734863,23.00000190734863,24.00000190734863,22.60000038146973,22.60000038146973,22.60000038146973,21.70000076293945,20,22.20000076293945,19.95400047302246,19.93000030517578,22.20000076293945,23.10000038146973,21.80000114440918,22.50000190734863,22.00000190734863,24.81000137329102,21.90000152587891,22.20000076293945,24.30000114440918,24.40000152587891,24.20000076293945,22.13000106811523]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Platform<\/th>\n      <th># Observations<\/th>\n      <th>Min(Temp)<\/th>\n      <th>Median(Temp)<\/th>\n      <th>Mean(Temp)<\/th>\n      <th>Max(Temp)<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"searching":true,"paging":true,"info":true,"lengthMenu":[[10,50,100,-1],["10","50","100","All"]],"columnDefs":[{"targets":2,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 1, 3, \",\", \".\", null);\n  }"},{"targets":3,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 1, 3, \",\", \".\", null);\n  }"},{"targets":4,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 1, 3, \",\", \".\", null);\n  }"},{"targets":5,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 1, 3, \",\", \".\", null);\n  }"},{"className":"dt-right","targets":[1,2,3,4,5]},{"name":"Platform","targets":0},{"name":"# Observations","targets":1},{"name":"Min(Temp)","targets":2},{"name":"Median(Temp)","targets":3},{"name":"Mean(Temp)","targets":4},{"name":"Max(Temp)","targets":5}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":["options.columnDefs.0.render","options.columnDefs.1.render","options.columnDefs.2.render","options.columnDefs.3.render"],"jsHooks":[]}</script>
+</div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+</section>
+<hr />
+<section id="distributions-by-profile-over-time-and-location" class="layout-chunk" data-layout="l-body">
+<h2>3. Distributions by profile over time and location</h2>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<h3 id="year">Year</h3>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="bo_temp_files/figure-html5/unnamed-chunk-22-1.png" width="960" /></p>
+</div>
+<h3 id="month">Month</h3>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="bo_temp_files/figure-html5/unnamed-chunk-23-1.png" width="960" /></p>
+</div>
+<h3 id="longitude">Longitude</h3>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="bo_temp_files/figure-html5/unnamed-chunk-24-1.png" width="960" /></p>
+</div>
+<h3 id="latitude">Latitude</h3>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="bo_temp_files/figure-html5/unnamed-chunk-25-1.png" width="960" /></p>
+</div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+</section>
+<hr />
+<div class="sourceCode" id="cb7"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<!--radix_placeholder_article_footer-->
+<!--/radix_placeholder_article_footer-->
+</div>
+
+<div class="d-appendix">
+</div>
+
+
+<!--radix_placeholder_site_after_body-->
+<!--/radix_placeholder_site_after_body-->
+<!--radix_placeholder_appendices-->
+<div class="appendix-bottom"></div>
+<!--/radix_placeholder_appendices-->
+<!--radix_placeholder_navigation_after_body-->
+<!--/radix_placeholder_navigation_after_body-->
+
+</body>
+
+</html>

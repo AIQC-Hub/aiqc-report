@@ -1,0 +1,64 @@
+---
+title: "Practical salinity"
+output:
+  distill::distill_article:
+    toc: true
+    toc_depth: 2
+---
+
+```{r include = FALSE}
+knitr::opts_chunk$set(echo=FALSE)
+```
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+r_func_path <- "./_func"
+r_funcs <- c("libraries.Rmd", "common.Rmd", "common_bo.Rmd", "var.Rmd")
+```
+
+```{r, import, child=file.path(r_func_path, r_funcs)}
+```
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+# Path
+rsc_dir <- "/scratch/data/aiqc/merged/nrt_bo"
+#rsc_dir <- "./resources"
+
+# Variables
+var <- "psal"
+var_name <- "Practical salinity"
+var_label <- "Psal"
+
+# Data frame
+bo_file_name <- file.path(rsc_dir, "netcdf_nrt_bo.parquet")
+df_bo <- read_parquet(bo_file_name)
+
+```
+
+The page shows the basic analysis of `r tolower(var_name)` data from `r source`.
+
+---
+
+```{r, basic_info, results = 'asis'}
+res <- knitr::knit_expand(basic_info, var=var, var_name=var_name, input=input,
+                          input_name=input_name, input_url=input_url)
+cat(res, sep = '\n')
+```
+
+---
+
+```{r, summary_stats, results = 'asis'}
+src <- knitr::knit_expand(summary_stats, df=df_name, var=var, var_name=var_name,
+                          var_label=var_label)
+res <- knitr::knit_child(text = src, quiet = TRUE)
+cat(res, sep = '\n')
+```
+
+---
+
+```{r, distributions, results = 'asis'}
+src <- knitr::knit_expand(distributions, var=var, var_name=var_name)
+res <- knitr::knit_child(text = src, quiet = TRUE)
+cat(res, sep = '\n')
+```
+
+---

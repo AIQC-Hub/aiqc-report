@@ -2,4 +2,6 @@
 .Rhistory
 .RData
 .Ruserdata
-/.project
+.project
+_site
+.idea
