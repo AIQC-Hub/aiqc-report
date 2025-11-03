@@ -1,11 +1,21 @@
 ```{r, message = FALSE, warning = FALSE}
 
 # Common variables
-source <- "Baltic NRT in situ observations"
+source <- "Baltic Sea in situ NRT observations"
 input <- "BO data"
 input_name <- "netcdf_nrt_bo.parquet"
 input_url <- "./resources/netcdf_nrt_bo.parquet"
 df_name <- "df_bo"
+
+# Path
+rsc_dir <- "/scratch/data/aiqc/merged/nrt_bo"
+#rsc_dir <- "./data"
+
+# Data frame
+bo_file_name <- file.path(rsc_dir, "netcdf_nrt_bo.parquet")
+if (!exists(df_name)) {
+  df_bo <- read_parquet(bo_file_name)
+}
 
 # Time spans
 ts7889_from <- 1978

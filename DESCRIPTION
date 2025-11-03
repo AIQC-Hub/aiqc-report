@@ -1,0 +1,21 @@
+Package: insitu-nrt-report
+Title: In Situ NRT Summary Report
+Version: 1.0.0
+Authors@R: person("Takaya", "Saito", email = "takaya.saito@outlook.com", role = c("aut", "cre"))
+Description: R Markdown source for the in situ NRT summary report.\
+License: MIT
+Encoding: UTF-8
+Imports:
+    rmarkdown,
+    distill,
+    fontawesome,
+    kableExtra,
+    DT,
+    htmltools,
+    arrow,
+    tidyverse,
+    rlang,
+    ggpubr,
+    cowplot,
+    scales,
+    xaringanExtra

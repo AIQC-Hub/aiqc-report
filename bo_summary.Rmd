@@ -1,7 +1,7 @@
 ---
 title: "Summary of Baltic Sea (BO)"
 description: |
-  Summary report generated from a single Parquet file has been created from over 750 NetCDF files from Baltic Sea NRT in situ observations.
+  Summary report generated from a single Parquet file has been created from over 750 NetCDF files from Baltic Sea in situ NRT observations.
 output: 
   distill::distill_article:
     toc: true
@@ -19,13 +19,7 @@ r_funcs <- c("libraries.Rmd", "common.Rmd", "common_bo.Rmd", "netcdf_bo.Rmd")
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE}
 # Common variables
-rsc_dir <- "/scratch/data/aiqc/merged/nrt_bo"
-#rsc_dir <- "./resources"
-
-bo_file_name <- file.path(rsc_dir, "netcdf_nrt_bo.parquet")
-df_bo <- read_parquet(bo_file_name)
 df_bo_uniq_profiles <- get_unique_profile_no(df_bo)
-
 ```
 
 ## 1. Basic Information
@@ -127,6 +121,7 @@ print(plot_grid(p_long_dense, p_lat_dense, nrow = 1))
 
 ## 4. Distribution of profiles over time
 
+
 ### Number of profiles
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.width = 10}
@@ -137,11 +132,11 @@ df_year <- summary_table_netcdf %>%
 df_month <- summary_table_netcdf %>%
   mutate(x = format(profile_timestamp, "%m"))
 
-df_year_month <- summary_table_netcdf %>%
-  mutate(x = format(profile_timestamp, "%Y-%m"))
-
 ```
 
+
+::: {.panelset}
+::: {.panel}
 #### Year
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.width = 10}
@@ -149,7 +144,9 @@ p_year_hist <- create_sample_time_hist(df_year, "Year")
 
 print(p_year_hist)
 ```
+:::
 
+::: {.panel}
 #### Month
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.width = 10}
@@ -157,6 +154,8 @@ p_month_hist <- create_sample_time_hist(df_month, "Month")
 
 print(p_month_hist)
 ```
+:::
+:::
 
 ### Mapped locations of four time spans
 

@@ -1,3 +1,13 @@
+<style>
+.panelset > .panel-tabs {
+  display: flex;
+}
+.panelset > .panel-tabs li {
+  flex: 1;
+  text-align: center;
+}
+</style>
+
 ```{r, message = FALSE, warning = FALSE}
 
 # Templates
@@ -14,6 +24,10 @@ kbl_table <- function(x) {
   kbl(x) %>% kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"))
 }
 
+# xaringan-panelset
+xaringanExtra::use_panelset()
+
+# Common funcitons
 create_dt_summary_tab <- function(df, cols=c('Lon', 'Lat')) {
   DT::datatable(df, rownames = FALSE,
       options = list(searching = TRUE, paging = TRUE, info = TRUE,
