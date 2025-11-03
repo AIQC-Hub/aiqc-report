@@ -1,0 +1,23 @@
+
+## 4. Normalisation
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.width = 10}
+df_x <- df_filtered %>% mutate(x = {{var}})
+
+p_orig <- create_density_for_transform(df_x, "Density of {{var_name}}", "{{var_name}}")
+
+df_scale <- df_x %>% mutate(x = (x - min(x)) / (max(x) - min(x)) )
+p_scale <- create_density_for_transform(df_scale, "Min-max scaling: Z({{var}})",
+                                      "Scaled {{var_name}}")
+
+df_std <- df_x %>% mutate(x = (x - mean_var) / sd_var )
+p_std <- create_density_for_transform(df_std, "Standard score: ({{var}} - m)/sd",
+                                      "Standardised {{var_name}}")
+
+df_trans <-{{trans_func}}
+p_trans <- create_density_for_transform(df_trans, "{{trans_name}}",
+                                        "Transformed {{var_name}}")
+
+print(plot_grid(p_orig, p_scale, p_std, p_trans, nrow = 2))
+
+```

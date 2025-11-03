@@ -1,0 +1,14 @@
+## 1. Basic Information
+
+### Variable name
+
+  - `{{var}}`: {{var_name}}
+
+---
+
+### Input data file
+
+  - **{{input}}**: [{{input_name}}]({{input_url}})
+  - **Filtered**: No
+
+---

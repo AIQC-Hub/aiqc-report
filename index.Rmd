@@ -1,6 +1,5 @@
 ---
-title: "Summary Report"
-subtitle: "Copernicus In-Situ Near Real-Time Observations"
+title: "In Situ NRT Summary Report"
 description: |
   Welcome to the website. I hope you enjoy it!
 site: distill::distill_website
