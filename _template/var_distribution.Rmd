@@ -1,5 +1,5 @@
 
-## 3. {{var_name}} distributions by profile over time and location {.tabset .tabset-pills }
+## 3. Distributions by profile over time and location
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, results = 'asis'}
 
@@ -44,7 +44,3 @@ p_latitude_hist <- create_var_density(summary_table_var3, latitude, "{{var_name}
 
 print(p_latitude_hist)
 ```
-
-##
-
----

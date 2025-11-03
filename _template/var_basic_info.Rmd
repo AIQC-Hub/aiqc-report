@@ -4,11 +4,7 @@
 
   - `{{var}}`: {{var_name}}
 
----
-
 ### Input data file
 
-  - **{{input}}**: [{{input_name}}]({{input_url}})
+  - **{{input}}**: {{input_name}}
   - **Filtered**: No
-
----

@@ -9,8 +9,6 @@ kbl_table(na_summary({{df}}, {{var}})) %>% kable_styling(font_size = 12)
 
 ```
 
----
-
 ### Descriptive statistics
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.width = 10}
@@ -32,8 +30,6 @@ sd_var <- sd(df_ds$x) %>% round(2)
   - `Max`: `r max_var`
   - `SD`: `r sd_var`
 
----
-
 ### Summary tables of `r tolower("{{var_name}}")` by platform
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, results = 'asis'}
@@ -44,5 +40,3 @@ create_dt_summary_tab(summary_table_var1 %>% format_var_summary_1("{{var_label}}
                              'Mean({{var_label}})', 'Max({{var_label}})'))
 
 ```
-
----

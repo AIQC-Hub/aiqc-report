@@ -2,35 +2,35 @@ name: "insitu-nrt-report"
 title: "In Situ NRT Summary"
 description: |
   In Situ NRT Summary Report
-output_dir: "_site"
+output_dir: "docs"
 exclude: ["script", "data", "rmd_child", ]
 navbar:
   right:
     - text: "Arctic Sea (AR)"
-      menu:
-        - text: "Summary"
-          href: ar_summary.html
-        - text: "---"
-        - text: "Pres"
-          href: ar_pres.html
-        - text: "Temp"
-          href: ar_temp.html
-        - text: "Psal"
-          href: ar_psal.html
-        - text: "---"
-        - text: "Pres QC"
-          href: ar_pres_qc.html
-        - text: "Temp QC"
-          href: ar_temp_qc.html
-        - text: "Psal QC"
-          href: ar_psal_qc.html
-    - text: "Arctic Sea (GL)"
       href: index.html
     - text: "Baltic Sea (BO)"
+      menu:
+        - text: "Summary"
+          href: bo_summary.html
+        - text: "---"
+        - text: "Pres"
+          href: bo_pres.html
+        - text: "Temp"
+          href: bo_temp.html
+        - text: "Psal"
+          href: bo_psal.html
+        - text: "---"
+        - text: "Pres QC"
+          href: bo_pres_qc.html
+        - text: "Temp QC"
+          href: bo_temp_qc.html
+        - text: "Psal QC"
+          href: bo_psal_qc.html
+    - text: "Mediterranean Sea (MO)"
+      href: index.html
+    - text: "Arctic Sea (GL)"
       href: index.html
     - text: "Baltic Sea (GL)"
-      href: index.html
-    - text: "Mediterranean Sea (MO)"
       href: index.html
     - text: "Mediterranean Sea (GL)"
       href: index.html

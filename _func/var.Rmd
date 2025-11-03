@@ -70,20 +70,4 @@ create_density_for_transform <- function(df, title, x_title) {
     theme(plot.title = element_text(size=11))
 }
 
-log_transform <- function(df, min_x = 0, shift_x = 1) {
-  df %>% filter(x > min_x) %>% mutate(x = log(x + shift_x)) %>%
-    mutate(x = (x - min(x)) / (max(x) - min(x)) )
-}
-
-arcsine_transform <- function(df) {
-  df %>% mutate(x = (x - min(x)) / (max(x) - min(x))) %>%
-    mutate(x = asin(sqrt(x))) %>%
-    mutate(x = (x - min(x)) / (max(x) - min(x)))
-}
-
-cube_root_transformation <- function(df, shift_x = 1) {
-  df %>% mutate(x = (x+shift_x)^(1/3)) %>%
-    mutate(x = (x - min(x)) / (max(x) - min(x)))
-}
-
 ```
