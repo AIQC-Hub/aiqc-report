@@ -1,0 +1,71 @@
+{
+  "articles": [
+    {
+      "path": "about.html",
+      "title": "About this site",
+      "description": "Some additional details about the website",
+      "author": [],
+      "contents": "\n\n\n\n",
+      "last_modified": "2025-11-03T12:26:33+01:00"
+    },
+    {
+      "path": "bo_pres_qc.html",
+      "title": "Pressure QC",
+      "author": [],
+      "contents": "\n\nContents\n1. Basic Information\n2. Summary statistics\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe page shows the basic analysis of pressure qc flag QC flags from Baltic NRT in situ observations.\n1. Basic Information\nVariable name\npres_qc: Pressure QC flag\nInput data file\nBO data: netcdf_nrt_bo.parquet\nFiltered: No\n2. Summary statistics\nNon-NA counts in pres\n\n\nCategory\n\n\nTotal Count\n\n\nNon-NA Count\n\n\nPct\n\n\n# Platforms\n\n\n753\n\n\n753\n\n\n100.0%\n\n\n# Profiles\n\n\n112,411\n\n\n112,411\n\n\n100.0%\n\n\n# Observations\n\n\n9,334,806\n\n\n9,334,792\n\n\n100.0%\n\n\nQC flag counts\n\n\nCode\n\n\nDefinition\n\n\nn\n\n\nRelative Frequency (%)\n\n\n0\n\n\nNo QC was performed\n\n\n0\n\n\n0.0%\n\n\n1\n\n\nGood data\n\n\n9,292,079\n\n\n99.5%\n\n\n2\n\n\nProbably good data\n\n\n0\n\n\n0.0%\n\n\n3\n\n\nBad data that are potentially correctable\n\n\n0\n\n\n0.0%\n\n\n4\n\n\nBad data\n\n\n42,713\n\n\n0.5%\n\n\n5\n\n\nValue changed\n\n\n0\n\n\n0.0%\n\n\n6\n\n\nBelow detection limit\n\n\n0\n\n\n0.0%\n\n\n7\n\n\nIn excess of quoted value\n\n\n0\n\n\n0.0%\n\n\n8\n\n\nInterpolated value\n\n\n0\n\n\n0.0%\n\n\n9\n\n\nMissing value\n\n\n0\n\n\n0.0%\n\n\nA\n\n\nIncomplete information\n\n\n0\n\n\n0.0%\n\n\nSummary table of pressure qc flag by platform\n\n\n\n\n\n\n\n",
+      "last_modified": "2025-11-03T12:26:44+01:00"
+    },
+    {
+      "path": "bo_pres.html",
+      "title": "Pressure",
+      "author": [],
+      "contents": "\n\nContents\n1. Basic Information\n2. Summary statistics\n3. Distributions by profile over time and location\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe page shows the basic analysis of pressure data from Baltic NRT in situ observations.\n1. Basic Information\nVariable name\npres: Pressure\nInput data file\nBO data: netcdf_nrt_bo.parquet\nFiltered: No\n2. Summary statistics\nNA value counts\n\n\nCategory\n\n\nTotal Count\n\n\nNon-NA Count\n\n\nPct\n\n\n# Platforms\n\n\n753\n\n\n753\n\n\n100.0%\n\n\n# Profiles\n\n\n112,411\n\n\n112,411\n\n\n100.0%\n\n\n# Observations\n\n\n9,334,806\n\n\n9,334,792\n\n\n100.0%\n\n\nDescriptive statistics\n\n\n\nMin: -0.16\nQ1: 8.08\nMedian: 22.2\nMean: 57.11\nQ3: 71.21\nMax: 657.3\nSD: 81\nSummary tables of pressure by platform\n\n\n\n\n3. Distributions by profile over time and location\n\n\n\nYear\n\n\n\nMonth\n\n\n\nLongitude\n\n\n\nLatitude\n\n\n\n\n\n\n\n",
+      "last_modified": "2025-11-03T12:27:51+01:00"
+    },
+    {
+      "path": "bo_psal_qc.html",
+      "title": "Practical salinity QC",
+      "author": [],
+      "contents": "\n\nContents\n1. Basic Information\n2. Summary statistics\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe page shows the basic analysis of practical salinity qc flag QC flags from Baltic NRT in situ observations.\n1. Basic Information\nVariable name\npsal_qc: Practical salinity QC flag\nInput data file\nBO data: netcdf_nrt_bo.parquet\nFiltered: No\n2. Summary statistics\nNon-NA counts in psal\n\n\nCategory\n\n\nTotal Count\n\n\nNon-NA Count\n\n\nPct\n\n\n# Platforms\n\n\n753\n\n\n748\n\n\n99.3%\n\n\n# Profiles\n\n\n112,411\n\n\n110,575\n\n\n98.4%\n\n\n# Observations\n\n\n9,334,806\n\n\n9,305,227\n\n\n99.7%\n\n\nQC flag counts\n\n\nCode\n\n\nDefinition\n\n\nn\n\n\nRelative Frequency (%)\n\n\n0\n\n\nNo QC was performed\n\n\n0\n\n\n0.0%\n\n\n1\n\n\nGood data\n\n\n9,258,971\n\n\n99.5%\n\n\n2\n\n\nProbably good data\n\n\n0\n\n\n0.0%\n\n\n3\n\n\nBad data that are potentially correctable\n\n\n360\n\n\n0.0%\n\n\n4\n\n\nBad data\n\n\n43,771\n\n\n0.5%\n\n\n5\n\n\nValue changed\n\n\n0\n\n\n0.0%\n\n\n6\n\n\nBelow detection limit\n\n\n2,125\n\n\n0.0%\n\n\n7\n\n\nIn excess of quoted value\n\n\n0\n\n\n0.0%\n\n\n8\n\n\nInterpolated value\n\n\n0\n\n\n0.0%\n\n\n9\n\n\nMissing value\n\n\n0\n\n\n0.0%\n\n\nA\n\n\nIncomplete information\n\n\n0\n\n\n0.0%\n\n\nSummary table of practical salinity qc flag by platform\n\n\n\n\n\n\n\n",
+      "last_modified": "2025-11-03T12:27:59+01:00"
+    },
+    {
+      "path": "bo_psal.html",
+      "title": "Practical salinity",
+      "author": [],
+      "contents": "\n\nContents\n1. Basic Information\n2. Summary statistics\n3. Distributions by profile over time and location\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe page shows the basic analysis of practical salinity data from Baltic NRT in situ observations.\n1. Basic Information\nVariable name\npsal: Practical salinity\nInput data file\nBO data: netcdf_nrt_bo.parquet\nFiltered: No\n2. Summary statistics\nNA value counts\n\n\nCategory\n\n\nTotal Count\n\n\nNon-NA Count\n\n\nPct\n\n\n# Platforms\n\n\n753\n\n\n748\n\n\n99.3%\n\n\n# Profiles\n\n\n112,411\n\n\n110,575\n\n\n98.4%\n\n\n# Observations\n\n\n9,334,806\n\n\n9,305,227\n\n\n99.7%\n\n\nDescriptive statistics\n\n\n\nMin: 0\nQ1: 10.28\nMedian: 18\nMean: 19.07\nQ3: 27.97\nMax: 37.74\nSD: 9.97\nSummary tables of practical salinity by platform\n\n\n\n\n3. Distributions by profile over time and location\n\n\n\nYear\n\n\n\nMonth\n\n\n\nLongitude\n\n\n\nLatitude\n\n\n\n\n\n\n\n",
+      "last_modified": "2025-11-03T12:29:04+01:00"
+    },
+    {
+      "path": "bo_summary.html",
+      "title": "Summary of Baltic Sea (BO)",
+      "description": "Summary report generated from a single Parquet file has been created from over 750 NetCDF files from Baltic Sea NRT in situ observations.\n",
+      "author": [],
+      "contents": "\n\nContents\n1. Basic Information\n2. Descriptive Statistics of BO CTD Data\n3. Locations\n4. Distribution of profiles over time\n5. Duplicate profiles within platforms\n6. Duplicate profiles across platforms\n7. Observation counts by profile\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n1. Basic Information\nNetCDF files\nDataset ID: cmems_obs-ins_bal_phybgcwav_mynrt_na_irr\nDuration: history\nRegion: Baltic Sea (BO)\nCategory: CT (CTD)\nParquet file\nBO data: netcdf_nrt_bo.parquet\n2. Descriptive Statistics of BO CTD Data\n\n\n\nNumber of observations: 9,334,806\nNumber of platform: 753\nNumber of profiles: 112,962\nSummary statistics by profiles\n\n\n\n3. Locations\nLongitude: 6.3 to 27.453\nLatitude: 54 to 65.73\nLocations by profiles\n\n\n\nMapped locations of all profiles and three selected platforms\n\n\n\nHistograms of longitudes and latitudes from all profiles\n\n\n\n4. Distribution of profiles over time\nNumber of profiles\n\n\n\nYear\n\n\n\nMonth\n\n\n\nMapped locations of four time spans\nts7889: 1978 ~ 1989\nts9006: 1990 ~ 2006\nts07A2: 2007 ~ 2012\ntsA3B5: 2013 ~ 2025\n\n\n\n5. Duplicate profiles within platforms\nDetection criteria\nTo identify potential duplicate profiles, the following variables must match:\nPlatform (platform_code)\nTimestamp (profile_timestamp)\nRounded precise longitude (round(precise_longitude, 3))\nRounded precise latitude (round(precise_latitude, 3))\nDuplicate profiles\n\n\n\n6. Duplicate profiles across platforms\nDetection criteria\nTo identify potential duplicate profiles, the following variables must match:\nTimestamp (profile_timestamp)\nRounded precise longitude (round(precise_longitude, 3))\nRounded precise latitude (round(precise_latitude, 3))\nDuplicate profiles\n\n\n\n7. Observation counts by profile\nHistograms of observation counts per profile\n\n\n\nMapped locations of 1, 2, 3000-3600, and ≥4000 observations\n\n\n\n\n\n\n",
+      "last_modified": "2025-11-03T12:29:34+01:00"
+    },
+    {
+      "path": "bo_temp_qc.html",
+      "title": "Temperature QC",
+      "author": [],
+      "contents": "\n\nContents\n1. Basic Information\n2. Summary statistics\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe page shows the basic analysis of temperature qc flag QC flags from Baltic NRT in situ observations.\n1. Basic Information\nVariable name\ntemp_qc: Temperature QC flag\nInput data file\nBO data: netcdf_nrt_bo.parquet\nFiltered: No\n2. Summary statistics\nNon-NA counts in temp\n\n\nCategory\n\n\nTotal Count\n\n\nNon-NA Count\n\n\nPct\n\n\n# Platforms\n\n\n753\n\n\n753\n\n\n100.0%\n\n\n# Profiles\n\n\n112,411\n\n\n111,059\n\n\n98.8%\n\n\n# Observations\n\n\n9,334,806\n\n\n9,317,217\n\n\n99.8%\n\n\nQC flag counts\n\n\nCode\n\n\nDefinition\n\n\nn\n\n\nRelative Frequency (%)\n\n\n0\n\n\nNo QC was performed\n\n\n0\n\n\n0.0%\n\n\n1\n\n\nGood data\n\n\n9,274,541\n\n\n99.5%\n\n\n2\n\n\nProbably good data\n\n\n0\n\n\n0.0%\n\n\n3\n\n\nBad data that are potentially correctable\n\n\n55\n\n\n0.0%\n\n\n4\n\n\nBad data\n\n\n42,621\n\n\n0.5%\n\n\n5\n\n\nValue changed\n\n\n0\n\n\n0.0%\n\n\n6\n\n\nBelow detection limit\n\n\n0\n\n\n0.0%\n\n\n7\n\n\nIn excess of quoted value\n\n\n0\n\n\n0.0%\n\n\n8\n\n\nInterpolated value\n\n\n0\n\n\n0.0%\n\n\n9\n\n\nMissing value\n\n\n0\n\n\n0.0%\n\n\nA\n\n\nIncomplete information\n\n\n0\n\n\n0.0%\n\n\nSummary table of temperature qc flag by platform\n\n\n\n\n\n\n\n",
+      "last_modified": "2025-11-03T12:29:41+01:00"
+    },
+    {
+      "path": "bo_temp.html",
+      "title": "Temperature",
+      "author": [],
+      "contents": "\n\nContents\n1. Basic Information\n2. Summary statistics\n3. Distributions by profile over time and location\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe page shows the basic analysis of temperature data from Baltic NRT in situ observations.\n1. Basic Information\nVariable name\ntemp: Temperature\nInput data file\nBO data: netcdf_nrt_bo.parquet\nFiltered: No\n2. Summary statistics\nNA value counts\n\n\nCategory\n\n\nTotal Count\n\n\nNon-NA Count\n\n\nPct\n\n\n# Platforms\n\n\n753\n\n\n753\n\n\n100.0%\n\n\n# Profiles\n\n\n112,411\n\n\n111,059\n\n\n98.8%\n\n\n# Observations\n\n\n9,334,806\n\n\n9,317,217\n\n\n99.8%\n\n\nDescriptive statistics\n\n\n\nMin: -2\nQ1: 4.98\nMedian: 6.77\nMean: 8.29\nQ3: 11.6\nMax: 28.4\nSD: 4.78\nSummary tables of temperature by platform\n\n\n\n\n3. Distributions by profile over time and location\n\n\n\nYear\n\n\n\nMonth\n\n\n\nLongitude\n\n\n\nLatitude\n\n\n\n\n\n\n\n",
+      "last_modified": "2025-11-03T12:30:41+01:00"
+    },
+    {
+      "path": "index.html",
+      "title": "In Situ NRT Summary Report",
+      "description": "Welcome to the website. I hope you enjoy it!\n",
+      "author": [],
+      "contents": "\n\n\n\n",
+      "last_modified": "2025-11-03T12:30:42+01:00"
+    }
+  ],
+  "collections": []
+}

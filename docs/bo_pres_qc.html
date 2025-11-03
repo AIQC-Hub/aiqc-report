@@ -1,0 +1,2508 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+  <meta name="generator" content="distill" />
+
+  <style type="text/css">
+  /* Hide doc at startup (prevent jankiness while JS renders/transforms) */
+  body {
+    visibility: hidden;
+  }
+  </style>
+
+ <!--radix_placeholder_import_source-->
+ <!--/radix_placeholder_import_source-->
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  { color: #00769e; background-color: #f1f3f5; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span { color: #00769e; } /* Normal */
+code span.al { color: #ad0000; } /* Alert */
+code span.an { color: #5e5e5e; } /* Annotation */
+code span.at { color: #657422; } /* Attribute */
+code span.bn { color: #ad0000; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #00769e; } /* ControlFlow */
+code span.ch { color: #20794d; } /* Char */
+code span.cn { color: #8f5902; } /* Constant */
+code span.co { color: #5e5e5e; } /* Comment */
+code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+code span.dt { color: #ad0000; } /* DataType */
+code span.dv { color: #ad0000; } /* DecVal */
+code span.er { color: #ad0000; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #ad0000; } /* Float */
+code span.fu { color: #4758ab; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #5e5e5e; } /* Information */
+code span.kw { color: #00769e; } /* Keyword */
+code span.op { color: #5e5e5e; } /* Operator */
+code span.ot { color: #00769e; } /* Other */
+code span.pp { color: #ad0000; } /* Preprocessor */
+code span.sc { color: #5e5e5e; } /* SpecialChar */
+code span.ss { color: #20794d; } /* SpecialString */
+code span.st { color: #20794d; } /* String */
+code span.va { color: #111111; } /* Variable */
+code span.vs { color: #20794d; } /* VerbatimString */
+code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+</style>
+
+
+  <!--radix_placeholder_meta_tags-->
+  <title>In Situ NRT Summary: Pressure QC</title>
+
+
+
+
+  <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
+  <meta property="og:title" content="In Situ NRT Summary: Pressure QC"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:locale" content="en_US"/>
+  <meta property="og:site_name" content="In Situ NRT Summary"/>
+
+  <!--  https://dev.twitter.com/cards/types/summary -->
+  <meta property="twitter:card" content="summary"/>
+  <meta property="twitter:title" content="In Situ NRT Summary: Pressure QC"/>
+
+  <!--/radix_placeholder_meta_tags-->
+  <!--radix_placeholder_rmarkdown_metadata-->
+
+  <script type="text/json" id="radix-rmarkdown-metadata">
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","output"]}},"value":[{"type":"character","attributes":{},"value":["Pressure QC"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]}]}]}]}
+  </script>
+  <!--/radix_placeholder_rmarkdown_metadata-->
+  <!--radix_placeholder_navigation_in_header-->
+  <meta name="distill:offset" content=""/>
+
+  <script type="application/javascript">
+
+    window.headroom_prevent_pin = false;
+
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+
+      // initialize headroom for banner
+      var header = $('header').get(0);
+      var headerHeight = header.offsetHeight;
+      var headroom = new Headroom(header, {
+        tolerance: 5,
+        onPin : function() {
+          if (window.headroom_prevent_pin) {
+            window.headroom_prevent_pin = false;
+            headroom.unpin();
+          }
+        }
+      });
+      headroom.init();
+      if(window.location.hash)
+        headroom.unpin();
+      $(header).addClass('headroom--transition');
+
+      // offset scroll location for banner on hash change
+      // (see: https://github.com/WickyNilliams/headroom.js/issues/38)
+      window.addEventListener("hashchange", function(event) {
+        window.scrollTo(0, window.pageYOffset - (headerHeight + 25));
+      });
+
+      // responsive menu
+      $('.distill-site-header').each(function(i, val) {
+        var topnav = $(this);
+        var toggle = topnav.find('.nav-toggle');
+        toggle.on('click', function() {
+          topnav.toggleClass('responsive');
+        });
+      });
+
+      // nav dropdowns
+      $('.nav-dropbtn').click(function(e) {
+        $(this).next('.nav-dropdown-content').toggleClass('nav-dropdown-active');
+        $(this).parent().siblings('.nav-dropdown')
+           .children('.nav-dropdown-content').removeClass('nav-dropdown-active');
+      });
+      $("body").click(function(e){
+        $('.nav-dropdown-content').removeClass('nav-dropdown-active');
+      });
+      $(".nav-dropdown").click(function(e){
+        e.stopPropagation();
+      });
+    });
+  </script>
+
+  <style type="text/css">
+
+  /* Theme (user-documented overrideables for nav appearance) */
+
+  .distill-site-nav {
+    color: rgba(255, 255, 255, 0.8);
+    background-color: #0F2E3D;
+    font-size: 15px;
+    font-weight: 300;
+  }
+
+  .distill-site-nav a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .distill-site-nav a:hover {
+    color: white;
+  }
+
+  @media print {
+    .distill-site-nav {
+      display: none;
+    }
+  }
+
+  .distill-site-header {
+
+  }
+
+  .distill-site-footer {
+
+  }
+
+
+  /* Site Header */
+
+  .distill-site-header {
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 3;
+  }
+
+  .distill-site-header .nav-left {
+    display: inline-block;
+    margin-left: 8px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .distill-site-header .nav-left {
+      margin-left: 0;
+    }
+  }
+
+
+  .distill-site-header .nav-right {
+    float: right;
+    margin-right: 8px;
+  }
+
+  .distill-site-header a,
+  .distill-site-header .title {
+    display: inline-block;
+    text-align: center;
+    padding: 14px 10px 14px 10px;
+  }
+
+  .distill-site-header .title {
+    font-size: 18px;
+    min-width: 150px;
+  }
+
+  .distill-site-header .logo {
+    padding: 0;
+  }
+
+  .distill-site-header .logo img {
+    display: none;
+    max-height: 20px;
+    width: auto;
+    margin-bottom: -4px;
+  }
+
+  .distill-site-header .nav-image img {
+    max-height: 18px;
+    width: auto;
+    display: inline-block;
+    margin-bottom: -3px;
+  }
+
+
+
+  @media screen and (min-width: 1000px) {
+    .distill-site-header .logo img {
+      display: inline-block;
+    }
+    .distill-site-header .nav-left {
+      margin-left: 20px;
+    }
+    .distill-site-header .nav-right {
+      margin-right: 20px;
+    }
+    .distill-site-header .title {
+      padding-left: 12px;
+    }
+  }
+
+
+  .distill-site-header .nav-toggle {
+    display: none;
+  }
+
+  .nav-dropdown {
+    display: inline-block;
+    position: relative;
+  }
+
+  .nav-dropdown .nav-dropbtn {
+    border: none;
+    outline: none;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 16px 10px;
+    background-color: transparent;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    margin: 0;
+    margin-top: 1px;
+    z-index: 2;
+  }
+
+  .nav-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 200px;
+    border: 1px solid rgba(0,0,0,0.15);
+    border-radius: 4px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+    z-index: 1;
+    margin-top: 2px;
+    white-space: nowrap;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+
+  .nav-dropdown-content hr {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-dropdown-active {
+    display: block;
+  }
+
+  .nav-dropdown-content a, .nav-dropdown-content .nav-dropdown-header {
+    color: black;
+    padding: 6px 24px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+
+  .nav-dropdown-content .nav-dropdown-header {
+    display: block;
+    padding: 5px 24px;
+    padding-bottom: 0;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #999999;
+    white-space: nowrap;
+  }
+
+  .nav-dropdown:hover .nav-dropbtn {
+    color: white;
+  }
+
+  .nav-dropdown-content a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  .nav-right .nav-dropdown-content {
+    margin-left: -45%;
+    right: 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    .distill-site-header a, .distill-site-header .nav-dropdown  {display: none;}
+    .distill-site-header a.nav-toggle {
+      float: right;
+      display: block;
+    }
+    .distill-site-header .title {
+      margin-left: 0;
+    }
+    .distill-site-header .nav-right {
+      margin-right: 0;
+    }
+    .distill-site-header {
+      overflow: hidden;
+    }
+    .nav-right .nav-dropdown-content {
+      margin-left: 0;
+    }
+  }
+
+
+  @media screen and (max-width: 768px) {
+    .distill-site-header.responsive {position: relative; min-height: 500px; }
+    .distill-site-header.responsive a.nav-toggle {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .distill-site-header.responsive a,
+    .distill-site-header.responsive .nav-dropdown {
+      display: block;
+      text-align: left;
+    }
+    .distill-site-header.responsive .nav-left,
+    .distill-site-header.responsive .nav-right {
+      width: 100%;
+    }
+    .distill-site-header.responsive .nav-dropdown {float: none;}
+    .distill-site-header.responsive .nav-dropdown-content {position: relative;}
+    .distill-site-header.responsive .nav-dropdown .nav-dropbtn {
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+  }
+
+  /* Site Footer */
+
+  .distill-site-footer {
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    z-index: 3;
+    margin-top: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+  }
+
+  /* Headroom */
+
+  d-title {
+    padding-top: 6rem;
+  }
+
+  @media print {
+    d-title {
+      padding-top: 4rem;
+    }
+  }
+
+  .headroom {
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .headroom--transition {
+    transition: all .4s ease-in-out;
+  }
+
+  .headroom--unpinned {
+    top: -100px;
+  }
+
+  .headroom--pinned {
+    top: 0;
+  }
+
+  /* adjust viewport for navbar height */
+  /* helps vertically center bootstrap (non-distill) content */
+  .min-vh-100 {
+    min-height: calc(100vh - 100px) !important;
+  }
+
+  </style>
+
+  <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+  <link href="site_libs/font-awesome-6.5.2/css/all.min.css" rel="stylesheet"/>
+  <link href="site_libs/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet"/>
+  <script src="site_libs/headroom-0.9.4/headroom.min.js"></script>
+  <script src="site_libs/autocomplete-0.37.1/autocomplete.min.js"></script>
+  <script src="site_libs/fuse-6.4.1/fuse.min.js"></script>
+
+  <script type="application/javascript">
+
+  function getMeta(metaName) {
+    var metas = document.getElementsByTagName('meta');
+    for (let i = 0; i < metas.length; i++) {
+      if (metas[i].getAttribute('name') === metaName) {
+        return metas[i].getAttribute('content');
+      }
+    }
+    return '';
+  }
+
+  function offsetURL(url) {
+    var offset = getMeta('distill:offset');
+    return offset ? offset + '/' + url : url;
+  }
+
+  function createFuseIndex() {
+
+    // create fuse index
+    var options = {
+      keys: [
+        { name: 'title', weight: 20 },
+        { name: 'categories', weight: 15 },
+        { name: 'description', weight: 10 },
+        { name: 'contents', weight: 5 },
+      ],
+      ignoreLocation: true,
+      threshold: 0
+    };
+    var fuse = new window.Fuse([], options);
+
+    // fetch the main search.json
+    return fetch(offsetURL('search.json'))
+      .then(function(response) {
+        if (response.status == 200) {
+          return response.json().then(function(json) {
+            // index main articles
+            json.articles.forEach(function(article) {
+              fuse.add(article);
+            });
+            // download collections and index their articles
+            return Promise.all(json.collections.map(function(collection) {
+              return fetch(offsetURL(collection)).then(function(response) {
+                if (response.status === 200) {
+                  return response.json().then(function(articles) {
+                    articles.forEach(function(article) {
+                      fuse.add(article);
+                    });
+                  })
+                } else {
+                  return Promise.reject(
+                    new Error('Unexpected status from search index request: ' +
+                              response.status)
+                  );
+                }
+              });
+            })).then(function() {
+              return fuse;
+            });
+          });
+
+        } else {
+          return Promise.reject(
+            new Error('Unexpected status from search index request: ' +
+                        response.status)
+          );
+        }
+      });
+  }
+
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+
+    // get search element (bail if we don't have one)
+    var searchEl = window.document.getElementById('distill-search');
+    if (!searchEl)
+      return;
+
+    createFuseIndex()
+      .then(function(fuse) {
+
+        // make search box visible
+        searchEl.classList.remove('hidden');
+
+        // initialize autocomplete
+        var options = {
+          autoselect: true,
+          hint: false,
+          minLength: 2,
+        };
+        window.autocomplete(searchEl, options, [{
+          source: function(query, callback) {
+            const searchOptions = {
+              isCaseSensitive: false,
+              shouldSort: true,
+              minMatchCharLength: 2,
+              limit: 10,
+            };
+            var results = fuse.search(query, searchOptions);
+            callback(results
+              .map(function(result) { return result.item; })
+            );
+          },
+          templates: {
+            suggestion: function(suggestion) {
+              var img = suggestion.preview && Object.keys(suggestion.preview).length > 0
+                ? `<img src="${offsetURL(suggestion.preview)}"</img>`
+                : '';
+              var html = `
+                <div class="search-item">
+                  <h3>${suggestion.title}</h3>
+                  <div class="search-item-description">
+                    ${suggestion.description || ''}
+                  </div>
+                  <div class="search-item-preview">
+                    ${img}
+                  </div>
+                </div>
+              `;
+              return html;
+            }
+          }
+        }]).on('autocomplete:selected', function(event, suggestion) {
+          window.location.href = offsetURL(suggestion.path);
+        });
+        // remove inline display style on autocompleter (we want to
+        // manage responsive display via css)
+        $('.algolia-autocomplete').css("display", "");
+      })
+      .catch(function(error) {
+        console.log(error);
+      });
+
+  });
+
+  </script>
+
+  <style type="text/css">
+
+  .nav-search {
+    font-size: x-small;
+  }
+
+  /* Algolioa Autocomplete */
+
+  .algolia-autocomplete {
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: sub;
+    background-color: white;
+    color: black;
+    padding: 6px;
+    padding-top: 8px;
+    padding-bottom: 0;
+    border-radius: 6px;
+    border: 1px #0F2E3D solid;
+    width: 180px;
+  }
+
+
+  @media screen and (max-width: 768px) {
+    .distill-site-nav .algolia-autocomplete {
+      display: none;
+      visibility: hidden;
+    }
+    .distill-site-nav.responsive .algolia-autocomplete {
+      display: inline-block;
+      visibility: visible;
+    }
+    .distill-site-nav.responsive .algolia-autocomplete .aa-dropdown-menu {
+      margin-left: 0;
+      width: 400px;
+      max-height: 400px;
+    }
+  }
+
+  .algolia-autocomplete .aa-input, .algolia-autocomplete .aa-hint {
+    width: 90%;
+    outline: none;
+    border: none;
+  }
+
+  .algolia-autocomplete .aa-hint {
+    color: #999;
+  }
+  .algolia-autocomplete .aa-dropdown-menu {
+    width: 550px;
+    max-height: 70vh;
+    overflow-x: visible;
+    overflow-y: scroll;
+    padding: 5px;
+    margin-top: 3px;
+    margin-left: -150px;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid #999;
+    border-top: none;
+  }
+
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion {
+    cursor: pointer;
+    padding: 5px 4px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion:last-of-type {
+    border-bottom: none;
+    margin-bottom: 2px;
+  }
+
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item {
+    overflow: hidden;
+    font-size: 0.8em;
+    line-height: 1.4em;
+  }
+
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item h3 {
+    font-size: 1rem;
+    margin-block-start: 0;
+    margin-block-end: 5px;
+  }
+
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-description {
+    display: inline-block;
+    overflow: hidden;
+    height: 2.8em;
+    width: 80%;
+    margin-right: 4%;
+  }
+
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview {
+    display: inline-block;
+    width: 15%;
+  }
+
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview img {
+    height: 3em;
+    width: auto;
+    display: none;
+  }
+
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview img[src] {
+    display: initial;
+  }
+
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion.aa-cursor {
+    background-color: #eee;
+  }
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion em {
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  </style>
+
+
+  <!--/radix_placeholder_navigation_in_header-->
+  <!--radix_placeholder_distill-->
+
+  <style type="text/css">
+
+  body {
+    background-color: white;
+  }
+
+  .pandoc-table {
+    width: 100%;
+  }
+
+  .pandoc-table>caption {
+    margin-bottom: 10px;
+  }
+
+  .pandoc-table th:not([align]) {
+    text-align: left;
+  }
+
+  .pagedtable-footer {
+    font-size: 15px;
+  }
+
+  d-byline .byline {
+    grid-template-columns: 2fr 2fr;
+  }
+
+  d-byline .byline h3 {
+    margin-block-start: 1.5em;
+  }
+
+  d-byline .byline .authors-affiliations h3 {
+    margin-block-start: 0.5em;
+  }
+
+  .authors-affiliations .orcid-id {
+    width: 16px;
+    height:16px;
+    margin-left: 4px;
+    margin-right: 4px;
+    vertical-align: middle;
+    padding-bottom: 2px;
+  }
+
+  d-title .dt-tags {
+    margin-top: 1em;
+    grid-column: text;
+  }
+
+  .dt-tags .dt-tag {
+    text-decoration: none;
+    display: inline-block;
+    color: rgba(0,0,0,0.6);
+    padding: 0em 0.4em;
+    margin-right: 0.5em;
+    margin-bottom: 0.4em;
+    font-size: 70%;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  d-article table.gt_table td,
+  d-article table.gt_table th {
+    border-bottom: none;
+    font-size: 100%;
+  }
+
+  .html-widget {
+    margin-bottom: 2.0em;
+  }
+
+  .l-screen-inset {
+    padding-right: 16px;
+  }
+
+  .l-screen .caption {
+    margin-left: 10px;
+  }
+
+  .shaded {
+    background: rgb(247, 247, 247);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .shaded .html-widget {
+    margin-bottom: 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .shaded .shaded-content {
+    background: white;
+  }
+
+  .text-output {
+    margin-top: 0;
+    line-height: 1.5em;
+  }
+
+  .hidden {
+    display: none !important;
+  }
+
+  hr.section-separator {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 0px;
+  }
+
+
+  d-byline {
+    border-top: none;
+  }
+
+  d-article {
+    padding-top: 2.5rem;
+    padding-bottom: 30px;
+    border-top: none;
+  }
+
+  d-appendix {
+    padding-top: 30px;
+  }
+
+  d-article>p>img {
+    width: 100%;
+  }
+
+  d-article h2 {
+    margin: 1rem 0 1.5rem 0;
+  }
+
+  d-article h3 {
+    margin-top: 1.5rem;
+  }
+
+  d-article iframe {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 2.0em;
+    width: 100%;
+  }
+
+  /* Tweak code blocks */
+
+  d-article div.sourceCode code,
+  d-article pre code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  d-article pre,
+  d-article div.sourceCode,
+  d-article div.sourceCode pre {
+    overflow: auto;
+  }
+
+  d-article div.sourceCode {
+    background-color: white;
+  }
+
+  d-article div.sourceCode pre {
+    padding-left: 10px;
+    font-size: 12px;
+    border-left: 2px solid rgba(0,0,0,0.1);
+  }
+
+  d-article pre {
+    font-size: 12px;
+    color: black;
+    background: none;
+    margin-top: 0;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  d-article pre a {
+    border-bottom: none;
+  }
+
+  d-article pre a:hover {
+    border-bottom: none;
+    text-decoration: underline;
+  }
+
+  d-article details {
+    grid-column: text;
+    margin-bottom: 0.8em;
+  }
+
+  @media(min-width: 768px) {
+
+  d-article pre,
+  d-article div.sourceCode,
+  d-article div.sourceCode pre {
+    overflow: visible !important;
+  }
+
+  d-article div.sourceCode pre {
+    padding-left: 18px;
+    font-size: 14px;
+  }
+
+  /* tweak for Pandoc numbered line within distill */
+  d-article pre.numberSource code > span {
+      left: -2em;
+  }
+
+  d-article pre {
+    font-size: 14px;
+  }
+
+  }
+
+  figure img.external {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    padding: 18px;
+    box-sizing: border-box;
+  }
+
+  /* CSS for d-contents */
+
+  .d-contents {
+    grid-column: text;
+    color: rgba(0,0,0,0.8);
+    font-size: 0.9em;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+    padding-left: 0.25em;
+    justify-self: start;
+  }
+
+  @media(min-width: 1000px) {
+    .d-contents.d-contents-float {
+      height: 0;
+      grid-column-start: 1;
+      grid-column-end: 4;
+      justify-self: center;
+      padding-right: 3em;
+      padding-left: 2em;
+    }
+  }
+
+  .d-contents nav h3 {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
+
+  .d-contents li {
+    list-style-type: none
+  }
+
+  .d-contents nav > ul {
+    padding-left: 0;
+  }
+
+  .d-contents ul {
+    padding-left: 1em
+  }
+
+  .d-contents nav ul li {
+    margin-top: 0.6em;
+    margin-bottom: 0.2em;
+  }
+
+  .d-contents nav a {
+    font-size: 13px;
+    border-bottom: none;
+    text-decoration: none
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  .d-contents nav a:hover {
+    text-decoration: underline solid rgba(0, 0, 0, 0.6)
+  }
+
+  .d-contents nav > ul > li > a {
+    font-weight: 600;
+  }
+
+  .d-contents nav > ul > li > ul {
+    font-weight: inherit;
+  }
+
+  .d-contents nav > ul > li > ul > li {
+    margin-top: 0.2em;
+  }
+
+
+  .d-contents nav ul {
+    margin-top: 0;
+    margin-bottom: 0.25em;
+  }
+
+  .d-article-with-toc h2:nth-child(2) {
+    margin-top: 0;
+  }
+
+
+  /* Figure */
+
+  .figure {
+    position: relative;
+    margin-bottom: 2.5em;
+    margin-top: 1.5em;
+  }
+
+  .figure .caption {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 12px;
+    line-height: 1.5em;
+  }
+
+  .figure img.external {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    padding: 18px;
+    box-sizing: border-box;
+  }
+
+  .figure .caption a {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  .figure .caption b,
+  .figure .caption strong, {
+    font-weight: 600;
+    color: rgba(0, 0, 0, 1.0);
+  }
+
+  /* Citations */
+
+  d-article .citation {
+    color: inherit;
+    cursor: inherit;
+  }
+
+  div.hanging-indent{
+    margin-left: 1em; text-indent: -1em;
+  }
+
+  /* Citation hover box */
+
+  .tippy-box[data-theme~=light-border] {
+    background-color: rgba(250, 250, 250, 0.95);
+  }
+
+  .tippy-content > p {
+    margin-bottom: 0;
+    padding: 2px;
+  }
+
+
+  /* Tweak 1000px media break to show more text */
+
+  @media(min-width: 1000px) {
+    .base-grid,
+    distill-header,
+    d-title,
+    d-abstract,
+    d-article,
+    d-appendix,
+    distill-appendix,
+    d-byline,
+    d-footnote-list,
+    d-citation-list,
+    distill-footer {
+      grid-template-columns: [screen-start] 1fr [page-start kicker-start] 80px [middle-start] 50px [text-start kicker-end] 65px 65px 65px 65px 65px 65px 65px 65px [text-end gutter-start] 65px [middle-end] 65px [page-end gutter-end] 1fr [screen-end];
+      grid-column-gap: 16px;
+    }
+
+    .grid {
+      grid-column-gap: 16px;
+    }
+
+    d-article {
+      font-size: 1.06rem;
+      line-height: 1.7em;
+    }
+    figure .caption, .figure .caption, figure figcaption {
+      font-size: 13px;
+    }
+  }
+
+  @media(min-width: 1180px) {
+    .base-grid,
+    distill-header,
+    d-title,
+    d-abstract,
+    d-article,
+    d-appendix,
+    distill-appendix,
+    d-byline,
+    d-footnote-list,
+    d-citation-list,
+    distill-footer {
+      grid-template-columns: [screen-start] 1fr [page-start kicker-start] 60px [middle-start] 60px [text-start kicker-end] 60px 60px 60px 60px 60px 60px 60px 60px [text-end gutter-start] 60px [middle-end] 60px [page-end gutter-end] 1fr [screen-end];
+      grid-column-gap: 32px;
+    }
+
+    .grid {
+      grid-column-gap: 32px;
+    }
+  }
+
+
+  /* Get the citation styles for the appendix (not auto-injected on render since
+     we do our own rendering of the citation appendix) */
+
+  d-appendix .citation-appendix,
+  .d-appendix .citation-appendix {
+    font-size: 11px;
+    line-height: 15px;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    padding-left: 18px;
+    border: 1px solid rgba(0,0,0,0.1);
+    background: rgba(0, 0, 0, 0.02);
+    padding: 10px 18px;
+    border-radius: 3px;
+    color: rgba(150, 150, 150, 1);
+    overflow: hidden;
+    margin-top: -12px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  /* Include appendix styles here so they can be overridden */
+
+  d-appendix {
+    contain: layout style;
+    font-size: 0.8em;
+    line-height: 1.7em;
+    margin-top: 60px;
+    margin-bottom: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    color: rgba(0,0,0,0.5);
+    padding-top: 60px;
+    padding-bottom: 48px;
+  }
+
+  d-appendix h3 {
+    grid-column: page-start / text-start;
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 1em;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.65);
+  }
+
+  d-appendix h3 + * {
+    margin-top: 1em;
+  }
+
+  d-appendix ol {
+    padding: 0 0 0 15px;
+  }
+
+  @media (min-width: 768px) {
+    d-appendix ol {
+      padding: 0 0 0 30px;
+      margin-left: -30px;
+    }
+  }
+
+  d-appendix li {
+    margin-bottom: 1em;
+  }
+
+  d-appendix a {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  d-appendix > * {
+    grid-column: text;
+  }
+
+  d-appendix > d-footnote-list,
+  d-appendix > d-citation-list,
+  d-appendix > distill-appendix {
+    grid-column: screen;
+  }
+
+  /* Include footnote styles here so they can be overridden */
+
+  d-footnote-list {
+    contain: layout style;
+  }
+
+  d-footnote-list > * {
+    grid-column: text;
+  }
+
+  d-footnote-list a.footnote-backlink {
+    color: rgba(0,0,0,0.3);
+    padding-left: 0.5em;
+  }
+
+
+
+  /* Anchor.js */
+
+  .anchorjs-link {
+    /*transition: all .25s linear; */
+    text-decoration: none;
+    border-bottom: none;
+  }
+  *:hover > .anchorjs-link {
+    margin-left: -1.125em !important;
+    text-decoration: none;
+    border-bottom: none;
+  }
+
+  /* Social footer */
+
+  .social_footer {
+    margin-top: 30px;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.67);
+  }
+
+  .disqus-comments {
+    margin-right: 30px;
+  }
+
+  .disqus-comment-count {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+  }
+
+  #disqus_thread {
+    margin-top: 30px;
+  }
+
+  .article-sharing a {
+    border-bottom: none;
+    margin-right: 8px;
+  }
+
+  .article-sharing a:hover {
+    border-bottom: none;
+  }
+
+  .sidebar-section.subscribe {
+    font-size: 12px;
+    line-height: 1.6em;
+  }
+
+  .subscribe p {
+    margin-bottom: 0.5em;
+  }
+
+
+  .article-footer .subscribe {
+    font-size: 15px;
+    margin-top: 45px;
+  }
+
+
+  .sidebar-section.custom {
+    font-size: 12px;
+    line-height: 1.6em;
+  }
+
+  .custom p {
+    margin-bottom: 0.5em;
+  }
+
+  /* Styles for listing layout (hide title) */
+  .layout-listing d-title, .layout-listing .d-title {
+    display: none;
+  }
+
+  /* Styles for posts lists (not auto-injected) */
+
+
+  .posts-with-sidebar {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  .posts-list .description h2,
+  .posts-list .description p {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+  }
+
+  .posts-list .description h2 {
+    font-weight: 700;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .posts-list h2.post-tag {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding-bottom: 12px;
+  }
+  .posts-list {
+    margin-top: 60px;
+    margin-bottom: 24px;
+  }
+
+  .posts-list .post-preview {
+    text-decoration: none;
+    overflow: hidden;
+    display: block;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 24px 0;
+  }
+
+  .post-preview-last {
+    border-bottom: none !important;
+  }
+
+  .posts-list .posts-list-caption {
+    grid-column: screen;
+    font-weight: 400;
+  }
+
+  .posts-list .post-preview h2 {
+    margin: 0 0 6px 0;
+    line-height: 1.2em;
+    font-style: normal;
+    font-size: 24px;
+  }
+
+  .posts-list .post-preview p {
+    margin: 0 0 12px 0;
+    line-height: 1.4em;
+    font-size: 16px;
+  }
+
+  .posts-list .post-preview .thumbnail {
+    box-sizing: border-box;
+    margin-bottom: 24px;
+    position: relative;
+    max-width: 500px;
+  }
+  .posts-list .post-preview img {
+    width: 100%;
+    display: block;
+  }
+
+  .posts-list .metadata {
+    font-size: 12px;
+    line-height: 1.4em;
+    margin-bottom: 18px;
+  }
+
+  .posts-list .metadata > * {
+    display: inline-block;
+  }
+
+  .posts-list .metadata .publishedDate {
+    margin-right: 2em;
+  }
+
+  .posts-list .metadata .dt-authors {
+    display: block;
+    margin-top: 0.3em;
+    margin-right: 2em;
+  }
+
+  .posts-list .dt-tags {
+    display: block;
+    line-height: 1em;
+  }
+
+  .posts-list .dt-tags .dt-tag {
+    display: inline-block;
+    color: rgba(0,0,0,0.6);
+    padding: 0.3em 0.4em;
+    margin-right: 0.2em;
+    margin-bottom: 0.4em;
+    font-size: 60%;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .posts-list img {
+    opacity: 1;
+  }
+
+  .posts-list img[data-src] {
+    opacity: 0;
+  }
+
+  .posts-more {
+    clear: both;
+  }
+
+
+  .posts-sidebar {
+    font-size: 16px;
+  }
+
+  .posts-sidebar h3 {
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  .sidebar-section {
+    margin-bottom: 30px;
+  }
+
+  .categories ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .categories li {
+    color: rgba(0, 0, 0, 0.8);
+    margin-bottom: 0;
+  }
+
+  .categories li>a {
+    border-bottom: none;
+  }
+
+  .categories li>a:hover {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  }
+
+  .categories .active {
+    font-weight: 600;
+  }
+
+  .categories .category-count {
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+
+  @media(min-width: 768px) {
+    .posts-list .post-preview h2 {
+      font-size: 26px;
+    }
+    .posts-list .post-preview .thumbnail {
+      float: right;
+      width: 30%;
+      margin-bottom: 0;
+    }
+    .posts-list .post-preview .description {
+      float: left;
+      width: 45%;
+    }
+    .posts-list .post-preview .metadata {
+      float: left;
+      width: 20%;
+      margin-top: 8px;
+    }
+    .posts-list .post-preview p {
+      margin: 0 0 12px 0;
+      line-height: 1.5em;
+      font-size: 16px;
+    }
+    .posts-with-sidebar .posts-list {
+      float: left;
+      width: 75%;
+    }
+    .posts-with-sidebar .posts-sidebar {
+      float: right;
+      width: 20%;
+      margin-top: 60px;
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+  }
+
+
+  /* Improve display for browsers without grid (IE/Edge <= 15) */
+
+  .downlevel {
+    line-height: 1.6em;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+  }
+
+  .downlevel .d-title {
+    padding-top: 6rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .downlevel .d-title h1 {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.1em;
+    margin: 0 0 0.5rem;
+  }
+
+  .downlevel .d-title p {
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 1.55em;
+    margin-top: 0;
+  }
+
+  .downlevel .d-byline {
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    font-size: 0.8rem;
+    line-height: 1.8em;
+  }
+
+  .downlevel .section-separator {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .downlevel .d-article {
+    font-size: 1.06rem;
+    line-height: 1.7em;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+
+
+  .downlevel .d-appendix {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: none;
+    font-size: 0.8em;
+    line-height: 1.7em;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.5);
+    padding-top: 40px;
+    padding-bottom: 48px;
+  }
+
+  .downlevel .footnotes ol {
+    padding-left: 13px;
+  }
+
+  .downlevel .base-grid,
+  .downlevel .distill-header,
+  .downlevel .d-title,
+  .downlevel .d-abstract,
+  .downlevel .d-article,
+  .downlevel .d-appendix,
+  .downlevel .distill-appendix,
+  .downlevel .d-byline,
+  .downlevel .d-footnote-list,
+  .downlevel .d-citation-list,
+  .downlevel .distill-footer,
+  .downlevel .appendix-bottom,
+  .downlevel .posts-container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media(min-width: 768px) {
+    .downlevel .base-grid,
+    .downlevel .distill-header,
+    .downlevel .d-title,
+    .downlevel .d-abstract,
+    .downlevel .d-article,
+    .downlevel .d-appendix,
+    .downlevel .distill-appendix,
+    .downlevel .d-byline,
+    .downlevel .d-footnote-list,
+    .downlevel .d-citation-list,
+    .downlevel .distill-footer,
+    .downlevel .appendix-bottom,
+    .downlevel .posts-container {
+    padding-left: 150px;
+    padding-right: 150px;
+    max-width: 900px;
+  }
+  }
+
+  .downlevel pre code {
+    display: block;
+    border-left: 2px solid rgba(0, 0, 0, .1);
+    padding: 0 0 0 20px;
+    font-size: 14px;
+  }
+
+  .downlevel code, .downlevel pre {
+    color: black;
+    background: none;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  .downlevel .posts-list .post-preview {
+    color: inherit;
+  }
+
+
+
+  </style>
+
+  <script type="application/javascript">
+
+  function is_downlevel_browser() {
+    if (bowser.isUnsupportedBrowser({ msie: "12", msedge: "16"},
+                                   window.navigator.userAgent)) {
+      return true;
+    } else {
+      return window.load_distill_framework === undefined;
+    }
+  }
+
+  // show body when load is complete
+  function on_load_complete() {
+
+    // add anchors
+    if (window.anchors) {
+      window.anchors.options.placement = 'left';
+      window.anchors.add('d-article > h2, d-article > h3, d-article > h4, d-article > h5');
+    }
+
+
+    // set body to visible
+    document.body.style.visibility = 'visible';
+
+    // force redraw for leaflet widgets
+    if (window.HTMLWidgets) {
+      var maps = window.HTMLWidgets.findAll(".leaflet");
+      $.each(maps, function(i, el) {
+        var map = this.getMap();
+        map.invalidateSize();
+        map.eachLayer(function(layer) {
+          if (layer instanceof L.TileLayer)
+            layer.redraw();
+        });
+      });
+    }
+
+    // trigger 'shown' so htmlwidgets resize
+    $('d-article').trigger('shown');
+  }
+
+  function init_distill() {
+
+    init_common();
+
+    // create front matter
+    var front_matter = $('<d-front-matter></d-front-matter>');
+    $('#distill-front-matter').wrap(front_matter);
+
+    // create d-title
+    $('.d-title').changeElementType('d-title');
+
+    // separator
+    var separator = '<hr class="section-separator" style="clear: both"/>';
+    // prepend separator above appendix
+    $('.d-byline').before(separator);
+    $('.d-article').before(separator);
+
+    // create d-byline
+    var byline = $('<d-byline></d-byline>');
+    $('.d-byline').replaceWith(byline);
+
+    // create d-article
+    var article = $('<d-article></d-article>');
+    $('.d-article').wrap(article).children().unwrap();
+
+    // move posts container into article
+    $('.posts-container').appendTo($('d-article'));
+
+    // create d-appendix
+    $('.d-appendix').changeElementType('d-appendix');
+
+    // flag indicating that we have appendix items
+    var appendix = $('.appendix-bottom').children('h3').length > 0;
+
+    // replace footnotes with <d-footnote>
+    $('.footnote-ref').each(function(i, val) {
+      appendix = true;
+      var href = $(this).attr('href');
+      var id = href.replace('#', '');
+      var fn = $('#' + id);
+      var fn_p = $('#' + id + '>p');
+      fn_p.find('.footnote-back').remove();
+      var text = fn_p.html();
+      var dtfn = $('<d-footnote></d-footnote>');
+      dtfn.html(text);
+      $(this).replaceWith(dtfn);
+    });
+    // remove footnotes
+    $('.footnotes').remove();
+
+    // move refs into #references-listing
+    $('#references-listing').replaceWith($('#refs'));
+
+    $('h1.appendix, h2.appendix').each(function(i, val) {
+      $(this).changeElementType('h3');
+    });
+    $('h3.appendix').each(function(i, val) {
+      var id = $(this).attr('id');
+      $('.d-contents a[href="#' + id + '"]').parent().remove();
+      appendix = true;
+      $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('d-appendix'));
+    });
+
+    // show d-appendix if we have appendix content
+    $("d-appendix").css('display', appendix ? 'grid' : 'none');
+
+    // localize layout chunks to just output
+    $('.layout-chunk').each(function(i, val) {
+
+      // capture layout
+      var layout = $(this).attr('data-layout');
+
+      // apply layout to markdown level block elements
+      var elements = $(this).children().not('details, div.sourceCode, pre, script');
+      elements.each(function(i, el) {
+        var layout_div = $('<div class="' + layout + '"></div>');
+        if (layout_div.hasClass('shaded')) {
+          var shaded_content = $('<div class="shaded-content"></div>');
+          $(this).wrap(shaded_content);
+          $(this).parent().wrap(layout_div);
+        } else {
+          $(this).wrap(layout_div);
+        }
+      });
+
+
+      // unwrap the layout-chunk div
+      $(this).children().unwrap();
+    });
+
+    // remove code block used to force  highlighting css
+    $('.distill-force-highlighting-css').parent().remove();
+
+    // remove empty line numbers inserted by pandoc when using a
+    // custom syntax highlighting theme, except when numbering line
+    // in code chunk
+    $('pre:not(.numberLines) code.sourceCode a:empty').remove();
+
+    // load distill framework
+    load_distill_framework();
+
+    // wait for window.distillRunlevel == 4 to do post processing
+    function distill_post_process() {
+
+      if (!window.distillRunlevel || window.distillRunlevel < 4)
+        return;
+
+      // hide author/affiliations entirely if we have no authors
+      var front_matter = JSON.parse($("#distill-front-matter").html());
+      var have_authors = front_matter.authors && front_matter.authors.length > 0;
+      if (!have_authors)
+        $('d-byline').addClass('hidden');
+
+      // article with toc class
+      $('.d-contents').parent().addClass('d-article-with-toc');
+
+      // strip links that point to #
+      $('.authors-affiliations').find('a[href="#"]').removeAttr('href');
+
+      // add orcid ids
+      $('.authors-affiliations').find('.author').each(function(i, el) {
+        var orcid_id = front_matter.authors[i].orcidID;
+        var author_name = front_matter.authors[i].author
+        if (orcid_id) {
+          var a = $('<a></a>');
+          a.attr('href', 'https://orcid.org/' + orcid_id);
+          var img = $('<img></img>');
+          img.addClass('orcid-id');
+          img.attr('alt', author_name ? 'ORCID ID for ' + author_name : 'ORCID ID');
+          img.attr('src','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==');
+          a.append(img);
+          $(this).append(a);
+        }
+      });
+
+      // hide elements of author/affiliations grid that have no value
+      function hide_byline_column(caption) {
+        $('d-byline').find('h3:contains("' + caption + '")').parent().css('visibility', 'hidden');
+      }
+
+      // affiliations
+      var have_affiliations = false;
+      for (var i = 0; i<front_matter.authors.length; ++i) {
+        var author = front_matter.authors[i];
+        if (author.affiliation !== "&nbsp;") {
+          have_affiliations = true;
+          break;
+        }
+      }
+      if (!have_affiliations)
+        $('d-byline').find('h3:contains("Affiliations")').css('visibility', 'hidden');
+
+      // published date
+      if (!front_matter.publishedDate)
+        hide_byline_column("Published");
+
+      // document object identifier
+      var doi = $('d-byline').find('h3:contains("DOI")');
+      var doi_p = doi.next().empty();
+      if (!front_matter.doi) {
+        // if we have a citation and valid citationText then link to that
+        if ($('#citation').length > 0 && front_matter.citationText) {
+          doi.html('Citation');
+          $('<a href="#citation"></a>')
+            .text(front_matter.citationText)
+            .appendTo(doi_p);
+        } else {
+          hide_byline_column("DOI");
+        }
+      } else {
+        $('<a></a>')
+           .attr('href', "https://doi.org/" + front_matter.doi)
+           .html(front_matter.doi)
+           .appendTo(doi_p);
+      }
+
+       // change plural form of authors/affiliations
+      if (front_matter.authors.length === 1) {
+        var grid = $('.authors-affiliations');
+        grid.children('h3:contains("Authors")').text('Author');
+        grid.children('h3:contains("Affiliations")').text('Affiliation');
+      }
+
+      // remove d-appendix and d-footnote-list local styles
+      $('d-appendix > style:first-child').remove();
+      $('d-footnote-list > style:first-child').remove();
+
+      // move appendix-bottom entries to the bottom
+      $('.appendix-bottom').appendTo('d-appendix').children().unwrap();
+      $('.appendix-bottom').remove();
+
+      // hoverable references
+      $('span.citation[data-cites]').each(function() {
+        const citeChild = $(this).children()[0]
+        // Do not process if @xyz has been used without escaping and without bibliography activated
+        // https://github.com/rstudio/distill/issues/466
+        if (citeChild === undefined) return true
+
+        if (citeChild.nodeName == "D-FOOTNOTE") {
+          var fn = citeChild
+          $(this).html(fn.shadowRoot.querySelector("sup"))
+          $(this).id = fn.id
+          fn.remove()
+        }
+        var refs = $(this).attr('data-cites').split(" ");
+        var refHtml = refs.map(function(ref) {
+          // Could use CSS.escape too here, we insure backward compatibility in navigator
+          return "<p>" + $('div[id="ref-' + ref + '"]').html() + "</p>";
+        }).join("\n");
+        window.tippy(this, {
+          allowHTML: true,
+          content: refHtml,
+          maxWidth: 500,
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start'
+        });
+      });
+
+      // fix footnotes in tables (#411)
+      // replacing broken distill.pub feature
+      $('table d-footnote').each(function() {
+        // we replace internal showAtNode methode which is triggered when hovering a footnote
+        this.hoverBox.showAtNode = function(node) {
+          // ported from https://github.com/distillpub/template/pull/105/files
+          calcOffset = function(elem) {
+              let x = elem.offsetLeft;
+              let y = elem.offsetTop;
+              // Traverse upwards until an `absolute` element is found or `elem`
+              // becomes null.
+              while (elem = elem.offsetParent && elem.style.position != 'absolute') {
+                  x += elem.offsetLeft;
+                  y += elem.offsetTop;
+              }
+
+              return { left: x, top: y };
+          }
+          // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetTop
+          const bbox = node.getBoundingClientRect();
+          const offset = calcOffset(node);
+          this.show([offset.left + bbox.width, offset.top + bbox.height]);
+        }
+      })
+
+      // clear polling timer
+      clearInterval(tid);
+
+      // show body now that everything is ready
+      on_load_complete();
+    }
+
+    var tid = setInterval(distill_post_process, 50);
+    distill_post_process();
+
+  }
+
+  function init_downlevel() {
+
+    init_common();
+
+     // insert hr after d-title
+    $('.d-title').after($('<hr class="section-separator"/>'));
+
+    // check if we have authors
+    var front_matter = JSON.parse($("#distill-front-matter").html());
+    var have_authors = front_matter.authors && front_matter.authors.length > 0;
+
+    // manage byline/border
+    if (!have_authors)
+      $('.d-byline').remove();
+    $('.d-byline').after($('<hr class="section-separator"/>'));
+    $('.d-byline a').remove();
+
+    // remove toc
+    $('.d-contents').remove();
+
+    // move appendix elements
+    $('h1.appendix, h2.appendix').each(function(i, val) {
+      $(this).changeElementType('h3');
+    });
+    $('h3.appendix').each(function(i, val) {
+      $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('.d-appendix'));
+    });
+
+
+    // inject headers into references and footnotes
+    var refs_header = $('<h3></h3>');
+    refs_header.text('References');
+    $('#refs').prepend(refs_header);
+
+    var footnotes_header = $('<h3></h3');
+    footnotes_header.text('Footnotes');
+    $('.footnotes').children('hr').first().replaceWith(footnotes_header);
+
+    // move appendix-bottom entries to the bottom
+    $('.appendix-bottom').appendTo('.d-appendix').children().unwrap();
+    $('.appendix-bottom').remove();
+
+    // remove appendix if it's empty
+    if ($('.d-appendix').children().length === 0)
+      $('.d-appendix').remove();
+
+    // prepend separator above appendix
+    $('.d-appendix').before($('<hr class="section-separator" style="clear: both"/>'));
+
+    // trim code
+    $('pre>code').each(function(i, val) {
+      $(this).html($.trim($(this).html()));
+    });
+
+    // move posts-container right before article
+    $('.posts-container').insertBefore($('.d-article'));
+
+    $('body').addClass('downlevel');
+
+    on_load_complete();
+  }
+
+
+  function init_common() {
+
+    // jquery plugin to change element types
+    (function($) {
+      $.fn.changeElementType = function(newType) {
+        var attrs = {};
+
+        $.each(this[0].attributes, function(idx, attr) {
+          attrs[attr.nodeName] = attr.nodeValue;
+        });
+
+        this.replaceWith(function() {
+          return $("<" + newType + "/>", attrs).append($(this).contents());
+        });
+      };
+    })(jQuery);
+
+    // prevent underline for linked images
+    $('a > img').parent().css({'border-bottom' : 'none'});
+
+    // mark non-body figures created by knitr chunks as 100% width
+    $('.layout-chunk').each(function(i, val) {
+      var figures = $(this).find('img, .html-widget');
+      // ignore leaflet img layers (#106)
+      figures = figures.filter(':not(img[class*="leaflet"])')
+      if ($(this).attr('data-layout') !== "l-body") {
+        figures.css('width', '100%');
+      } else {
+        figures.css('max-width', '100%');
+        figures.filter("[width]").each(function(i, val) {
+          var fig = $(this);
+          fig.css('width', fig.attr('width') + 'px');
+        });
+
+      }
+    });
+
+    // auto-append index.html to post-preview links in file: protocol
+    // and in rstudio ide preview
+    $('.post-preview').each(function(i, val) {
+      if (window.location.protocol === "file:")
+        $(this).attr('href', $(this).attr('href') + "index.html");
+    });
+
+    // get rid of index.html references in header
+    if (window.location.protocol !== "file:") {
+      $('.distill-site-header a[href]').each(function(i,val) {
+        $(this).attr('href', $(this).attr('href').replace(/^index[.]html/, "./"));
+      });
+    }
+
+    // add class to pandoc style tables
+    $('tr.header').parent('thead').parent('table').addClass('pandoc-table');
+    $('.kable-table').children('table').addClass('pandoc-table');
+
+    // add figcaption style to table captions
+    $('caption').parent('table').addClass("figcaption");
+
+    // initialize posts list
+    if (window.init_posts_list)
+      window.init_posts_list();
+
+    // implmement disqus comment link
+    $('.disqus-comment-count').click(function() {
+      window.headroom_prevent_pin = true;
+      $('#disqus_thread').toggleClass('hidden');
+      if (!$('#disqus_thread').hasClass('hidden')) {
+        var offset = $(this).offset();
+        $(window).resize();
+        $('html, body').animate({
+          scrollTop: offset.top - 35
+        });
+      }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    if (is_downlevel_browser())
+      init_downlevel();
+    else
+      window.addEventListener('WebComponentsReady', init_distill);
+  });
+
+  </script>
+
+  <!--/radix_placeholder_distill-->
+  <script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
+  <script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+  <link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+  <link href="site_libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
+  <script src="site_libs/bsTable-3.3.7/bootstrapTable.js"></script>
+  <link href="site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet" />
+  <script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+  <link href="site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+  <script src="site_libs/datatables-binding-0.33/datatables.js"></script>
+  <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+  <link href="site_libs/dt-core-1.13.6/css/jquery.dataTables.min.css" rel="stylesheet" />
+  <link href="site_libs/dt-core-1.13.6/css/jquery.dataTables.extra.css" rel="stylesheet" />
+  <script src="site_libs/dt-core-1.13.6/js/jquery.dataTables.min.js"></script>
+  <link href="site_libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet" />
+  <script src="site_libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
+  <script src="site_libs/popper-2.6.0/popper.min.js"></script>
+  <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="site_libs/tippy-6.2.7/tippy.umd.min.js"></script>
+  <script src="site_libs/anchor-4.2.2/anchor.min.js"></script>
+  <script src="site_libs/bowser-1.9.3/bowser.min.js"></script>
+  <script src="site_libs/webcomponents-2.0.0/webcomponents.js"></script>
+  <script src="site_libs/distill-2.2.21/template.v2.js"></script>
+  <!--radix_placeholder_site_in_header-->
+  <!--/radix_placeholder_site_in_header-->
+
+
+</head>
+
+<body>
+
+<!--radix_placeholder_front_matter-->
+
+<script id="distill-front-matter" type="text/json">
+{"title":"Pressure QC","authors":[]}
+</script>
+
+<!--/radix_placeholder_front_matter-->
+<!--radix_placeholder_navigation_before_body-->
+<header class="header header--fixed" role="banner">
+<nav class="distill-site-nav distill-site-header">
+<div class="nav-left">
+<a href="index.html" class="title">In Situ NRT Summary</a>
+</div>
+<div class="nav-right">
+<a href="index.html">Arctic Sea (AR)</a>
+<div class="nav-dropdown">
+<button class="nav-dropbtn">
+Baltic Sea (BO)
+ 
+<span class="down-arrow">&#x25BE;</span>
+</button>
+<div class="nav-dropdown-content">
+<a href="bo_summary.html">Summary</a>
+<hr/>
+<a href="bo_pres.html">Pres</a>
+<a href="bo_temp.html">Temp</a>
+<a href="bo_psal.html">Psal</a>
+<hr/>
+<a href="bo_pres_qc.html">Pres QC</a>
+<a href="bo_temp_qc.html">Temp QC</a>
+<a href="bo_psal_qc.html">Psal QC</a>
+</div>
+</div>
+<a href="index.html">Mediterranean Sea (MO)</a>
+<a href="index.html">Arctic Sea (GL)</a>
+<a href="index.html">Baltic Sea (GL)</a>
+<a href="index.html">Mediterranean Sea (GL)</a>
+<a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
+</div>
+</nav>
+</header>
+<!--/radix_placeholder_navigation_before_body-->
+<!--radix_placeholder_site_before_body-->
+<!--/radix_placeholder_site_before_body-->
+
+<div class="d-title">
+<h1>Pressure QC</h1>
+
+<!--radix_placeholder_categories-->
+<!--/radix_placeholder_categories-->
+
+</div>
+
+
+<div class="d-article">
+<div class="d-contents d-contents-float">
+<nav class="l-text toc figcaption" id="TOC">
+<h3>Contents</h3>
+<ul>
+<li><a href="#basic-information" id="toc-basic-information">1. Basic Information</a></li>
+<li><a href="#summary-statistics" id="toc-summary-statistics">2. Summary statistics</a></li>
+</ul>
+</nav>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<p>The page shows the basic analysis of pressure qc flag QC flags from Baltic NRT in situ observations.</p>
+<hr />
+<section id="basic-information" class="layout-chunk" data-layout="l-body">
+<h2>1. Basic Information</h2>
+<h3 id="variable-name">Variable name</h3>
+<ul>
+<li><code>pres_qc</code>: Pressure QC flag</li>
+</ul>
+<h3 id="input-data-file">Input data file</h3>
+<ul>
+<li><strong>BO data</strong>: netcdf_nrt_bo.parquet</li>
+<li><strong>Filtered</strong>: No</li>
+</ul>
+</section>
+<hr />
+<section id="summary-statistics" class="layout-chunk" data-layout="l-body">
+<h2>2. Summary statistics</h2>
+<h3 id="non-na-counts-in-pres">Non-NA counts in <code>pres</code></h3>
+<div class="layout-chunk" data-layout="l-body">
+<table class="table table-striped table-hover table-condensed table-responsive table" style="margin-left: auto; margin-right: auto; font-size: 12px; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Category
+</th>
+<th style="text-align:left;">
+Total Count
+</th>
+<th style="text-align:left;">
+Non-NA Count
+</th>
+<th style="text-align:left;">
+Pct
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+# Platforms
+</td>
+<td style="text-align:left;">
+753
+</td>
+<td style="text-align:left;">
+753
+</td>
+<td style="text-align:left;">
+100.0%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+# Profiles
+</td>
+<td style="text-align:left;">
+112,411
+</td>
+<td style="text-align:left;">
+112,411
+</td>
+<td style="text-align:left;">
+100.0%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+# Observations
+</td>
+<td style="text-align:left;">
+9,334,806
+</td>
+<td style="text-align:left;">
+9,334,792
+</td>
+<td style="text-align:left;">
+100.0%
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="qc-flag-counts">QC flag counts</h3>
+<div class="layout-chunk" data-layout="l-body">
+<table class="table table-striped table-hover table-condensed table-responsive table" style="margin-left: auto; margin-right: auto; font-size: 12px; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Code
+</th>
+<th style="text-align:left;">
+Definition
+</th>
+<th style="text-align:left;">
+n
+</th>
+<th style="text-align:left;">
+Relative Frequency (%)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+No QC was performed
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+0.0%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+Good data
+</td>
+<td style="text-align:left;">
+9,292,079
+</td>
+<td style="text-align:left;">
+99.5%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2
+</td>
+<td style="text-align:left;">
+Probably good data
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+0.0%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+3
+</td>
+<td style="text-align:left;">
+Bad data that are potentially correctable
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+0.0%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+4
+</td>
+<td style="text-align:left;">
+Bad data
+</td>
+<td style="text-align:left;">
+42,713
+</td>
+<td style="text-align:left;">
+0.5%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+5
+</td>
+<td style="text-align:left;">
+Value changed
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+0.0%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+6
+</td>
+<td style="text-align:left;">
+Below detection limit
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+0.0%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+7
+</td>
+<td style="text-align:left;">
+In excess of quoted value
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+0.0%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+8
+</td>
+<td style="text-align:left;">
+Interpolated value
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+0.0%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+9
+</td>
+<td style="text-align:left;">
+Missing value
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+0.0%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+A
+</td>
+<td style="text-align:left;">
+Incomplete information
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+0.0%
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="summary-table-of-pressure-qc-flag-by-platform">Summary table of pressure qc flag by platform</h3>
+<div class="layout-chunk" data-layout="l-body">
+<style>table.dataTable {font-size: 12px;}</style>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-9c44bd8639c5cd54fa5d" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-9c44bd8639c5cd54fa5d">{"x":{"filter":"none","vertical":false,"data":[["ARH160003","ARH170001","ARH170002","ARH170004","ARH170006","ARH170011","ARH170025","ARH170084","ARH170115","ARH170117","ARH170118","ARH170119","ARH170139","ARH170142","ARH190004","ARH190005","ARH230902","ARH230904","ARH230905","ARH250030","ARH250032","ARH250034","BOR1040005","BOR1040050","BOR3074005","BOR3091005","BOR4049005","BOR4084505","BOR5059505","BORBMPK2","BRK1040050","BRK3074005","BRK3091005","BRK4049005","BRK4084505","BRK5059505","BRKBMPK2","BSHDarsserS","DMU1001","DMU1002","DMU1004","DMU1005","DMU1006","DMU1007","DMU1008","DMU1009","DMU1013","DMU1019","DMU1022","DMU1023","DMU1024","DMU1025","DMU1026","DMU1027","DMU1034","DMU1035","DMU1041","DMU1042","DMU1043","DMU1044","DMU1045","DMU1046","DMU1052","DMU1053","DMU1054","DMU1055","DMU1056","DMU1059","DMU1060","DMU1061","DMU1062","DMU1063","DMU1064","DMU1071","DMU1072","DMU1073","DMU1074","DMU1080","DMU1081","DMU1082","DMU1083","DMU1084","DMU1085","DMU1086","DMU1101","DMU1102","DMU1104","DMU1106","DMU1130","DMU1131","DMU1133","DMU1135","DMU1728","DMU31S","DMU403","DMU409","DMU413","DMU415","DMU418","DMU427","DMU430","DMU431","DMU432","DMU441","DMU443","DMU444","DMU449","DMU450","DMU905","DMU921","DMU922","DMU925","DMU935","DMU939","DMU952","DMU954","DMUM2","DMUN3","EPALT1","EPALT1B","EPALT2","EPALT2C","EPALT3","EPALT4","EPALT46","EPALT4C","EPALT5","EPALT6","EPALT64","EPALT64A","EPALT65","EPALT66","EPALT6B","EPALT7","EPALTB-1","EPALTB-4","EPALTN-6","FRB1877","FRB1937","FRB1939","FRB1993","FRB20036","FRB20037","FRB20038","FRB2013","FRB65","FRB75","FRB8000","FRB8550","FRB9000","FRB9080","FYN0018001","FYN0018002","FYN0018112","FYN0018121","FYN0018152","FYN0018153","FYN0018161","FYN0018231","FYN0018232","FYN0018310","FYN0018320","FYN0018322","FYN0018361","FYN0018365","FYN0018402","FYN0018501","FYN0018511","FYN0018531","FYN0018532","FYN0018541","FYN0018571","FYN0018572","FYN0018691","FYN0018751","FYN0018752","FYN0018825","FYN0018841","FYN0018843","FYN0018861","FYN0018881","FYN0018882","FYN6100014","FYN6100016","FYN6100018","FYN6100020","FYN6100021","FYN6100051","FYN6100052","FYN6200026","FYN6200027","FYN6200029","FYN6200901","FYN6300043","FYN6300044","FYN6300050","FYN6300051","FYN6400042","FYN6500002","FYN6500003","FYN6500033","FYN6500040","FYN6500041","FYN6500051","FYN6500052","FYN6500053","FYN6500054","FYN6500062","FYN6500099","FYN6510001","FYN6510005","FYN6510009","FYN6510011","FYN6510015","FYN6510017","FYN6600007","FYN6700009","FYN6700051","FYN6700053","FYN6700054","FYN6900017","FYN6900803","FYN6900804","FYN6910008","FYN6940622","FYN7100804","FYN7101002","FYN7101003","FYN7101004","FYN7101101","FYN7101102","FYN7101103","FYN7101104","FYN7200506","FYN7200508","FYN7200603","FYN7200605","FYN7200606","FYN7200607","FYN7200608","FYN7200609","FYN7200706","FYN7301603","FYN7301604","FYN7301701","FYN7301702","FYN7301703","FYN7301704","FYN7301801","FYN7301802","FYN7400302","FYN7400403","FYN7400405","FYN7501901","FYN7501910","FYN7501911","FYN7501912","FYN7502001","FYN7502002","FYN7701207","FYN7701302","FYN8152","FYN8231","FYN8232","FYN8361","FYN8365","FYN8571","FYN8572","FYN8751","FYN8752","FYN8841","FYN8843","IOPANBojaGotlandia1","IOPANIO5","IOPANIO6","IOPANIO7","IOPANK","IOPANL4","IOPANL8","IOPANL9","IOPANOster1","IOPANP1","IOPANP104","IOPANP104a","IOPANP104b","IOPANP104c","IOPANP110","IOPANP110a","IOPANP110d","IOPANP115","IOPANP116","IOPANP13","IOPANP14","IOPANP15","IOPANP16a","IOPANP1a","IOPANP2","IOPANP2a","IOPANP40","IOPANP63","IOPANP63a","IOPANPY15a","IOPANPokemark1","IOPANR4","IOPANR6","IOPANR8","IOPANTA10","IOPANTA6","IOPANTA7","IOPANTA8","IOPANTA9","IOPANZN2","KBH1722","KBH1723","KBH1728","KBH1942","KBH1944","KBH431","KBH5000","KBH5002","KBH5005","KBK1728","KBK3002","KBK3005","LHEI101A","LHEI102A","LHEI103","LHEI103C","LHEI107","LHEI107A","LHEI111","LHEI119","LHEI120","LHEI121","LHEI135","LHEI142","LHEI158","LHEI160","LHEI161","LHEI162","LHEI163","LHEI164","LHEI165","LHEI166","LHEI167","LHEI168","LHEI169","LHEI170","LHEI172","LHEI173","LHEI174","LHEI37","LHEI43","MSI107","MSI111","MSI114","MSI14","MSI15","MSI17","MSI19","MSI23","MSI25","MSI32","MSI34a","MSI85","MSIE80","MSIF1","MSIF3","MSIG1","MSIH1","MSIH2","MSIN12","NJY3306","NJY3310","NJY40302","NJY409","NJY4406","NJY4410","NJY6602","NJY6605","NJY6607","NJY7705","NJY7715","NJY7725","NOR3306","NOR3310","NOR40302","NOR409","NOR4406","NOR4410","NOR4411","NOR5503","RIB1510001","RIB1510002","RIB1510003","RIB1510005","RIB1510006","RIB1510007","RIB1510008","RIB1510009","RIB1510022","RIB1610002","RIB1610003","RIB1610008","RIB1620012","RIB1620014","RIB1630016","RKB1","RKB10","RKB22","RKB23","RKB43","RKB44","RKB59","ROS1726","ROS1727","ROS2","ROS2043","ROS5060","ROS60","ROS8014","ROS8015","SJY1","SJY12","SJY12A","SJY13B","SJY15","SJY16","SJY19","SJY19A","SJY2","SJY20","SJY27","SJY3","SJYFF31","SJYFF41","SJYFF43","SJYHADF0008","SJYKFF1","SJYKFF2","SJYKFF3","SJYKFF4","SJYKFF5","SJYKFF6","SJYSJA1","SMFBY29","SMFBY31","SMHI3125","SMHI4002","SMHI409ALBORGBUGT","SMHI441STEVNSKLINT","SMHI925KATTEGATSW","SMHIA13","SMHIA14","SMHIA15","SMHIA16","SMHIA17","SMHIALSBACK","SMHIANHOLTE","SMHIASTOL","SMHIB1V","SMHIBCSIII10","SMHIBJORKHOLMEN","SMHIBLAJUNGFRUN","SMHIBO3A3","SMHIBY1","SMHIBY10","SMHIBY11","SMHIBY13","SMHIBY15","SMHIBY19","SMHIBY2","SMHIBY20","SMHIBY21","SMHIBY23","SMHIBY27","SMHIBY28","SMHIBY29","SMHIBY3","SMHIBY30","SMHIBY31","SMHIBY32","SMHIBY36","SMHIBY38","SMHIBY39","SMHIBY4","SMHIBY5","SMHIBY7","SMHIBY9","SMHIBYFJORDEN","SMHIBYTTELOCKET","SMHIC3","SMHIDANAFJORD","SMHIDROGDENE","SMHIEALVSBORGSBRON","SMHIF13","SMHIF16","SMHIF18","SMHIF2","SMHIF26C15","SMHIF33","SMHIF3A5","SMHIF64","SMHIF9A13","SMHIFA1","SMHIFLADEN","SMHIG1","SMHIGALTERO","SMHIGF6","SMHIGF8","SMHIGF9","SMHIHANOBUKTEN","SMHIHANOBUKTENKBV","SMHIHAVSTENSFJORD","SMHIHS5","SMHIHUVUDSKARBUOY","SMHIK11MV","SMHIK12","SMHIK15MV","SMHIK19","SMHIK21","SMHIK24","SMHIK26","SMHIK27","SMHIK28","SMHIK29","SMHIK30","SMHIK3V","SMHIK6","SMHIK7","SMHIKAARV4","SMHIKL12","SMHIKL8","SMHIKNOLLSGRUNDBUOY","SMHIKOLJOFJORD","SMHIKOSTERFJORDEN","SMHIKULLEN","SMHIL12","SMHIL9","SMHILAHOLM3","SMHILAMIDDELGRUND","SMHILASOE","SMHILASORANNA","SMHILL12","SMHILL15","SMHILT1","SMHILT2","SMHILT3","SMHILT4","SMHIM1V","SMHIM3V","SMHIM5V","SMHIM6V","SMHIM7V","SMHIMASESKARWBUOY","SMHIMB1VMS","SMHIMB210VMSF","SMHIMB24V","SMHIMB2V","SMHIMS2","SMHIMS4C14","SMHIMS6","SMHIN13","SMHIN14","SMHIN5","SMHIN6","SMHIN7","SMHINORRAMIDSJOBANKEN","SMHINY","SMHIO1V","SMHIOKG1V","SMHIOLANDSODRA","SMHIORESUND12X","SMHIORESUND2","SMHIORESUND4","SMHIORESUND7","SMHIOVF11","SMHIOVF32","SMHIOVF411","SMHIOVF48","SMHIOVF52","SMHIP2","SMHIPLP1","SMHIPLP63","SMHIREFM1V1","SMHIREFO3V","SMHIREFV2","SMHIREFV2V","SMHIRR1","SMHIRR5","SMHIRR7","SMHIS10","SMHISEGERSTADII","SMHISKALDERVIKEN2","SMHISKALKORGARNA","SMHISLAGGO","SMHISODRAMIDSJOBANKEN","SMHISR1A","SMHISR3","SMHISR5C4","SMHISR8","SMHISS29","SMHISTMIDDELGRUND","SMHISTOLPETROSKEL","SMHISTRETUDDEN","SMHISWVINGAGF4","SMHITROSKELNALANDSHAV","SMHIUS2","SMHIUS3C6","SMHIUS5BC1","SMHIUS7","SMHIV1V","SMHIV3V","SMHIV6VMS","SMHIVA6","SMHIVADEROARNABUOY","SMHIVALO","SMHIVH1","SMHIVH3A","SMHIVH4","SMHIWFAROSUND","SMHIWLANDSKRONA","STO0101015","STO0101019","STO0101021","STO0101023","STO0101047","STO0101124","STO0102006","STO0102013","STO0102017","STO0103004","STO0103052","STO0201120","STO0302051","STO0501018","STO0601053","STO0601056","STO0601088","STO0703006","STO0704010","STO0801008","STO0801049","STO0802008","STO0802023","STO0901008","STO0901016","STO0901032","STR0101015","STR0101023","STR0101047","STR0102013","STR0103004","STR0103052","STR0302051","STR0704010","STR0802008","STR0802023","STR0901008","STR0901016","STR0901032","SYKE39A","SYKEBCSIII10","SYKEBO3A3","SYKEBY1","SYKEBY15","SYKEBY2","SYKEBY38","SYKEBY5","SYKEF18","SYKEF2","SYKEF62","SYKEF64","SYKEGF1","SYKEGF2","SYKEIU2","SYKEIU6","SYKEIU7","SYKEJML","SYKELL12","SYKELL15","SYKELL17","SYKELL23","SYKELL3A","SYKELL7","SYKELL9","SYKEMS9","SYKESR5C4","SYKESR8","SYKEUS5BC1","SYKEUUS23","SYKEXII3","SYKEXV1","UMFB7","UMFC3","UMFF3A5","UMFF9A13","UMFGA1","UMFMS4C14","UMFNB1B3","UMFRA2","VEJ0003350","VEJ0003750","VEJ0003772","VEJ0003951","VEJ0004273","VEJ0004669","VEJ0005367","VEJ0005790","VEJ0006089","VEJ0006489","VEJ0006592","VEJ0006870","VEJ0006883","VEJ0007677","VEJ6100014","VIB23101","VIB23102","VIB3702-1","VIB3705-1","VIB3708-1","VIB3711-1","VIB3713-00001","VIB3718-00001","VIB3719-00001","VIB3723-1","VIB3726-1","VIB3727-1","VIB3728-1","VSJ10001","VSJ10002","VSJ10003","VSJ10006","VSJ20004","VSJ20925","VSJ30002","VSJ30003","VSJ30005","VSJ30006","VSJ30008","VSJ30018","VSJ41007","VSJ41008","VSJ42001","VSJ42009","VSJ43010","VSJ44011","VSJ45012","VSJ50015","VSJ51013","VSJ51014","VSJ53016","VSJ8000"],[9336,986,32215,5631,91429,11029,8461,24765,4902,16329,7066,1315,24309,8855,22380,8419,18576,3993,26667,407,771,612,65,12872,112,111,54,114,108,15608,11241,94,94,46,94,92,21029,5130,12271,3289,5533,4002,387,7883,7754,4995,145,148,139,208,226,226,189,161,118,173,109,141,147,208,219,198,144,174,198,172,195,87,123,172,207,227,231,176,200,190,169,107,129,151,204,199,183,88,114,290,306,495,149,165,291,353,1136,390,8426,3262,9193,2802,5508,8372,377,12534,5589,5523,7245,9125,4258,7139,15320,5292,7113,9030,8944,7208,5340,5685,1636,1205,283,155,318,125,128,279,44,135,132,900,368,158,201,31,231,140,72,92,138,10137,9862,17849,13068,1083,2316,2149,29123,16101,23952,18126,3019,24000,3390,258,689,9237,295,499,307,237,582,22635,6958,809,972,4390,1886,90,660,22,426,2298,292,3109,1424,2839,466,1944,8334,4949,8654,144,211,109,33199,28207,28796,70349,55011,75080,35615,1477,40135,40662,49228,88337,77377,3070,8299,36365,11568,112,15613,546,10781,53337,28945,26490,997,3193,819,1217,1754,2124,2756,2844,2167,10170,40410,51093,137140,41437,53990,3720,7467,5088,52673,881,738,998,1437,602,1228,2412,2335,3031,4654,519,1858,6234,1949,2138,1125,2871,1013,4221,1945,8190,12262,1205,9143,2061,2973,890,3193,4286,4169,19833,1397,2102,3618,6530,999,384,702,10879,4077,1857,2191,1506,424,881,5075,7918,106,82,141,144,64,67,86,121,326,334,180,221,508,234,240,182,84,184,306,222,90,138,79,313,234,241,277,246,298,359,261,76,117,234,217,337,422,593,313,146,1173,5931,13179,8775,1839,123628,7026,3474,1208,20382,5594,34673,1018,1775,2288,502,1270,421,1744,1902,1553,3629,2019,1837,404,313,318,653,1055,257,737,282,1062,380,172,540,499,440,532,670,616,909,1239,883,2505,710,3606,2815,3204,3143,3500,1693,2809,2690,2768,2719,1823,2824,3086,1135,652,1192,24230,12046,655,10160,962,826,925,5697,16793,24870,1143,2367,43621,21035,1162,16141,15841,60149,2959,656,6846,999,771,3120,708,7110,642,4244,454,4018,737,667,52,13283,6025,2776,2743,10421,12331,5616,3622,20850,6504,2322,1804,14794,5284,578,71699,20270,11120,30351,44179,45750,33582,24145,1131,3324,10778,11651,10145,16441,12982,1180,9041,34045,1435,2315,51687,19797,28082,65668,476378,71,103,1278,2524,3685,100462,109136,140882,221996,347783,25036,113967,29614,434,91618,30252,7039,9626,50893,157610,19057,9639,288498,16002,52428,222467,12931,3987,13487,20090,92663,6654,19404,241127,222593,14663,119773,12214,102163,98751,11604,23067,19440,12136,2699,17541,4327,3838,5947,3542,10125,8283,13624,13537,1079,30981,10536,63,104025,182,16585,4912,4420,2910,85342,4081,16901,14706,8091,765,681,314,640,1106,128,96,121,175,133,133,77,3748,759,1442,62,83,1837,17224,76735,5387,80,3314,2555,11458,15414,11729,3525,4472,1225,1353,769,953,265,355,60,55,49,1124,428,703,521,767,7037,1163,7212,5679,23708,3535,7148,7280,83,1139,368,1017,1054,1891,711,1310,1661,1495,1205,500,1176,992,108793,7262,5626,15316,1043,2156,2757,7956,6304,3065,109,654,2823,5769,96493,544,5999,7402,13520,3124,10164,5033,7364,20497,12033,6827,20176,15639,22616,1727,497,1296,1145,140,127,9954,1723,1200,1430,464,60323,15065,4326,4787,24486,4704,5928,924,1140,151,128,2062,5293,742,2219,250,902,3941,380,1557,15167,10603,8825,887,16979,33307,11027,3335,5130,4847,1518,261,1465,910,945,4995,893,4887,26515,10721,179,1941,1616,320,15134,907,2388,1737,190,2258,531,17497,459,461,37,110,678,440,9803,858,11712,14417,4400,16321,475,556,11313,247,3467,253,169,338,1137,40706,19494,35532,3314,16403,798,518,6713,2081,4234,7549,21896,9210,18223,17369,3442,43051,1297,51843,14743,5600,9692,1184,896,12169,8518,15057,11517,2111,767,2,15523,25640,14978,13491,2481,3010,18942,12088,8420,77780,17211,5185,435,26323,3323,2265,20824,15890,2012,4822,6549,2283,6262,4255,2136,1103,1344,13957],[9336,986,32215,5631,91429,11029,8461,24765,4902,16329,7066,1315,24309,8855,22380,8419,5654,434,7831,407,771,612,65,12872,112,111,54,114,108,15608,11241,94,94,46,94,92,21029,5130,12271,3289,5533,4002,387,7883,7754,4995,145,148,139,208,226,226,189,161,118,173,109,141,147,208,219,198,144,174,198,172,195,87,123,172,207,227,231,176,200,190,169,107,129,151,204,199,183,88,114,290,306,495,149,165,291,353,1136,390,8426,3262,9193,2802,5508,8372,377,12534,5589,5523,7245,9125,4258,7139,15320,5292,7113,9030,8944,7208,5340,5685,1636,1205,283,155,318,125,128,279,44,135,132,900,368,158,201,31,231,140,72,92,138,10137,9862,17849,13068,1083,2316,2149,29123,16101,23952,18126,3019,24000,3390,258,689,9237,288,482,300,237,582,22635,6958,809,972,4154,1886,90,660,22,426,2260,292,3109,1424,2839,439,1866,8334,4949,8654,144,211,109,33199,28207,28796,70349,55011,75080,35615,1477,40135,40662,49228,88337,77377,3070,8299,36365,11568,112,15613,546,10781,53337,28945,26490,997,3170,819,1217,1754,2124,2756,2844,2167,10170,40410,51093,137140,41437,53990,3720,7467,5088,52673,881,738,998,1437,602,1228,2412,2335,3031,4654,519,1858,6234,1949,2138,1125,2871,1013,4221,1945,8190,12262,1205,9143,2061,2973,890,3193,4286,4169,19833,1397,2102,3618,6530,999,376,702,10879,3859,1857,2191,1506,405,846,5075,7918,90,61,125,119,57,51,77,112,286,300,158,200,468,208,215,169,72,172,270,192,67,125,64,295,213,223,255,228,258,340,238,58,95,221,191,310,403,574,280,126,1173,5931,13179,8775,1839,123628,7026,3474,1208,20382,5594,34673,1018,1775,2288,502,1270,421,1737,1902,1553,3629,2019,1837,404,313,318,653,1055,257,737,282,1062,380,172,540,499,440,500,670,616,906,1234,873,2504,707,3595,2815,3202,3141,3498,1691,2805,2687,2766,2717,1819,2824,3084,1135,652,1192,24230,12046,655,10160,962,826,925,5697,16793,24870,1143,2367,43621,21035,1162,16141,15841,60149,2959,656,6846,999,771,3120,708,7110,642,4244,454,4018,737,667,52,13283,6025,2776,2743,10421,12331,5616,3622,20850,6504,2322,1804,14794,5284,578,71699,20270,11120,30351,44179,45750,33582,24145,1131,3324,10778,11651,10145,16441,12982,1180,9041,34045,491,2315,51687,19797,28082,65668,476021,71,103,1278,2522,3685,100385,109111,140590,221983,347705,25032,113922,29614,434,91597,30252,7039,9625,50878,157592,19056,9625,288456,15999,52403,222435,12925,3987,13487,20090,92625,6654,19395,241106,222583,14661,119763,12203,102083,98685,11603,23067,19440,12136,2699,17541,4327,3838,5947,3542,10125,8282,13624,13537,1079,30980,10536,63,103954,182,16585,4910,4412,2896,85296,4081,16898,14706,8062,765,681,314,640,1106,128,96,121,175,133,133,77,3748,759,1442,62,83,1837,17224,76735,5377,80,3314,2553,11458,15414,11711,3525,4472,1225,1353,769,953,265,355,60,55,49,1124,428,703,521,767,7035,1163,7212,5679,23668,3535,7148,7280,83,1139,368,1017,1054,1891,711,1310,1661,1495,1205,500,1176,992,108743,7262,5626,15316,1043,2156,2757,7954,6304,3065,109,654,2816,5769,96305,544,5998,7402,13519,3124,10164,5033,7364,20497,12030,6826,20176,15639,22616,1726,497,1296,1145,140,127,9954,1723,1200,1430,464,60181,15065,4326,4787,24486,4704,5928,924,1140,151,128,2062,5293,742,2219,250,902,3941,380,1557,15167,10603,8825,887,16979,33307,11027,3282,5087,4847,1518,261,1465,910,945,4995,893,4887,26515,10721,177,1941,1616,320,15134,907,2388,1737,190,2257,531,17497,458,461,37,110,678,440,9803,858,11712,14417,4399,16321,474,556,11313,247,3467,253,169,338,1137,40704,19494,35532,3314,16403,798,518,6713,2081,4234,7549,21896,9210,18223,17369,3442,43051,1297,51843,14743,5600,9692,1184,896,12169,8518,15057,11517,2111,767,2,15523,25640,14978,13491,2481,3010,18942,12088,8420,77780,17211,5185,435,26323,3323,2265,20824,15890,2012,4822,6549,220,6262,4255,2136,447,1344,13957],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,12922,3559,18836,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7,17,7,0,0,0,0,0,0,236,0,0,0,0,0,38,0,0,0,0,27,78,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,23,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8,0,0,218,0,0,0,19,35,0,0,16,21,16,25,7,16,9,9,40,34,22,21,40,26,25,13,12,12,36,30,23,13,15,18,21,18,22,18,40,19,23,18,22,13,26,27,19,19,33,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32,0,0,3,5,10,1,3,11,0,2,2,2,2,4,3,2,2,4,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,944,0,0,0,0,0,357,0,0,0,2,0,77,25,292,13,78,4,45,0,0,21,0,0,1,15,18,1,14,42,3,25,32,6,0,0,0,38,0,9,21,10,2,10,11,80,66,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,71,0,0,2,8,14,46,0,3,0,29,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10,0,0,2,0,0,18,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,40,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,50,0,0,0,0,0,0,2,0,0,0,0,7,0,188,0,1,0,1,0,0,0,0,0,3,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,142,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,53,43,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2063,0,0,0,656,0,0]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Platform<\/th>\n      <th># Observations<\/th>\n      <th>1<\/th>\n      <th>4<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"searching":true,"paging":true,"info":true,"lengthMenu":[[10,50,100,-1],["10","50","100","All"]],"columnDefs":[{"className":"dt-right","targets":[1,2,3]},{"name":"Platform","targets":0},{"name":"# Observations","targets":1},{"name":"1","targets":2},{"name":"4","targets":3}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+</div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+</section>
+<hr />
+<div class="sourceCode" id="cb7"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<!--radix_placeholder_article_footer-->
+<!--/radix_placeholder_article_footer-->
+</div>
+
+<div class="d-appendix">
+</div>
+
+
+<!--radix_placeholder_site_after_body-->
+<!--/radix_placeholder_site_after_body-->
+<!--radix_placeholder_appendices-->
+<div class="appendix-bottom"></div>
+<!--/radix_placeholder_appendices-->
+<!--radix_placeholder_navigation_after_body-->
+<!--/radix_placeholder_navigation_after_body-->
+
+</body>
+
+</html>
