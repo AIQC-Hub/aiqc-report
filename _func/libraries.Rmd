@@ -4,7 +4,6 @@ library(fontawesome)
 library(kableExtra)
 library(DT)
 library(htmltools)
-library(xaringanExtra)
 
 library(arrow)
 library(tidyverse)
