@@ -1,5 +1,3 @@
-## 1. Basic Information
-
 ### NetCDF files
   - **Dataset ID**: [{{netcdf}}]({{netcdf_doi}})
   - **Duration**: history

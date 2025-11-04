@@ -1,4 +1,4 @@
-## 3. Locations
+### Location ranges
 
  - **Longitude**: `r round(min(summary_loc_table[, "Min(Lon)"]), 3)` to `r round(max(summary_loc_table[, "Max(Lon)"]), 3)`
  - **Latitude**: `r round(min(summary_loc_table[, "Min(Lat)"]), 3)` to `r round(max(summary_loc_table[, "Max(Lat)"]), 3)`

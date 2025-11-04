@@ -5,3 +5,5 @@
 .project
 _site
 .idea
+data
+docs

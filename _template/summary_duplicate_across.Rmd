@@ -1,5 +1,3 @@
-## 6. Duplicate profiles across platforms
-
 ### Detection criteria
 
 To identify potential duplicate profiles, the following variables must match:

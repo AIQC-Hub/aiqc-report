@@ -8,8 +8,8 @@ input_url <- "./resources/netcdf_nrt_bo.parquet"
 df_name <- "df_bo"
 
 # Path
-#rsc_dir <- "/scratch/data/aiqc/merged/nrt_bo"
-rsc_dir <- "../data"
+rsc_dir <- "../data/nrt_bo"
+#rsc_dir <- "../data"
 
 # Data frame
 bo_file_name <- file.path(rsc_dir, "netcdf_nrt_bo.parquet")

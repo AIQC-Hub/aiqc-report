@@ -32,7 +32,6 @@ platform1 <- "UMFF9A13"
 platform2 <- "UMFNB1B3"
 platform3 <- "SMHIRR7"
 
-
 time_span1 <- "ts7889"
 time_span2 <- "ts9006"
 time_span3 <- "ts07A2"
@@ -54,25 +53,28 @@ count5 <- "4000"
 
 ```
 
+## 1. Basic Information
 ```{r, basic_info, results = 'asis'}
-res <- knitr::knit_expand(t_basic_info, netcdf=netcdf, netcdf_doi=netcdf_doi, region=region,
+res <- knitr::knit_expand(t_s_basic_info, netcdf=netcdf, netcdf_doi=netcdf_doi, region=region,
                           region_code2=region_code2, parquet=parquet)
 cat(res, sep = '\n')
 ```
 
 ---
 
+## 2. Descriptive Statistics of `r region_code1` CTD Data
 ```{r, descriptive_stats, results = 'asis'}
-src <- knitr::knit_expand(t_descriptive_stats, region_code1=region_code1, df=df_name)
+src <- knitr::knit_expand(t_s_descriptive_stats, region_code1=region_code1, df=df_name)
 res <- knitr::knit_child(text = src, quiet = TRUE)
 cat(res, sep = '\n')
 ```
 
 ---
 
+## 3. Locations
 ```{r, locations, results = 'asis'}
 
-src <- knitr::knit_expand(t_locations, platform1=platform1, platform2=platform2,
+src <- knitr::knit_expand(t_s_locations, platform1=platform1, platform2=platform2,
                           platform3=platform3)
 res <- knitr::knit_child(text = src, quiet = TRUE)
 cat(res, sep = '\n')
@@ -80,8 +82,9 @@ cat(res, sep = '\n')
 
 ---
 
+## 4. Distribution of profiles over time
 ```{r, distribution_time, results = 'asis'}
-src <- knitr::knit_expand(t_distribution_time,
+src <- knitr::knit_expand(t_s_distribution_time,
                           time_span1=time_span1, time_span1_from=ts7889_from, time_span1_to=ts7889_to,
                           time_span2=time_span2, time_span2_from=ts9006_from, time_span2_to=ts9006_to,
                           time_span3=time_span3, time_span3_from=ts07A2_from, time_span3_to=ts07A2_to,
@@ -92,8 +95,9 @@ cat(res, sep = '\n')
 
 ---
 
+## 5. Duplicate profiles within platforms
 ```{r, duplicate_within, results = 'asis'}
-src <- knitr::knit_expand(t_duplicate_within, longitude_var=longitude_var,
+src <- knitr::knit_expand(t_s_duplicate_within, longitude_var=longitude_var,
                           latitude_var=latitude_var, df=df_name)
 res <- knitr::knit_child(text = src, quiet = TRUE)
 cat(res, sep = '\n')
@@ -101,8 +105,9 @@ cat(res, sep = '\n')
 
 ---
 
+## 6. Duplicate profiles across platforms
 ```{r, duplicate_across, results = 'asis'}
-src <- knitr::knit_expand(t_duplicate_across, longitude_var=longitude_var,
+src <- knitr::knit_expand(t_s_duplicate_across, longitude_var=longitude_var,
                           latitude_var=latitude_var, df=df_name)
 res <- knitr::knit_child(text = src, quiet = TRUE)
 cat(res, sep = '\n')
@@ -110,8 +115,9 @@ cat(res, sep = '\n')
 
 ---
 
+## 7. Observation counts by profile
 ```{r, observation_counts, results = 'asis'}
-src <- knitr::knit_expand(t_observation_counts, count1_1=count1_1,
+src <- knitr::knit_expand(t_s_observation_counts, count1_1=count1_1,
                           count1_2=count1_2, count1_3=count1_3,
                           count2_1=count2_1, count2_2=count2_2,
                           count3_1=count3_1, count3_2=count3_2,

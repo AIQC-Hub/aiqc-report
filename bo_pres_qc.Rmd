@@ -24,16 +24,18 @@ qc_var_name <- "Pressure QC flag"
 ```{r, import, child=file.path(r_func_path, r_funcs)}
 ```
 
+## 1. Basic Information
 ```{r, basic_info, results = 'asis'}
-res <- knitr::knit_expand(qc_basic_info, qc_var=qc_var, qc_var_name=qc_var_name, input=input,
+res <- knitr::knit_expand(t_qc_basic_info, qc_var=qc_var, qc_var_name=qc_var_name, input=input,
                           input_name=input_name, input_url=input_url)
 cat(res, sep = '\n')
 ```
 
 ---
 
+## 2. Summary statistics
 ```{r, summary_stats, results = 'asis'}
-src <- knitr::knit_expand(qc_summary_stats, df=df_name, var=var, qc_var=qc_var)
+src <- knitr::knit_expand(t_qc_summary_stats, df=df_name, var=var, qc_var=qc_var)
 res <- knitr::knit_child(text = src, quiet = TRUE)
 cat(res, sep = '\n')
 ```
