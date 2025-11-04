@@ -57,6 +57,7 @@ jobs:
             any::cowplot
             any::scales
             any::maps
+            any::xaringanExtra
 
       # 4. Create the target data directory
       - name: Create data directory
