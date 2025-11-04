@@ -1,9 +1,5 @@
 ## 3. Locations
 
-```{r, echo = FALSE, message = FALSE, warning = FALSE, results = 'asis'}
-summary_loc_table <- netcdf_loc_summary(summary_table_netcdf2)
-```
-
  - **Longitude**: `r round(min(summary_loc_table[, "Min(Lon)"]), 3)` to `r round(max(summary_loc_table[, "Max(Lon)"]), 3)`
  - **Latitude**: `r round(min(summary_loc_table[, "Min(Lat)"]), 3)` to `r round(max(summary_loc_table[, "Max(Lat)"]), 3)`
 

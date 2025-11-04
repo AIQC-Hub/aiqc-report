@@ -4,7 +4,7 @@ description: |
   In Situ NRT Summary Report
 output_dir: "docs"
 exclude: ["script", "data", "rmd_child",
-          "DESCRIPTION", "CHANGELOG.md", "README.md"]
+          "DESCRIPTION", "CHANGELOG.md", "README.md", "LICENSE"]
 navbar:
   right:
     - text: "Arctic Sea (AR)"

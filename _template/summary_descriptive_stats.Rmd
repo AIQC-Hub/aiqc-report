@@ -9,6 +9,7 @@ summary_table <- {{df}} %>%
 
 summary_table_netcdf <- netcdf_summary_1({{df}})
 summary_table_netcdf2 <- netcdf_summary_2(summary_table_netcdf)
+summary_loc_table <- netcdf_loc_summary(summary_table_netcdf2)
 
 ```
 

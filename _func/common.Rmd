@@ -18,6 +18,13 @@ distributions <- file.path(template_path, "var_distribution.Rmd")
 normalisation <- file.path(template_path, "var_normalisation.Rmd")
 qc_basic_info <- file.path(template_path, "qc_basic_info.Rmd")
 qc_summary_stats <- file.path(template_path, "qc_summary_stats.Rmd")
+t_basic_info <- file.path(template_path, "summary_basic_info.Rmd")
+t_descriptive_stats <- file.path(template_path, "summary_descriptive_stats.Rmd")
+t_locations <- file.path(template_path, "summary_locations.Rmd")
+t_distribution_time <- file.path(template_path, "summary_distribution_time.Rmd")
+t_duplicate_within <- file.path(template_path, "summary_duplicate_within.Rmd")
+t_duplicate_across <- file.path(template_path, "summary_duplicate_across.Rmd")
+t_observation_counts <- file.path(template_path, "summary_observation_counts.Rmd")
 
 # Kable wrappers
 kbl_table <- function(x) {

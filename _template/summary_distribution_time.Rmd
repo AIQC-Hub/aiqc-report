@@ -39,10 +39,10 @@ print(p_month_hist)
 
 ### Mapped locations of four time spans
 
- - **{{time_span1}}**: `r paste0({{time_span1_from1}}, " ~ ", {{time_span1_to1}})`
- - **{{time_span2}}**: `r paste0({{time_span1_from2}}, " ~ ", {{time_span1_to2}})`
- - **{{time_span3}}**: `r paste0({{time_span1_from3}}, " ~ ", {{time_span1_to3}})`
- - **{{time_span4}}**: `r paste0({{time_span1_from4}}, " ~ ", {{time_span1_to4}})`
+ - **{{time_span1}}**: `r paste0({{time_span1_from}}, " ~ ", {{time_span1_to}})`
+ - **{{time_span2}}**: `r paste0({{time_span2_from}}, " ~ ", {{time_span2_to}})`
+ - **{{time_span3}}**: `r paste0({{time_span3_from}}, " ~ ", {{time_span3_to}})`
+ - **{{time_span4}}**: `r paste0({{time_span4_from}}, " ~ ", {{time_span4_to}})`
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.width = 10, fig.height = 10}
 
