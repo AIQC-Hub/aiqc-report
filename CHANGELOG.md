@@ -5,6 +5,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+## [0.1.7] - 2025-11-04
+### Fixed
+- Resource path in bo common
+
 ## [0.1.6] - 2025-11-04
 ### Added
 - xaringanExtra
