@@ -1,5 +1,3 @@
-## 1. Basic Information
-
 ### NetCDF files
   - **Dataset ID**: [{{netcdf}}]({{netcdf_doi}})
   - **Duration**: history
@@ -8,4 +6,4 @@
 
 ### Parquet file
 
-  - **{{region_code2}} data**: {{parquet}}
+  - **{{region_code2}} data**: [{{parquet}}](parquet_url)

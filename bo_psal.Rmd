@@ -24,25 +24,26 @@ var_label <- "Psal"
 ```{r, import, include = FALSE, child=file.path(r_func_path, r_funcs)}
 ```
 
+## 1. Basic Information
 ```{r, basic_info, results = 'asis'}
-res <- knitr::knit_expand(basic_info, var=var, var_name=var_name, input=input,
-                          input_name=input_name, input_url=input_url)
+res <- knitr::knit_expand(t_v_basic_info)
 cat(res, sep = '\n')
 ```
 
 ---
 
+## 2. Summary statistics
 ```{r, summary_stats, results = 'asis'}
-src <- knitr::knit_expand(summary_stats, df=df_name, var=var, var_name=var_name,
-                          var_label=var_label)
+src <- knitr::knit_expand(t_v_summary_stats, df=df_name)
 res <- knitr::knit_child(text = src, quiet = TRUE)
 cat(res, sep = '\n')
 ```
 
 ---
 
+## 3. Distributions by profile over time and location
 ```{r, distributions, results = 'asis'}
-src <- knitr::knit_expand(distributions, var=var, var_name=var_name)
+src <- knitr::knit_expand(t_v_distributions)
 res <- knitr::knit_child(text = src, quiet = TRUE)
 cat(res, sep = '\n')
 ```

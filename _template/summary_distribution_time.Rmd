@@ -1,6 +1,3 @@
-## 4. Distribution of profiles over time
-
-
 ### Number of profiles
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.width = 10}
@@ -39,10 +36,10 @@ print(p_month_hist)
 
 ### Mapped locations of four time spans
 
- - **{{time_span1}}**: `r paste0({{time_span1_from}}, " ~ ", {{time_span1_to}})`
- - **{{time_span2}}**: `r paste0({{time_span2_from}}, " ~ ", {{time_span2_to}})`
- - **{{time_span3}}**: `r paste0({{time_span3_from}}, " ~ ", {{time_span3_to}})`
- - **{{time_span4}}**: `r paste0({{time_span4_from}}, " ~ ", {{time_span4_to}})`
+ - **{{time_span1}}**: `r paste0("from ", {{time_span1_from}}, " to ", {{time_span1_to}})`
+ - **{{time_span2}}**: `r paste0("from ", {{time_span2_from}}, " to ", {{time_span2_to}})`
+ - **{{time_span3}}**: `r paste0("from ", {{time_span3_from}}, " to ", {{time_span3_to}})`
+ - **{{time_span4}}**: `r paste0("from ", {{time_span4_from}}, " to ", {{time_span4_to}})`
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.width = 10, fig.height = 10}
 

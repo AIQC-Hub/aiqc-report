@@ -11,112 +11,68 @@ output:
 ```{r include = FALSE}
 knitr::opts_chunk$set(echo=FALSE)
 r_func_path <- "./_func"
-r_funcs <- c("libraries.Rmd", "common.Rmd", "common_bo.Rmd", "netcdf_bo.Rmd")
+r_funcs <- c("libraries.Rmd", "common.Rmd", "common_bo.Rmd", "summary_common.Rmd", "summary_precise.Rmd")
 ```
 
 ```{r, import, child=file.path(r_func_path, r_funcs)}
 ```
 
-```{r, echo = FALSE, message = FALSE, warning = FALSE}
-# Common variables
-df_bo_uniq_profiles <- get_unique_profile_no(df_bo)
-
-netcdf <- "cmems_obs-ins_bal_phybgcwav_mynrt_na_irr"
-netcdf_doi <- "https://doi.org/10.48670/moi-00032"
-region <- "Baltic Sea"
-region_code1 <- "BO"
-region_code2 <- "BO"
-parquet <- "netcdf_nrt_bo.parquet"
-
-platform1 <- "UMFF9A13"
-platform2 <- "UMFNB1B3"
-platform3 <- "SMHIRR7"
-
-
-time_span1 <- "ts7889"
-time_span2 <- "ts9006"
-time_span3 <- "ts07A2"
-time_span4 <- "tsA3B5"
-
-longitude_var <- "precise_longitude"
-latitude_var <- "precise_latitude"
-
-count1_1 <- "100"
-count1_2 <- "30"
-count1_3 <- "3000"
-count2_1 <- "1"
-count2_2 <- "1"
-count3_1 <- "2"
-count3_2 <- "2"
-count4_1 <- "3000"
-count4_2 <- "3600"
-count5 <- "4000"
-
-```
-
+## 1. Basic Information
 ```{r, basic_info, results = 'asis'}
-res <- knitr::knit_expand(t_basic_info, netcdf=netcdf, netcdf_doi=netcdf_doi, region=region,
-                          region_code2=region_code2, parquet=parquet)
+res <- knitr::knit_expand(t_s_basic_info)
 cat(res, sep = '\n')
 ```
 
 ---
 
+## 2. Descriptive Statistics of `r region_code1` CTD Data
 ```{r, descriptive_stats, results = 'asis'}
-src <- knitr::knit_expand(t_descriptive_stats, region_code1=region_code1, df=df_name)
+src <- knitr::knit_expand(t_s_descriptive_stats, df=df_name)
 res <- knitr::knit_child(text = src, quiet = TRUE)
 cat(res, sep = '\n')
 ```
 
 ---
 
+## 3. Locations
 ```{r, locations, results = 'asis'}
-
-src <- knitr::knit_expand(t_locations, platform1=platform1, platform2=platform2,
-                          platform3=platform3)
+src <- knitr::knit_expand(t_s_locations)
 res <- knitr::knit_child(text = src, quiet = TRUE)
 cat(res, sep = '\n')
 ```
 
 ---
 
+## 4. Distribution of profiles over time
 ```{r, distribution_time, results = 'asis'}
-src <- knitr::knit_expand(t_distribution_time,
-                          time_span1=time_span1, time_span1_from=ts7889_from, time_span1_to=ts7889_to,
-                          time_span2=time_span2, time_span2_from=ts9006_from, time_span2_to=ts9006_to,
-                          time_span3=time_span3, time_span3_from=ts07A2_from, time_span3_to=ts07A2_to,
-                          time_span4=time_span4, time_span4_from=tsA3B5_from, time_span4_to=tsA3B5_to)
+src <- knitr::knit_expand(t_s_distribution_time)
 res <- knitr::knit_child(text = src, quiet = TRUE)
 cat(res, sep = '\n')
 ```
 
 ---
 
+## 5. Duplicate profiles within platforms
 ```{r, duplicate_within, results = 'asis'}
-src <- knitr::knit_expand(t_duplicate_within, longitude_var=longitude_var,
-                          latitude_var=latitude_var, df=df_name)
+src <- knitr::knit_expand(t_s_duplicate_within, df=df_name)
 res <- knitr::knit_child(text = src, quiet = TRUE)
 cat(res, sep = '\n')
 ```
 
 ---
 
+## 6. Duplicate profiles across platforms
 ```{r, duplicate_across, results = 'asis'}
-src <- knitr::knit_expand(t_duplicate_across, longitude_var=longitude_var,
-                          latitude_var=latitude_var, df=df_name)
+src <- knitr::knit_expand(t_s_duplicate_across, df=df_name)
 res <- knitr::knit_child(text = src, quiet = TRUE)
 cat(res, sep = '\n')
 ```
 
 ---
 
+## 7. Observation counts by profile
 ```{r, observation_counts, results = 'asis'}
-src <- knitr::knit_expand(t_observation_counts, count1_1=count1_1,
-                          count1_2=count1_2, count1_3=count1_3,
-                          count2_1=count2_1, count2_2=count2_2,
-                          count3_1=count3_1, count3_2=count3_2,
-                          count4_1=count4_1, count4_2=count4_2,
-                          count5=count5)
+src <- knitr::knit_expand(t_s_observation_counts)
 res <- knitr::knit_child(text = src, quiet = TRUE)
 cat(res, sep = '\n')
 ```

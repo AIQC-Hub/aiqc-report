@@ -12,19 +12,18 @@
 
 # Templates
 template_path <- "./_template"
-basic_info <- file.path(template_path, "var_basic_info.Rmd")
-summary_stats <- file.path(template_path, "var_summary_stats.Rmd")
-distributions <- file.path(template_path, "var_distribution.Rmd")
-normalisation <- file.path(template_path, "var_normalisation.Rmd")
-qc_basic_info <- file.path(template_path, "qc_basic_info.Rmd")
-qc_summary_stats <- file.path(template_path, "qc_summary_stats.Rmd")
-t_basic_info <- file.path(template_path, "summary_basic_info.Rmd")
-t_descriptive_stats <- file.path(template_path, "summary_descriptive_stats.Rmd")
-t_locations <- file.path(template_path, "summary_locations.Rmd")
-t_distribution_time <- file.path(template_path, "summary_distribution_time.Rmd")
-t_duplicate_within <- file.path(template_path, "summary_duplicate_within.Rmd")
-t_duplicate_across <- file.path(template_path, "summary_duplicate_across.Rmd")
-t_observation_counts <- file.path(template_path, "summary_observation_counts.Rmd")
+t_v_basic_info <- file.path(template_path, "var_basic_info.Rmd")
+t_v_summary_stats <- file.path(template_path, "var_summary_stats.Rmd")
+t_v_distributions <- file.path(template_path, "var_distribution.Rmd")
+t_qc_basic_info <- file.path(template_path, "qc_basic_info.Rmd")
+t_qc_summary_stats <- file.path(template_path, "qc_summary_stats.Rmd")
+t_s_basic_info <- file.path(template_path, "summary_basic_info.Rmd")
+t_s_descriptive_stats <- file.path(template_path, "summary_descriptive_stats.Rmd")
+t_s_locations <- file.path(template_path, "summary_locations.Rmd")
+t_s_distribution_time <- file.path(template_path, "summary_distribution_time.Rmd")
+t_s_duplicate_within <- file.path(template_path, "summary_duplicate_within.Rmd")
+t_s_duplicate_across <- file.path(template_path, "summary_duplicate_across.Rmd")
+t_s_observation_counts <- file.path(template_path, "summary_observation_counts.Rmd")
 
 # Kable wrappers
 kbl_table <- function(x) {
@@ -51,6 +50,122 @@ na_summary <- function(data, var) {
   mutate(`Pct` = scales::percent(`Non-NA Count` / `Total Count`, accuracy = 0.1),
          `Total Count` = comma(`Total Count`),
          `Non-NA Count` = comma(`Non-NA Count`))
+}
+
+split_time_spans_common <- function(df, ts1, ts1_from, ts1_to, ts2, ts2_from, ts2_to,
+                                    ts3, ts3_from, ts3_to, ts4, ts4_from, ts4_to) {
+  df_year <- df %>%
+    mutate(x = format(profile_timestamp, "%Y"))
+
+  t1 <- df_year %>% filter(x >= ts1_from & x <= ts1_to)
+  t2 <- df_year %>% filter(x >= ts2_from & x <= ts2_to)
+  t3 <- df_year %>% filter(x >= ts3_from & x <= ts3_to)
+  t4 <- df_year %>% filter(x >= ts4_from & x <= ts4_to)
+
+  lst <- list(t1, t2, t3, t4)
+  names(lst) = c(ts1, ts2, ts3, ts4)
+  lst
+}
+
+filer_locations_common <- function(df, min_lon, max_lon, min_lat, max_lat) {
+  df_filtered <- df %>%
+      group_by(platform_code, profile_no) %>%
+      summarise(longitude = first(longitude), latitude = first(latitude)) %>%
+      ungroup() %>%
+      dplyr::filter((longitude >= min_lon) & (longitude <= max_lon) & (latitude >= min_lat) & (latitude <= max_lat)) %>%
+      distinct(platform_code, profile_no)
+
+  df %>% inner_join(df_filtered, by=c("platform_code", "profile_no"))
+}
+
+exclude_locations_common <- function(df, lon1, lat1, lon2, lat2) {
+  df_filtered <- df %>%
+      group_by(platform_code, profile_no) %>%
+      summarise(longitude = first(longitude), latitude = first(latitude)) %>%
+      ungroup() %>%
+      dplyr::filter(!((longitude >= lon1) & (latitude >= lat1) & (longitude <= lon2) & (latitude <= lat2))) %>%
+      distinct(platform_code, profile_no)
+
+  df %>% inner_join(df_filtered, by=c("platform_code", "profile_no"))
+}
+
+get_unique_profile_no_common <- function(df, longitude_var, latitude_var) {
+  df %>%
+    distinct(platform_code, profile_no, profile_timestamp, {{ longitude_var }}, {{ latitude_var }}) %>%
+    mutate(profile_no2 = paste(platform_code,
+                               as.character(profile_timestamp),
+                               profile_no,
+                               as.character({{ longitude_var }}),
+                               as.character({{ latitude_var }}), sep = "|")) %>%
+    arrange(platform_code, profile_timestamp, .by_group = TRUE) %>%
+    group_by(platform_code) %>%
+    mutate(profile_no_uniq = dense_rank(profile_no2)) %>%
+    ungroup()
+}
+
+update_profile_no_common <- function(df, df_profiles, longitude_var, latitude_var, longitude_var_name, latitude_var_name) {
+  df %>%
+    inner_join(df_profiles %>%
+                 dplyr::select(platform_code, profile_no, profile_timestamp,
+                               {{ longitude_var }}, {{ latitude_var }}, profile_no_uniq),
+               by = c("platform_code", "profile_no", "profile_timestamp",
+                      longitude_var_name, latitude_var_name)) %>%
+    mutate(profile_no = profile_no_uniq) %>%
+    dplyr::select(-profile_no_uniq)
+}
+
+find_duplicates_within_platforms_common <- function(df, longitude_var, latitude_var) {
+  df %>%
+    distinct(platform_code, profile_no, profile_timestamp, {{ longitude_var }}, {{ latitude_var }}) %>%
+    mutate(lon2 = round({{ longitude_var }}, 3),
+           lat2 = round({{ latitude_var }}, 3)) %>%
+    group_by(platform_code, profile_timestamp, lon2, lat2) %>%
+    summarise(profile_nos = paste0(profile_no, collapse = ","), n = n()) %>%
+    ungroup() %>%
+    filter(n > 1)
+}
+
+find_duplicates_across_platforms_common <- function(df, longitude_var, latitude_var) {
+  df %>%
+    distinct(platform_code, profile_no, profile_timestamp, {{ longitude_var }}, {{ latitude_var }}) %>%
+    mutate(lon2 = round({{ longitude_var }}, 3),
+           lat2 = round({{ latitude_var }}, 3)) %>%
+    group_by(profile_timestamp, lon2, lat2) %>%
+    summarise(platform_codes = paste0(platform_code, collapse = ","),
+              profile_nos = paste0(profile_no, collapse = ","), n = n()) %>%
+    filter(n > 1)
+}
+
+summarise_df_dup_common <- function(df_orig, df_dup, longitude_var, latitude_var) {
+  df_orig  %>%
+    mutate(lon2 = round({{ longitude_var }}, 3),
+           lat2 = round({{ latitude_var }}, 3)) %>%
+    inner_join(df_dup %>% dplyr::select(-c(profile_nos, n)),
+               by=c("platform_code", "profile_timestamp", "lon2", "lat2")) %>%
+    group_by(platform_code, profile_no, profile_timestamp, lon2, lat2) %>%
+    summarise(n = n(),
+              avg_pres = mean(pres, na.rm = FALSE),
+              avg_temp = mean(temp, na.rm = FALSE),
+              avg_psal = mean(psal, na.rm = FALSE),
+              avg_deph = mean(deph, na.rm = FALSE)) %>%
+    ungroup()
+}
+
+remove_duplicates_within_platforms_common <- function(df_orig, df_dup_summary) {
+  df_dup_keep <- df_dup_summary %>%
+    arrange(platform_code, profile_timestamp, lon2, lat2,
+            avg_pres, avg_deph, avg_temp, avg_psal, n) %>%
+    group_by(platform_code, profile_timestamp, lon2, lat2) %>%
+    summarise(profile_no = first(profile_no)) %>%
+    ungroup() %>%
+    dplyr::select(platform_code, profile_no)
+
+  df_dup_remove <- df_dup_summary %>%
+    distinct(platform_code, profile_no, profile_timestamp, lon2, lat2) %>%
+    anti_join(df_dup_keep) %>%
+    dplyr::select(platform_code, profile_no)
+
+  df_orig %>% anti_join(df_dup_remove)
 }
 
 ```

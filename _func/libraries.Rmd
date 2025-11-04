@@ -11,5 +11,7 @@ library(rlang)
 library(ggpubr)
 library(cowplot)
 library(scales)
+library(xaringanExtra)
 
+xaringanExtra::use_panelset()
 ```

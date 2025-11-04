@@ -1,5 +1,4 @@
-## 2. Descriptive Statistics of {{region_code1}} CTD Data
-
+### Number of platforms, profiles, and observations
 ```{r, echo = FALSE, message = FALSE, warning = FALSE}
 summary_table <- {{df}} %>%
   summarise(across(everything(), ~ typeof(.))) %>%

@@ -1,13 +1,11 @@
-## 5. Duplicate profiles within platforms
-
 ### Detection criteria
 
 To identify potential duplicate profiles, the following variables must match:
 
  - Platform (`platform_code`)
  - Timestamp (`profile_timestamp`)
- - Rounded precise longitude (`round({{longitude_var}}, 3)`)
- - Rounded precise latitude (`round({{latitude_var}}, 3)`)
+ - Rounded precise longitude (`round({{longitude_var_name}}, 3)`)
+ - Rounded precise latitude (`round({{latitude_var_name}}, 3)`)
 
 ### Duplicate profiles
 

@@ -1,5 +1,3 @@
-## 7. Observation counts by profile
-
 ### Histograms of observation counts per profile
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.width = 10, fig.height = 10}
@@ -28,21 +26,21 @@ print(plot_grid(p_obs_count_hist, p_obs_count_hist_count1,
 
 p_long_x_lat_obs1 <- summary_table_netcdf %>%
   filter(obs_count >= {{count2_1}} & obs_count <= {{count2_2}}) %>%
-  mutate(longitude = {{longitude_var}}, latitude = {{latitude_var}}) %>%
+  mutate(longitude = {{longitude_var_name}}, latitude = {{latitude_var_name}}) %>%
   create_region_scatter("#Obs: {{count2_1}}-{{count2_2}}", lat_range, lon_range)
 
 p_long_x_lat_obs2 <- summary_table_netcdf %>%
   filter(obs_count >= {{count3_1}} & obs_count <= {{count3_2}}) %>%
-  mutate(longitude = {{longitude_var}}, latitude = {{latitude_var}}) %>%
+  mutate(longitude = {{longitude_var_name}}, latitude = {{latitude_var_name}}) %>%
   create_region_scatter("#Obs: {{count3_1}}-{{count3_2}}", lat_range, lon_range)
 
 p_long_x_lat_obs3 <-summary_table_netcdf %>%
   filter(obs_count >= {{count4_1}} & obs_count <= {{count4_2}}) %>%
-  mutate(longitude = {{longitude_var}}, latitude = {{latitude_var}}) %>%
+  mutate(longitude = {{longitude_var_name}}, latitude = {{latitude_var_name}}) %>%
   create_region_scatter("#Obs: {{count4_1}}-{{count4_2}}", lat_range, lon_range)
 
 p_long_x_lat_obs4 <- summary_table_netcdf %>% filter(obs_count >= {{count5}}) %>%
-  mutate(longitude = {{longitude_var}}, latitude = {{latitude_var}}) %>%
+  mutate(longitude = {{longitude_var_name}}, latitude = {{latitude_var_name}}) %>%
   create_region_scatter("#Obs: ≥{{count5}}", lat_range, lon_range)
 
 print(plot_grid(p_long_x_lat_obs1, p_long_x_lat_obs2, 
