@@ -43,7 +43,7 @@ na_summary <- function(data, var) {
   df <- data %>% mutate(uniq_prof = paste0(platform_code, profile_no))
   df_f <- df %>% filter(!is.na({{ var }}))
   tibble(
-    Category = c("# Platforms", "# Profiles", "# Observations"),
+    Level = c("Platform", "Profile", "Observation"),
     `Total Count` = c(n_distinct(df$platform_code), n_distinct(df$uniq_prof), nrow(df)),
     `Non-NA Count` = c(n_distinct(df_f$platform_code), n_distinct(df_f$uniq_prof), nrow(df_f))
   ) %>%

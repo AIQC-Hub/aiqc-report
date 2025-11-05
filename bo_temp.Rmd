@@ -41,7 +41,7 @@ cat(res, sep = '\n')
 
 ---
 
-## 3. Distributions by profile over time and location
+## 3. Distributions over time and location
 ```{r, distributions, results = 'asis'}
 src <- knitr::knit_expand(t_v_distributions)
 res <- knitr::knit_child(text = src, quiet = TRUE)

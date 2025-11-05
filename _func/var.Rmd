@@ -13,7 +13,7 @@ var_summary_1 <- function(df, var_x) {
 
 format_var_summary_1 <- function(df, var_name) {
   df %>%
-    select(`Platform` = 1, `# Observations` = 2,
+    select(`Platform` = 1, `# Obs` = 2,
            `Min(X)` = 3, `Median(X)` = 4, `Mean(X)` = 5, `Max(X)` = 6) %>%
     rename_with(~ gsub("X", var_name, .x, fixed = TRUE))
 }
@@ -42,7 +42,6 @@ create_var_boxplot <- function(df, y_title) {
     labs(x = NULL,
          y = y_title) +
     theme_pubr(base_size = 12) +
-    theme(plot.title = element_text(size=13)) +
     theme(axis.text.x = element_text(angle = 45, hjust = 1))
 }
 
@@ -58,7 +57,6 @@ create_var_density <- function(df, var_x, y_title) {
     labs(x = deparse(substitute(var_x)),
          y = y_title) +
     theme_pubr(base_size = 12) +
-    theme(plot.title = element_text(size=13)) +
     theme(axis.text.x = element_text(angle = 45, hjust = 1))
 }
 

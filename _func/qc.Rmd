@@ -64,7 +64,7 @@ qc_summary_2 <- function(df, var_x) {
 
 format_qc_summary_2 <- function(df) {
   df %>%
-    rename(`Platform code` = platform_code, `Profile` = profile_no, `# Observations` = n)
+    rename(`Platform code` = platform_code, `Profile` = profile_no, `# Obs` = n)
 }
 
 ```
