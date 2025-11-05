@@ -5,9 +5,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+## [0.1.10] - 2025-11-05
+### Changed
+- Format of the menu bar
+
+### Added
+- `content` directory to store all Rmd files
+- Time distribuion section to QC flag pages
+
 ## [0.1.9] - 2025-11-05
 ### Fixed
-- base font sizes for all plots
+- Base font sizes for all plots
 
 ## [0.1.8] - 2025-11-05
 ### Added

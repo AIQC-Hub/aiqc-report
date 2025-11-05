@@ -64,7 +64,31 @@ qc_summary_2 <- function(df, var_x) {
 
 format_qc_summary_2 <- function(df) {
   df %>%
-    rename(`Platform code` = platform_code, `Profile` = profile_no, `# Observations` = n)
+    rename(`Platform code` = platform_code, `Profile` = profile_no, `# Obs` = n)
+}
+
+qc_summary_time <- function(df, var_x) {
+  df_counts <- df %>%
+    group_by(x, {{var_x}}) %>%
+    summarise(n = n()) %>%
+    ungroup() %>%
+    complete(x, {{var_x}}, fill = list(count = 0)) %>%
+    mutate(n = ifelse(is.na(n), 0, n)) %>%
+    pivot_wider(names_from = {{var_x}}, values_from = n)
+
+  df %>%
+    group_by(x) %>% summarise(n = n()) %>%
+    left_join(df_counts, by=c("x"))
+}
+
+format_qc_summary_year <- function(df) {
+  df %>%
+    rename(`Year` = x, `# Obs` = n)
+}
+
+format_qc_summary_month <- function(df) {
+  df %>%
+    rename(`Month` = x, `# Obs` = n)
 }
 
 ```

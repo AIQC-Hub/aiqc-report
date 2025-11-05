@@ -1,32 +1,32 @@
 ---
-title: "Temperature"
+title: "Temperature QC"
 description: |
-  Basic analysis of the temperature data from Baltic Sea in situ NRT observations.
+  Basic analysis of the temperature QC data from Baltic Sea in situ NRT observations.
 output:
   distill::distill_article:
     toc: true
     toc_depth: 2
 ---
 
-```{r, init, include = FALSE}
+```{r include = FALSE}
 knitr::opts_chunk$set(echo=FALSE)
 
 # Common functions
 r_func_path <- "./_func"
-r_funcs <- c("libraries.Rmd", "common.Rmd", "common_bo.Rmd", "var.Rmd")
+r_funcs <- c("libraries.Rmd", "common.Rmd", "common_bo.Rmd", "qc.Rmd")
 
 # Variables
 var <- "temp"
-var_name <- "Temperature"
-var_label <- "Temp"
+qc_var <- "temp_qc"
+qc_var_name <- "Temperature QC flag"
 ```
 
-```{r, import, include = FALSE, child=file.path(r_func_path, r_funcs)}
+```{r, import, child=file.path(r_func_path, r_funcs)}
 ```
 
 ## 1. Basic Information
 ```{r, basic_info, results = 'asis'}
-res <- knitr::knit_expand(t_v_basic_info)
+res <- knitr::knit_expand(t_qc_basic_info)
 cat(res, sep = '\n')
 ```
 
@@ -34,16 +34,16 @@ cat(res, sep = '\n')
 
 ## 2. Summary statistics
 ```{r, summary_stats, results = 'asis'}
-src <- knitr::knit_expand(t_v_summary_stats, df=df_name)
+src <- knitr::knit_expand(t_qc_summary_stats, df=df_name)
 res <- knitr::knit_child(text = src, quiet = TRUE)
 cat(res, sep = '\n')
 ```
 
 ---
 
-## 3. Distributions by profile over time and location
+## 3. Distributions over time
 ```{r, distributions, results = 'asis'}
-src <- knitr::knit_expand(t_v_distributions)
+src <- knitr::knit_expand(t_qc_distributions)
 res <- knitr::knit_child(text = src, quiet = TRUE)
 cat(res, sep = '\n')
 ```

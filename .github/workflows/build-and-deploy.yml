@@ -79,7 +79,7 @@ jobs:
 
       # 6. Build the distill site using an R command
       - name: Build site
-        run: R -e 'rmarkdown::render_site(encoding = "UTF-8")'
+        run: R -e 'rmarkdown::render_site(input = "content", encoding = "UTF-8")'
 
       # 7. Configure GitHub Pages
       - name: Setup Pages
@@ -91,7 +91,7 @@ jobs:
         with:
           # This MUST match the `output_dir` from your _site.yml
           # The default for distill is '_site'. We use 'docs' here based on your description.
-          path: './docs'
+          path: './content/docs'
 
       # 9. Deploy the artifact to GitHub Pages
       - name: Deploy to GitHub Pages

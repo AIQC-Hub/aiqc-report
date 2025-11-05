@@ -1,6 +1,6 @@
 Package: insitu-nrt-report
 Title: In Situ NRT Summary Report
-Version: 0.1.9
+Version: 0.1.10
 Authors@R: person("Takaya", "Saito", email = "takaya.saito@outlook.com", role = c("aut", "cre"))
 Description: R Markdown source for the in situ NRT summary report.\
 License: MIT

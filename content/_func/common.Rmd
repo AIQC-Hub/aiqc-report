@@ -10,6 +10,9 @@
 
 ```{r, message = FALSE, warning = FALSE}
 
+# Path
+rsc_dir <- "../../data"
+
 # Templates
 template_path <- "./_template"
 t_v_basic_info <- file.path(template_path, "var_basic_info.Rmd")
@@ -17,6 +20,7 @@ t_v_summary_stats <- file.path(template_path, "var_summary_stats.Rmd")
 t_v_distributions <- file.path(template_path, "var_distribution.Rmd")
 t_qc_basic_info <- file.path(template_path, "qc_basic_info.Rmd")
 t_qc_summary_stats <- file.path(template_path, "qc_summary_stats.Rmd")
+t_qc_distributions <- file.path(template_path, "qc_distribution.Rmd")
 t_s_basic_info <- file.path(template_path, "summary_basic_info.Rmd")
 t_s_descriptive_stats <- file.path(template_path, "summary_descriptive_stats.Rmd")
 t_s_locations <- file.path(template_path, "summary_locations.Rmd")
@@ -43,7 +47,7 @@ na_summary <- function(data, var) {
   df <- data %>% mutate(uniq_prof = paste0(platform_code, profile_no))
   df_f <- df %>% filter(!is.na({{ var }}))
   tibble(
-    Category = c("# Platforms", "# Profiles", "# Observations"),
+    Level = c("Platform", "Profile", "Observation"),
     `Total Count` = c(n_distinct(df$platform_code), n_distinct(df$uniq_prof), nrow(df)),
     `Non-NA Count` = c(n_distinct(df_f$platform_code), n_distinct(df_f$uniq_prof), nrow(df_f))
   ) %>%

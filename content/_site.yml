@@ -1,0 +1,50 @@
+name: "insitu-nrt-report"
+title: "In Situ NRT Summary"
+description: |
+  In Situ NRT Summary Report
+output_dir: "docs"
+exclude: ["script", "data", "rmd_child",
+          "DESCRIPTION", "CHANGELOG.md", "README.md", "LICENSE"]
+navbar:
+  right:
+    - text: "Arctic Sea"
+      href: index.html
+    - text: "Baltic Sea"
+      menu:
+        - text: "Summary (BO)"
+          href: bo_summary.html
+        - text: "---"
+        - text: "Pres (BO)"
+          href: bo_pres.html
+        - text: "Temp (BO)"
+          href: bo_temp.html
+        - text: "Psal (BO)"
+          href: bo_psal.html
+        - text: "---"
+        - text: "Pres QC (BO)"
+          href: bo_pres_qc.html
+        - text: "Temp QC (BO)"
+          href: bo_temp_qc.html
+        - text: "Psal QC (BO)"
+          href: bo_psal_qc.html
+        - text: "---"
+        - text: "Summary (GL)"
+          href: bo_gl_summary.html
+        - text: "---"
+        - text: "Pres (GL)"
+          href: bo_gl_pres.html
+        - text: "Temp (GL)"
+          href: bo_gl_temp.html
+        - text: "Psal (GL)"
+          href: bo_gl_psal.html
+        - text: "---"
+        - text: "Pres QC (GL)"
+          href: bo_gl_pres_qc.html
+        - text: "Temp QC (GL)"
+          href: bo_gl_temp_qc.html
+        - text: "Psal QC (GL)"
+          href: bo_gl_psal_qc.html
+    - text: "Mediterranean Sea"
+      href: index.html
+
+output: distill::distill_article

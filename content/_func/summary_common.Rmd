@@ -12,7 +12,6 @@ create_sample_time_hist <- function(df, title) {
     labs(title = title,
          x = NULL,
          y = "count") + theme_pubr(base_size = 12) +
-    theme(plot.title = element_text(size=13)) +
     theme(axis.text.x = element_text(angle = 45, hjust = 1))
 }
 
@@ -21,8 +20,7 @@ create_obs_count_hist <- function(df, title) {
     geom_histogram() +
     ggtitle(title) +
     xlab("Observation counts by profile") +
-    theme_pubr(base_size = 12) +
-    theme(plot.title = element_text(size=13))
+    theme_pubr(base_size = 12)
 }
 
 create_region_hist <- function(df, title, xtitle) {
@@ -30,8 +28,7 @@ create_region_hist <- function(df, title, xtitle) {
     geom_histogram() +
     ggtitle(title) +
     xlab(xtitle) +
-    theme_pubr(base_size = 12) +
-    theme(plot.title = element_text(size=13))
+    theme_pubr(base_size = 12)
 }
 
 create_region_scatter <- function(df, title, lat_range, lon_range) {
@@ -48,8 +45,7 @@ create_region_scatter <- function(df, title, lat_range, lon_range) {
     xlab("Longitude") +
     ylab("Latitude") +
     coord_cartesian(xlim = lon_range, ylim = lat_range) +
-    theme_pubr(base_size = 12) +
-    theme(plot.title = element_text(size=13))
+    theme_pubr(base_size = 12)
 }
 
 ```
