@@ -91,7 +91,7 @@ jobs:
         with:
           # This MUST match the `output_dir` from your _site.yml
           # The default for distill is '_site'. We use 'docs' here based on your description.
-          path: './docs'
+          path: './content/docs'
 
       # 9. Deploy the artifact to GitHub Pages
       - name: Deploy to GitHub Pages
