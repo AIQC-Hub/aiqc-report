@@ -37,7 +37,7 @@ create_region_hist <- function(df, title, xtitle) {
 create_region_scatter <- function(df, title, lat_range, lon_range) {
 
   ggplot(df, aes(x = longitude, y = latitude)) +
-    borders("world", fill = "lightgray", color = "gray") +
+    annotation_borders("world", fill = "lightgray", color = "gray") +
     geom_hex(bins = 1000) +
     ggtitle(title) +
     xlab("Longitude") +

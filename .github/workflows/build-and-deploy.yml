@@ -58,6 +58,7 @@ jobs:
             any::scales
             any::maps
             any::xaringanExtra
+            any::hexbin
 
       # 4. Create the target data directory
       - name: Create data directory

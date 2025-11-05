@@ -4,14 +4,15 @@ library(fontawesome)
 library(kableExtra)
 library(DT)
 library(htmltools)
-
 library(arrow)
 library(tidyverse)
 library(rlang)
 library(ggpubr)
 library(cowplot)
 library(scales)
+library(maps)
+library(hexbin)
 library(xaringanExtra)
-
 xaringanExtra::use_panelset()
+
 ```
