@@ -4,8 +4,7 @@ netcdf_summary_1 <- function(df) {
   df %>%
     group_by(platform_code, profile_no) %>%
     summarise(obs_count = n(), profile_timestamp = first(profile_timestamp),
-              longitude = first(longitude), longitude = first(longitude),
-              latitude = first(latitude), latitude = first(latitude)) %>%
+              longitude = first(longitude), latitude = first(latitude)) %>%
     ungroup()
 }
 
@@ -39,15 +38,11 @@ netcdf_loc_summary <- function(df) {
 }
 
 get_loc_by_platform <- function(df, platform) {
-  df %>% filter(platform_code == platform) %>%
-          mutate(longitude = longitude,
-                 latitude = latitude)
+  df %>% filter(platform_code == platform)
 }
 
 get_loc_by_timespan <- function(lst, timespan){
-  lst %>% pluck(timespan) %>%
-          mutate(longitude = longitude,
-                 latitude = latitude)
+  lst %>% pluck(timespan)
 }
 
 ```
