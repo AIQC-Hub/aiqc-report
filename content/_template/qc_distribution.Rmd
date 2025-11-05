@@ -1,0 +1,27 @@
+```{r, echo = FALSE, message = FALSE, warning = FALSE, results = 'asis'}
+
+df_year <- df_filtered %>%
+  mutate(x = format(profile_timestamp, "%Y"))
+
+df_month <- df_filtered %>%
+  mutate(x = format(profile_timestamp, "%m"))
+
+```
+
+### QC flag counts of `r tolower("{{qc_var_name}}")` by year
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE, results = 'asis'}
+
+summary_table_qc_year <- qc_summary_time(df_year, {{qc_var}})
+create_dt_summary_tab(summary_table_qc_year %>% format_qc_summary_year(), cols=NULL)
+
+```
+
+### QC flag counts of `r tolower("{{qc_var_name}}")` by month
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE, results = 'asis'}
+
+summary_table_qc_month <- qc_summary_time(df_month, {{qc_var}})
+create_dt_summary_tab(summary_table_qc_month %>% format_qc_summary_month(), cols=NULL)
+
+```

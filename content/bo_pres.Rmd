@@ -1,7 +1,7 @@
 ---
-title: "Practical salinity"
+title: "Pressure"
 description: |
-  Basic analysis of the salinity data from Baltic Sea in situ NRT observations.
+  Basic analysis of the pressure data from Baltic Sea in situ NRT observations.
 output:
   distill::distill_article:
     toc: true
@@ -16,9 +16,9 @@ r_func_path <- "./_func"
 r_funcs <- c("libraries.Rmd", "common.Rmd", "common_bo.Rmd", "var.Rmd")
 
 # Variables
-var <- "psal"
-var_name <- "Practical salinity"
-var_label <- "Psal"
+var <- "pres"
+var_name <- "Pressure"
+var_label <- "Pres"
 ```
 
 ```{r, import, include = FALSE, child=file.path(r_func_path, r_funcs)}
@@ -41,7 +41,7 @@ cat(res, sep = '\n')
 
 ---
 
-## 3. Distributions by profile over time and location
+## 3. Distributions over time and location
 ```{r, distributions, results = 'asis'}
 src <- knitr::knit_expand(t_v_distributions)
 res <- knitr::knit_child(text = src, quiet = TRUE)

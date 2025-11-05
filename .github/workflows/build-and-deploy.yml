@@ -79,7 +79,7 @@ jobs:
 
       # 6. Build the distill site using an R command
       - name: Build site
-        run: R -e 'rmarkdown::render_site(encoding = "UTF-8")'
+        run: R -e 'rmarkdown::render_site(input = "content", encoding = "UTF-8")'
 
       # 7. Configure GitHub Pages
       - name: Setup Pages

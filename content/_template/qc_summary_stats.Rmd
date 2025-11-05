@@ -14,7 +14,7 @@ flags <- get_flag_counts(df_filtered, {{qc_var}})
 kbl_table(flags) %>% kable_styling(font_size = 12)
 ```
 
-### Summary table of `r tolower("{{qc_var_name}}")` by platform
+### QC flag counts of `r tolower("{{qc_var_name}}")` by platform
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, results = 'asis'}
 

@@ -28,7 +28,7 @@ sd_var <- sd(df_ds$x) %>% round(2)
   - `Max`: `r max_var`
   - `SD`: `r sd_var`
 
-### Summary tables of `r tolower("{{var_name}}")` by platform
+### Summary table of `r tolower("{{var_name}}")` by platform
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, results = 'asis'}
 
