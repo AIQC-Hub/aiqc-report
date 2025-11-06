@@ -1,4 +1,4 @@
-```{r, message = FALSE, warning = FALSE}
+```{r, func_libraries, message = FALSE, warning = FALSE}
 
 library(fontawesome)
 library(kableExtra)

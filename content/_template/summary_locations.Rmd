@@ -6,7 +6,7 @@
 
 ### Locations by profiles
 
-```{r, echo = FALSE, message = FALSE, warning = FALSE, results = 'asis'}
+```{r, t_summary_loc1, echo = FALSE, message = FALSE, warning = FALSE, results = 'asis'}
 loc_table_cols <- c("Min(Lon)", "Max(Lon)", "Diff(Lon)",
                     "Min(Lat)" ,"Max(Lat)", "Diff(Lat)")
 create_dt_summary_tab(summary_loc_table, cols=loc_table_cols)
@@ -15,7 +15,7 @@ create_dt_summary_tab(summary_loc_table, cols=loc_table_cols)
 
 ### Mapped locations of all profiles and three selected platforms
 
-```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.width = 10, fig.height = 10}
+```{r, t_summary_loc2, echo = FALSE, message = FALSE, warning = FALSE, fig.width = 10, fig.height = 10}
 lat_range <- range(summary_table_netcdf$latitude)
 lon_range <- range(summary_table_netcdf$longitude)
 
@@ -43,7 +43,7 @@ rm(p_long_x_lat_platform3)
 
 ### Histograms of longitudes and latitudes from all profiles
 
-```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.width = 10}
+```{r, t_summary_loc3, echo = FALSE, message = FALSE, warning = FALSE, fig.width = 10}
 
 p_long_dense <- summary_table_netcdf %>% mutate(x = longitude) %>%
   create_region_hist("Histogram of longitude", "Longitude")

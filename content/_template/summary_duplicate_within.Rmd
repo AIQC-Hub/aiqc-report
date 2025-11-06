@@ -9,7 +9,7 @@ To identify potential duplicate profiles, the following variables must match:
 
 ### Duplicate profiles
 
-```{r, echo = FALSE, message = FALSE, warning = FALSE}
+```{r, t_summary_dup_w1, echo = FALSE, message = FALSE, warning = FALSE}
 df_dup_within <- find_duplicates_within_platforms({{df}})
 
 create_dt_summary_tab(df_dup_within %>%

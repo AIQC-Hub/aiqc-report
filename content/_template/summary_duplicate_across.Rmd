@@ -8,7 +8,7 @@ To identify potential duplicate profiles, the following variables must match:
 
 ### Duplicate profiles
 
-```{r, echo = FALSE, message = FALSE, warning = FALSE}
+```{r, t_summary_dup_a1, echo = FALSE, message = FALSE, warning = FALSE}
 df_dup_across <- find_duplicates_across_platforms({{df}})
 
 create_dt_summary_tab(df_dup_across %>%

@@ -1,6 +1,6 @@
 ### Summary table of duplicate profiles
 
-```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.width = 10}
+```{r, t_summary_dup_a_details1, echo = FALSE, message = FALSE, warning = FALSE, fig.width = 10}
 
 df_dup_summary <- summarise_df_dup_across({{df}}, df_dup_across)
 create_dt_summary_tab(df_dup_summary %>%

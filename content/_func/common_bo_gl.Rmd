@@ -1,4 +1,4 @@
-```{r, message = FALSE, warning = FALSE}
+```{r, func_common_bo_gl, message = FALSE, warning = FALSE}
 
 # Common variables
 netcdf <- "cmems_obs-ins_bal_phybgcwav_mynrt_na_irr"

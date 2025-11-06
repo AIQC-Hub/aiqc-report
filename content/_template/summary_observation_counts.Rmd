@@ -1,6 +1,6 @@
 ### Histograms of observation counts per profile
 
-```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.width = 10, fig.height = 10}
+```{r, t_summary_obs_count1, echo = FALSE, message = FALSE, warning = FALSE, fig.width = 10, fig.height = 10}
 
 summary_table_netcdf_count1 <- summary_table_netcdf %>%
   filter(obs_count <= {{count1_1}})
@@ -27,7 +27,7 @@ rm(p_obs_count_hist_count3)
 
 ### Mapped locations of {{count2_1}}-{{count2_2}}, {{count3_1}}-{{count3_2}}, {{count4_1}}-{{count4_2}}, and ≥{{count5}} observations
 
-```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.width = 10, fig.height = 10}
+```{r, t_summary_obs_count2, echo = FALSE, message = FALSE, warning = FALSE, fig.width = 10, fig.height = 10}
 
 p_long_x_lat_obs1 <- summary_table_netcdf %>%
   filter(obs_count >= {{count2_1}} & obs_count <= {{count2_2}}) %>%

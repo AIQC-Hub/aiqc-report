@@ -1,4 +1,4 @@
-```{r, echo = FALSE, message = FALSE, warning = FALSE, results = 'asis'}
+```{r, t_var_dist1, echo = FALSE, message = FALSE, warning = FALSE, results = 'asis'}
 
 summary_table_var3 <- var_summary_3(df_filtered, {{var}})
 
@@ -14,7 +14,7 @@ df_month <- summary_table_var3 %>%
 ::: {.panel}
 ### Year
 
-```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.width = 10, fig.height = 10}
+```{r, t_var_dist2, echo = FALSE, message = FALSE, warning = FALSE, fig.width = 10, fig.height = 10}
 p_year_bp <- create_var_boxplot(df_year, "{{var_name}}")
 
 print(p_year_bp)
@@ -24,7 +24,7 @@ print(p_year_bp)
 ::: {.panel}
 ### Month
 
-```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.width = 10, fig.height = 10}
+```{r, t_var_dist3, echo = FALSE, message = FALSE, warning = FALSE, fig.width = 10, fig.height = 10}
 p_month_bp <- create_var_boxplot(df_month, "{{var_name}}")
 
 print(p_month_bp)
@@ -34,7 +34,7 @@ print(p_month_bp)
 ::: {.panel}
 ### Longitude
 
-```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.width = 10, fig.height = 10}
+```{r, t_var_dist4, echo = FALSE, message = FALSE, warning = FALSE, fig.width = 10, fig.height = 10}
 p_longitude_dense <- create_var_density(summary_table_var3, longitude, "{{var_name}}")
 
 print(p_longitude_dense)
@@ -44,7 +44,7 @@ print(p_longitude_dense)
 ::: {.panel}
 ### Latitude
 
-```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.width = 10, fig.height = 10}
+```{r, t_var_dist5, echo = FALSE, message = FALSE, warning = FALSE, fig.width = 10, fig.height = 10}
 p_latitude_hist <- create_var_density(summary_table_var3, latitude, "{{var_name}}")
 
 print(p_latitude_hist)

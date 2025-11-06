@@ -1,4 +1,4 @@
-```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.width = 10, fig.height = 10}
+```{r, t_summary_loc_filter1, echo = FALSE, message = FALSE, warning = FALSE, fig.width = 10, fig.height = 10}
 summary_table_original <- netcdf_summary_1({{df}})
 summary_table_original_2 <- netcdf_summary_2(summary_table_original)
 
@@ -22,7 +22,7 @@ summary_table_filtered2_2 <- netcdf_summary_2(summary_table_filtered2)
 
 ### Mapped locations of all profiles and filtering effects
 
-```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.width = 10, fig.height = 10}
+```{r, t_summary_loc_filter2, echo = FALSE, message = FALSE, warning = FALSE, fig.width = 10, fig.height = 10}
 lat_range <- range(summary_table_original$latitude)
 lon_range <- range(summary_table_original$longitude)
 p_loc_original <- summary_table_original %>%
@@ -65,7 +65,7 @@ rm(p_loc_filter2)
  - **Number of platform**: `r formatC(nrow(summary_table_filtered2_2), big.mark=",")`
  - **Number of profiles**: `r formatC(sum(summary_table_filtered2_2$profile_count), big.mark=",")`
 
-```{r, echo = FALSE, message = FALSE, warning = FALSE}
+```{r, t_summary_loc_filter3, echo = FALSE, message = FALSE, warning = FALSE}
 
 {{df_filtered}} <- df_filtered2
 

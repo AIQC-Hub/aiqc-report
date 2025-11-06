@@ -1,3 +1,3 @@
-```{r, echo = FALSE, message = FALSE, warning = FALSE}
+```{r, t_location_filtering, echo = FALSE, message = FALSE, warning = FALSE}
 {{df_filtered}} <- exclude_locations(filer_locations({{df}}))
 ```

@@ -1,5 +1,5 @@
 ### Number of platforms, profiles, and observations
-```{r, echo = FALSE, message = FALSE, warning = FALSE}
+```{r, t_summary_desc_stats1, echo = FALSE, message = FALSE, warning = FALSE}
 summary_table <- {{df}} %>%
   summarise(across(everything(), ~ typeof(.))) %>%
   t() %>% as.data.frame() %>%
@@ -19,7 +19,7 @@ summary_loc_table <- netcdf_loc_summary(summary_table_netcdf2)
 
 ### Summary statistics by profiles
 
-```{r, echo = FALSE, message = FALSE, warning = FALSE, results = 'asis'}
+```{r, t_summary_desc_stats2, echo = FALSE, message = FALSE, warning = FALSE, results = 'asis'}
 summary_table_netcdf2 <- format_netcdf_summary_2(summary_table_netcdf2)
 create_dt_summary_tab(summary_table_netcdf2)
 

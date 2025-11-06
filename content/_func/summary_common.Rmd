@@ -1,4 +1,4 @@
-```{r, message = FALSE, warning = FALSE}
+```{r, func_summary_common, message = FALSE, warning = FALSE}
 
 format_netcdf_summary_2 <- function(df) {
   df %>%

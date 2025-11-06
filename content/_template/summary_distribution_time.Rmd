@@ -1,6 +1,6 @@
 ### Number of profiles
 
-```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.width = 10}
+```{r, t_summary_dist1, echo = FALSE, message = FALSE, warning = FALSE, fig.width = 10}
 
 df_year <- summary_table_netcdf %>%
   mutate(x = format(profile_timestamp, "%Y"))
@@ -15,7 +15,7 @@ df_month <- summary_table_netcdf %>%
 ::: {.panel}
 #### Year
 
-```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.width = 10}
+```{r, t_summary_dist2, echo = FALSE, message = FALSE, warning = FALSE, fig.width = 10}
 p_year_hist <- create_sample_time_hist(df_year, "Year")
 
 print(p_year_hist)
@@ -28,7 +28,7 @@ rm(p_year_hist)
 ::: {.panel}
 #### Month
 
-```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.width = 10}
+```{r, t_summary_dist3, echo = FALSE, message = FALSE, warning = FALSE, fig.width = 10}
 p_month_hist <- create_sample_time_hist(df_month, "Month")
 
 print(p_month_hist)
@@ -46,7 +46,7 @@ rm(p_month_hist)
  - **{{time_span3}}**: `r paste0("from ", {{time_span3_from}}, " to ", {{time_span3_to}})`
  - **{{time_span4}}**: `r paste0("from ", {{time_span4_from}}, " to ", {{time_span4_to}})`
 
-```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.width = 10, fig.height = 10}
+```{r, t_summary_dist4, echo = FALSE, message = FALSE, warning = FALSE, fig.width = 10, fig.height = 10}
 
 ts_lst <- split_time_spans(summary_table_netcdf)
 

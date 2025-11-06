@@ -1,4 +1,4 @@
-```{r, message = FALSE, warning = FALSE}
+```{r, func_qc, message = FALSE, warning = FALSE}
 
 get_flag_def <- function() {
   Code <- c("0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A")

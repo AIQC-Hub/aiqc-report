@@ -1,4 +1,4 @@
-```{r, message = FALSE, warning = FALSE}
+```{r, func_summary_precise, message = FALSE, warning = FALSE}
 
 netcdf_summary_1 <- function(df) {
   df %>%

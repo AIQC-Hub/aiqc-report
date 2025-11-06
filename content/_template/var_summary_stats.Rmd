@@ -1,6 +1,6 @@
 ### NA value counts
 
-```{r, echo = FALSE, message = FALSE, warning = FALSE, results = 'asis'}
+```{r, t_var_stats1, echo = FALSE, message = FALSE, warning = FALSE, results = 'asis'}
 
 df_filtered <- {{df}} %>% filter(!is.na({{var}}))
 kbl_table(na_summary({{df}}, {{var}})) %>% kable_styling(font_size = 12)
@@ -30,7 +30,7 @@ sd_var <- sd(df_ds$x) %>% round(2)
 
 ### Summary table of `r tolower("{{var_name}}")` by platform
 
-```{r, echo = FALSE, message = FALSE, warning = FALSE, results = 'asis'}
+```{r, t_var_stats2, echo = FALSE, message = FALSE, warning = FALSE, results = 'asis'}
 
 summary_table_var1 <- var_summary_1(df_filtered, {{var}})
 create_dt_summary_tab(summary_table_var1 %>% format_var_summary_1("{{var_label}}"),
