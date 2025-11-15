@@ -1,6 +1,6 @@
 Package: aiqc-report
-Title: In Situ NRT Summary Report
-Version: 0.2.1
+Title: AIQC Exploratory Data Analysis
+Version: 0.3.0
 Authors@R: person("Takaya", "Saito", email = "takaya.saito@outlook.com", role = c("aut", "cre"))
 Description: R Markdown source for the in situ NRT summary report.\
 License: MIT
@@ -11,14 +11,5 @@ Imports:
     fontawesome,
     kableExtra,
     DT,
-    htmltools,
-    arrow,
-    data.table,
     tidyverse,
-    rlang,
-    ggpubr,
-    cowplot,
-    scales,
-    maps,
-    hexbin,
     xaringanExtra,
