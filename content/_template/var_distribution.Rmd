@@ -30,24 +30,4 @@ p_month_bp <- create_var_boxplot(df_month, "{{var_name}}")
 print(p_month_bp)
 ```
 :::
-
-::: {.panel}
-### Longitude
-
-```{r, t_var_dist4, echo = FALSE, message = FALSE, warning = FALSE, fig.width = 10, fig.height = 10}
-p_longitude_dense <- create_var_density(summary_table_var3, longitude, "{{var_name}}")
-
-print(p_longitude_dense)
-```
-:::
-
-::: {.panel}
-### Latitude
-
-```{r, t_var_dist5, echo = FALSE, message = FALSE, warning = FALSE, fig.width = 10, fig.height = 10}
-p_latitude_hist <- create_var_density(summary_table_var3, latitude, "{{var_name}}")
-
-print(p_latitude_hist)
-```
-:::
 :::

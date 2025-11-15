@@ -1,7 +1,7 @@
 ---
-title: "Summary of Baltic Sea (GL)"
+title: "Summary of Arctic Ocean (GL)"
 description: |
-  Summary report generated from a single Parquet file has been created from eight NetCDF files from the Baltic Sea in situ NRT observations.
+  Summary report generated from a single Parquet file has been created from around 550 NetCDF files from the Arctic Ocean in situ NRT observations.
 output: 
   distill::distill_article:
     toc: true
@@ -11,7 +11,7 @@ output:
 ```{r include = FALSE}
 knitr::opts_chunk$set(echo=FALSE)
 r_func_path <- "./_func"
-r_funcs <- c("libraries.Rmd", "common.Rmd", "common_bo_gl.Rmd", "summary_common.Rmd", "summary_regular.Rmd")
+r_funcs <- c("libraries.Rmd", "common.Rmd", "common_ar.Rmd", "summary_common.Rmd", "summary_regular.Rmd")
 ```
 
 ```{r, import, child=file.path(r_func_path, r_funcs)}
@@ -27,7 +27,7 @@ cat(res, sep = '\n')
 
 ## 2. Location Filtering
 ```{r, location_filtering, results = 'asis'}
-src <- knitr::knit_expand(t_s_location_filtering, df=df_name, df_filtered=df_filtered_name)
+src <- knitr::knit_expand(t_s_location_filtering2, df=df_name, df_filtered=df_filtered_name)
 res <- knitr::knit_child(text = src, quiet = TRUE)
 cat(res, sep = '\n')
 ```
@@ -45,7 +45,7 @@ cat(res, sep = '\n')
 
 ## 4. Locations
 ```{r, locations, results = 'asis'}
-src <- knitr::knit_expand(t_s_locations, plot_nrow=2, plot_height=10)
+src <- knitr::knit_expand(t_s_locations, plot_nrow=4, plot_height=20)
 res <- knitr::knit_child(text = src, quiet = TRUE)
 cat(res, sep = '\n')
 ```
@@ -54,7 +54,7 @@ cat(res, sep = '\n')
 
 ## 5. Distribution of Profiles Over Time
 ```{r, distribution_time, results = 'asis'}
-src <- knitr::knit_expand(t_s_distribution_time, plot_nrow=2, plot_height=10)
+src <- knitr::knit_expand(t_s_distribution_time, plot_nrow=4, plot_height=20)
 res <- knitr::knit_child(text = src, quiet = TRUE)
 cat(res, sep = '\n')
 ```
@@ -68,12 +68,6 @@ res <- knitr::knit_child(text = src, quiet = TRUE)
 cat(res, sep = '\n')
 ```
 
-```{r, duplicate_details, results = 'asis'}
-src <- knitr::knit_expand(t_s_duplicate_within_details, df=df_filtered_name)
-res <- knitr::knit_child(text = src, quiet = TRUE)
-cat(res, sep = '\n')
-```
-
 ---
 
 ## 7. Duplicate Profiles Across Platforms
@@ -83,11 +77,17 @@ res <- knitr::knit_child(text = src, quiet = TRUE)
 cat(res, sep = '\n')
 ```
 
+```{r, duplicate_details, results = 'asis'}
+src <- knitr::knit_expand(t_s_duplicate_across_details, df=df_filtered_name)
+res <- knitr::knit_child(text = src, quiet = TRUE)
+cat(res, sep = '\n')
+```
+
 ---
 
 ## 8. Observation Counts By Profile
 ```{r, observation_counts, results = 'asis'}
-src <- knitr::knit_expand(t_s_observation_counts, plot_nrow=2, plot_height=10)
+src <- knitr::knit_expand(t_s_observation_counts, plot_nrow=4, plot_height=20)
 res <- knitr::knit_child(text = src, quiet = TRUE)
 cat(res, sep = '\n')
 ```

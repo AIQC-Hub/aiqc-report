@@ -1,7 +1,7 @@
 ---
 title: "Summary of Arctic Ocean (AR)"
 description: |
-  Summary report generated from a single Parquet file has been created from over 180 NetCDF files from the Arctic Ocean in situ NRT observations.
+  Summary report generated from a single Parquet file has been created from 190 NetCDF files from the Arctic Ocean in situ NRT observations.
 output: 
   distill::distill_article:
     toc: true
