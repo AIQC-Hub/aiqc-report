@@ -1,6 +1,6 @@
 Package: aiqc-report
 Title: AIQC Exploratory Data Analysis
-Version: 0.3.0
+Version: 0.3.1
 Authors@R: person("Takaya", "Saito", email = "takaya.saito@outlook.com", role = c("aut", "cre"))
 Description: R Markdown source for the in situ NRT summary report.\
 License: MIT
