@@ -1,67 +1,20 @@
-name: "insitu-nrt-report"
-title: "In Situ NRT Summary"
+name: "aiqc-report"
+title: "Exploratory Data Analysis"
 description: |
-  In Situ NRT Summary Report
+  AIQC Exploratory Data Analysis
 output_dir: "docs"
 exclude: ["script", "data", "rmd_child",
           "DESCRIPTION", "CHANGELOG.md", "README.md", "LICENSE"]
 navbar:
+  logo:
+    image: images/logo.png
+    href: https://aiqc-hub.github.io/aiqc-report/
   right:
     - text: "Arctic Ocean"
-      menu:
-        - text: "Summary (AR)"
-          href: ar_summary.html
-        - text: "---"
-        - text: "Pres (AR)"
-          href: ar_pres.html
-        - text: "Temp (AR)"
-          href: ar_temp.html
-        - text: "Psal (AR)"
-          href: ar_psal.html
-        - text: "---"
-        - text: "Pres QC (AR)"
-          href: ar_pres_qc.html
-        - text: "Temp QC (AR)"
-          href: ar_temp_qc.html
-        - text: "Psal QC (AR)"
-          href: ar_psal_qc.html
-      href: index.html
+      href: https://aiqc-hub.github.io/arc-report/
     - text: "Baltic Sea"
-      menu:
-        - text: "Summary (BO)"
-          href: bo_summary.html
-        - text: "---"
-        - text: "Pres (BO)"
-          href: bo_pres.html
-        - text: "Temp (BO)"
-          href: bo_temp.html
-        - text: "Psal (BO)"
-          href: bo_psal.html
-        - text: "---"
-        - text: "Pres QC (BO)"
-          href: bo_pres_qc.html
-        - text: "Temp QC (BO)"
-          href: bo_temp_qc.html
-        - text: "Psal QC (BO)"
-          href: bo_psal_qc.html
-        - text: "---"
-        - text: "Summary (GL)"
-          href: bo_gl_summary.html
-        - text: "---"
-        - text: "Pres (GL)"
-          href: bo_gl_pres.html
-        - text: "Temp (GL)"
-          href: bo_gl_temp.html
-        - text: "Psal (GL)"
-          href: bo_gl_psal.html
-        - text: "---"
-        - text: "Pres QC (GL)"
-          href: bo_gl_pres_qc.html
-        - text: "Temp QC (GL)"
-          href: bo_gl_temp_qc.html
-        - text: "Psal QC (GL)"
-          href: bo_gl_psal_qc.html
+      href: https://aiqc-hub.github.io/bal-report/
     - text: "Mediterranean Sea"
-      href: index.html
+      href: https://aiqc-hub.github.io/med-report/
 
 output: distill::distill_article

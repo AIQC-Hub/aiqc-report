@@ -1,11 +1,9 @@
-# In Situ NRT Summary Report
+# AIQC Exploratory Data Analysis
 
-A brief, one-line description of the project's purpose.
+The site provides a collection of resources and summary reports containing statistics and other relevant information about the datasets.
 
-## Description
+## Summary Reports
 
-A more detailed explanation of what the project does, its features, and its intended use. This section can also include the problem it solves or the value it provides.
-
-## Getting Started
-
-Instructions on how to set up and run the project locally.
+  * [Arctic Ocean Summary Report](https://aiqc-hub.github.io/arc-report/)
+  * [Baltic Sea Summary Report](https://aiqc-hub.github.io/bal-report/)
+  * [Mediterranean Sea Summary Report](https://aiqc-hub.github.io/med-report/)

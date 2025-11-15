@@ -1,15 +1,16 @@
 ---
-title: "In Situ NRT Summary Report"
+title: "Exploratory Data Analysis"
 description: |
-  Welcome to the website. I hope you enjoy it!
+  The site provides a collection of resources and summary reports containing statistics and other relevant information about the datasets.
 site: distill::distill_website
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
-
-# Learn more about creating websites with Distill at:
-# https://rstudio.github.io/distill/website.html
-
 ```
 
+## Summary Reports
+
+  * [Arctic Ocean Summary Report](https://aiqc-hub.github.io/arc-report/)
+  * [Baltic Sea Summary Report](https://aiqc-hub.github.io/bal-report/)
+  * [Mediterranean Sea Summary Report](https://aiqc-hub.github.io/med-report/)
