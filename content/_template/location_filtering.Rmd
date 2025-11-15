@@ -1,8 +1,0 @@
-```{r, t_location_filtering, echo = FALSE, message = FALSE, warning = FALSE}
-if (file.exists(df_filtered_cache_name)) {
-  {{df_filtered}} <- readRDS(df_filtered_cache_name)
-} else {
-  {{df_filtered}} <- exclude_locations(filer_locations({{df}}))
-  saveRDS({{df_filtered}}, df_filtered_cache_name)
-}
-```

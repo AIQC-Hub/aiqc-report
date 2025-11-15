@@ -1,4 +1,4 @@
-Package: insitu-nrt-report
+Package: aiqc-report
 Title: In Situ NRT Summary Report
 Version: 0.2.1
 Authors@R: person("Takaya", "Saito", email = "takaya.saito@outlook.com", role = c("aut", "cre"))
