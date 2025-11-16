@@ -1,0 +1,10 @@
+```{r, func_libraries, message = FALSE, warning = FALSE}
+
+library(fontawesome)
+library(kableExtra)
+library(DT)
+library(tidyverse)
+library(xaringanExtra)
+xaringanExtra::use_panelset()
+
+```

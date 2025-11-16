@@ -1,0 +1,93 @@
+### Detection criteria
+
+::: {.panelset}
+::: {.panel}
+
+#### Duplicate profiles within platforms
+
+The following variables must match:
+
+ - Platform (`platform_code`)
+ - Timestamp (`profile_timestamp`)
+ - Rounded longitude (`round(longitude, 3)`)
+ - Rounded latitude (`round(latitude, 3)`)
+
+:::
+
+::: {.panel}
+
+#### Duplicate profiles across platforms
+
+The following variables must match:
+
+ - Timestamp (`profile_timestamp`)
+ - Rounded longitude (`round(longitude, 3)`)
+ - Rounded latitude (`round(latitude, 3)`)
+
+The following variable must unmatch:
+
+ - Platform (`platform_code`)
+
+:::
+:::
+
+### Number of duplicate profiles
+
+::: {.panelset}
+::: {.panel}
+
+#### Arctic Ocean
+
+```{r, t_duplicate_arc, echo = FALSE, message = FALSE, warning = FALSE}
+
+df_tbl <- tibble(`Code` = c("AR", "GL", "CORA"),
+                 `# Profiles` = c(297876, 207372, 437619),
+                 `# Within platforms` = c(0,  6572, 9796),
+                 `Within (%)` = c("0%", "3.2%", "2.2%"),
+                 `# Across platforms` = c(4080, 7249, 50465),
+                 `Across (%)` = c("1.4%", "3.5%", "11.5%"))
+
+kbl_table(df_tbl) %>% kable_styling(font_size = 12)
+
+```
+
+:::
+
+::: {.panel}
+
+#### Baltic Sea
+
+```{r, t_duplicate_bal, echo = FALSE, message = FALSE, warning = FALSE}
+
+df_tbl <- tibble(`Code` = c("BO", "GL", "CORA"),
+                 `# Profiles` = c(107063, 6699, 215617),
+                 `# Within platforms` = c(0, 234, 10617),
+                 `Within (%)` = c("0%", "3.5%", "4.9%"),
+                 `# Across platforms` = c(5845, 0, 50224),
+                 `Across (%)` = c("5.5%", "0%", "23.3%"))
+
+kbl_table(df_tbl) %>% kable_styling(font_size = 12)
+
+```
+
+:::
+
+::: {.panel}
+
+#### Mediterranean Sea
+
+```{r, t_duplicate_med, echo = FALSE, message = FALSE, warning = FALSE}
+
+df_tbl <- tibble(`Code` = c("MO", "GL", "CORA"),
+                 `# Profiles` = c(1633, 96728, 82997),
+                 `# Within platforms` = c(3, 14413, 13950),
+                 `Within (%)` = c("0.2%", "14.9%", "16.8%"),
+                 `# Across platforms` = c(0, 2326, 4226),
+                 `Across (%)` = c("0%", "2.4%", "5.1%"))
+
+kbl_table(df_tbl) %>% kable_styling(font_size = 12)
+
+```
+
+:::
+:::

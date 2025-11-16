@@ -1,0 +1,79 @@
+::: {.panelset}
+::: {.panel}
+
+### Arctic Ocean
+
+#### Data ID
+
+  * **AR** & **GL**: [cmems_obs-ins_arc_phybgcwav_mynrt_na_irr](https://doi.org/10.48670/moi-00031)
+  * **CORA**: [cmems_obs-ins_glo_phy-temp-sal_my_cora_irr](https://data.marine.copernicus.eu/product/INSITU_GLO_PHY_TS_DISCRETE_MY_013_001)
+
+
+#### Number of files
+
+```{r, t_netcdf_arc, echo = FALSE, message = FALSE, warning = FALSE}
+
+df_tbl <- tibble(`Code` = c("AR", "GL", "CORA"),
+                 `# Files` = c(190, 551, 18123),
+                 `# Files with Time QC` = c(190, 551, 18123),
+                 `# Files with Position QC` = c(190, 551, 18123),
+                 `# Files with PRES` = c(188, 347, 16723))
+
+kbl_table(df_tbl) %>% kable_styling(font_size = 12)
+
+```
+
+:::
+
+::: {.panel}
+
+### Baltic Sea
+
+#### Data ID
+
+  * **BO** & **GL**: [cmems_obs-ins_bal_phybgcwav_mynrt_na_irr](https://doi.org/10.48670/moi-00032)
+  * **CORA**: [cmems_obs-ins_glo_phy-temp-sal_my_cora_irr](https://data.marine.copernicus.eu/product/INSITU_GLO_PHY_TS_DISCRETE_MY_013_001)
+ 
+
+#### Number of files
+  
+```{r, t_netcdf_bal, echo = FALSE, message = FALSE, warning = FALSE}
+
+df_tbl <- tibble(`Code` = c("BO", "GL", "CORA"),
+                 `# Files` = c(753, 8, 11978),
+                 `# Files with Time QC` = c(753, 8, 11978),
+                 `# Files with Position QC` = c(461, 8, 11978),
+                 `# Files with PRES` = c(576, 8, 11971))
+
+kbl_table(df_tbl) %>% kable_styling(font_size = 12)
+
+```
+
+:::
+
+::: {.panel}
+
+### Mediterranean Sea
+
+#### Data ID
+
+  * **MO** & **GL**: [cmems_obs-ins_med_phybgcwav_mynrt_na_irr](https://doi.org/10.48670/moi-00044)
+  * **CORA**: [cmems_obs-ins_glo_phy-temp-sal_my_cora_irr](https://data.marine.copernicus.eu/product/INSITU_GLO_PHY_TS_DISCRETE_MY_013_001)
+
+
+#### Number of files
+
+```{r, t_netcdf_med, echo = FALSE, message = FALSE, warning = FALSE}
+
+df_tbl <- tibble(`Code` = c("MO", "GL", "CORA"),
+                 `# Files` = c(79, 187, 7424),
+                 `# Files with Time QC` = c(79, 187, 7424),
+                 `# Files with Position QC` = c(79, 186, 7424),
+                 `# Files with PRES` = c(79, 114, 7363))
+
+kbl_table(df_tbl) %>% kable_styling(font_size = 12)
+
+```
+
+:::
+:::

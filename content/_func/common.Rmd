@@ -1,0 +1,39 @@
+<style>
+.panelset > .panel-tabs {
+  display: flex;
+}
+.panelset > .panel-tabs li {
+  flex: 1;
+  text-align: center;
+}
+</style>
+
+```{r, func_common, message = FALSE, warning = FALSE}
+
+# Path
+rsc_dir <- "../../data"
+rsc_dir2 <- "../data"
+
+# Templates
+template_path <- "./_template"
+t_eda_netcdf <- file.path(template_path, "eda_netcdf.Rmd")
+t_eda_parquet <- file.path(template_path, "eda_parquet.Rmd")
+t_eda_duplicate <- file.path(template_path, "eda_duplicate.Rmd")
+t_eda_qc_over_time <- file.path(template_path, "eda_qc_over_time.Rmd")
+
+# Kable wrapper
+kbl_table <- function(x) {
+  kbl(x) %>% kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive")) %>%
+    kable_styling(full_width = TRUE)
+}
+
+# Common funcitons
+create_dt_summary_tab <- function(df, cols=c('Lon', 'Lat')) {
+  DT::datatable(df, rownames = FALSE,
+      options = list(searching = TRUE, paging = TRUE, info = TRUE,
+                     lengthMenu = list(c(10, 50, 100, -1), c("10", "50", "100", "All")))) %>%
+    formatRound(columns = cols, digits = 1) %>%
+    htmlwidgets::prependContent(tags$style(HTML('table.dataTable {font-size: 12px;}')))
+}
+
+```

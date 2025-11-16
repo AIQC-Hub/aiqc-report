@@ -1,0 +1,69 @@
+All nine Parquet files have been uploaded to Zenodo under the following DOI:
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17619571.svg)](https://doi.org/10.5281/zenodo.17619571)
+
+::: {.panelset}
+::: {.panel}
+
+### Arctic Ocean
+
+```{r, t_data_resource_arc, echo = FALSE, message = FALSE, warning = FALSE}
+
+df_tbl <- tibble(`Code` = c("AR", "GL", "CORA"),
+                 `Filename` = c("netcdf_nrt_ar_2.parquet",
+                                "netcdf_nrt_ar_gl_2.parquet",
+                                "netcdf_cora_ar_2.parquet"),
+                 Size = c("695.43 MB", "1.98 GB", "1.06 GB"),
+                 `# Platforms` = c(190, 551, 736),
+                 `# Profiles` = c(339751, 742809, 446321),
+                 `# Observations` = c(87991564, 273695664, 127506287))
+
+kbl_table(df_tbl) %>% kable_styling(font_size = 12)
+
+```
+
+:::
+
+::: {.panel}
+
+### Baltic Sea
+
+```{r, t_data_resource_bal, echo = FALSE, message = FALSE, warning = FALSE}
+
+df_tbl <- tibble(`Code` = c("BO", "GL", "CORA"),
+                 `Filename` = c("netcdf_nrt_bo_2.parquet",
+                                "netcdf_nrt_bo_gl_2.parquet",
+                                "netcdf_cora_bo_2.parquet"),
+                 Size = c("64.29 MB", "170.93 MB", "163.22 MB"),
+                 `# Platforms` = c(753, 8, 900),
+                 `# Profiles` = c(112962, 48080, 228053),
+                 `# Observations` = c(9334806, 26436908, 19076635))
+
+kbl_table(df_tbl) %>% kable_styling(font_size = 12)
+
+```
+
+:::
+
+::: {.panel}
+
+### Mediterranean Sea
+
+
+```{r, t_data_resource_med, echo = FALSE, message = FALSE, warning = FALSE}
+
+df_tbl <- tibble(`Code` = c("MO", "GL", "CORA"),
+                 `Filename` = c("netcdf_nrt_mo_2.parquet",
+                               "netcdf_nrt_mo_gl_2.parquet",
+                               "netcdf_cora_mo_2.parquet"),
+                 Size = c("1.91 MB", "1.20 GB", "216.39 MB"),
+                 `# Platforms` = c(10, 187, 191),
+                 `# Profiles` = c(1655, 434183, 85053),
+                 `# Observations` = c(363495, 169154995, 26447548))
+
+kbl_table(df_tbl) %>% kable_styling(font_size = 12)
+
+```
+
+:::
+:::

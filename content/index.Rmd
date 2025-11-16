@@ -5,20 +5,13 @@ description: |
 site: distill::distill_website
 ---
 
-```{r, setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-kbl_table <- function(x) {
-  kbl(x) %>% kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive")) %>%
-    kable_styling(full_width = TRUE)
-}
+```{r, setup, include = FALSE}
+knitr::opts_chunk$set(echo=FALSE)
+r_func_path <- "./_func"
+r_funcs <- c("libraries.Rmd", "common.Rmd")
+```
 
-library(fontawesome)
-library(kableExtra)
-library(DT)
-library(tidyverse)
-library(xaringanExtra)
-xaringanExtra::use_panelset()
-
+```{r, import, child=file.path(r_func_path, r_funcs)}
 ```
 
 ## Summary Reports
@@ -29,161 +22,37 @@ xaringanExtra::use_panelset()
 
 ---
 
-## Exported Parquet Datasets
-
-All nine Parquet files have been uploaded to Zenodo under the following DOI:
-
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17619571.svg)](https://doi.org/10.5281/zenodo.17619571)
-
-::: {.panelset}
-::: {.panel}
-
-### Arctic Ocean
-
-```{r, t_data_resource_arc, echo = FALSE, message = FALSE, warning = FALSE}
-
-df_tbl <- tibble(`Code` = c("AR", "GL", "CORA"),
-                 `Filename` = c("netcdf_nrt_ar_2.parquet",
-                               "netcdf_nrt_ar_gl_2.parquet",
-                               "netcdf_cora_ar_2.parquet"),
-                 Size = c("695.43 MB", "1.98 GB", "1.06 GB"),
-                 `# Platforms` = c(190, 551, 736),
-                 `# Profiles` = c(339751, 742809, 446321),
-                 `# Observations` = c(87991564, 273695664, 127506287))
-
-kbl_table(df_tbl) %>% kable_styling(font_size = 12)
-
-```
-
-:::
-
-::: {.panel}
-
-### Baltic Sea
-
-```{r, t_data_resource_bal, echo = FALSE, message = FALSE, warning = FALSE}
-
-df_tbl <- tibble(`Code` = c("BO", "GL", "CORA"),
-                 `Filename` = c("netcdf_nrt_bo_2.parquet",
-                               "netcdf_nrt_bo_gl_2.parquet",
-                               "netcdf_cora_bo_2.parquet"),
-                 Size = c("64.29 MB", "170.93 MB", "163.22 MB"),
-                 `# Platforms` = c(753, 8, 900),
-                 `# Profiles` = c(112962, 48080, 228053),
-                 `# Observations` = c(9334806, 26436908, 19076635))
-
-kbl_table(df_tbl) %>% kable_styling(font_size = 12)
-
-```
-
-:::
-
-::: {.panel}
-
-### Mediterranean Sea
-
-
-```{r, t_data_resource_med, echo = FALSE, message = FALSE, warning = FALSE}
-
-df_tbl <- tibble(`Code` = c("MO", "GL", "CORA"),
-                 `Filename` = c("netcdf_nrt_mo_2.parquet",
-                               "netcdf_nrt_mo_gl_2.parquet",
-                               "netcdf_cora_mo_2.parquet"),
-                 Size = c("1.91 MB", "1.20 GB", "216.39 MB"),
-                 `# Platforms` = c(10, 187, 191),
-                 `# Profiles` = c(1655, 434183, 85053),
-                 `# Observations` = c(363495, 169154995, 26447548))
-
-kbl_table(df_tbl) %>% kable_styling(font_size = 12)
-
-```
-
-:::
-:::
-
----
-
 ## Original NetCDF Datasets
-
-::: {.panelset}
-::: {.panel}
-
-### Arctic Ocean
-
-#### Data ID
-
-  * **AR** & **GL**: [cmems_obs-ins_arc_phybgcwav_mynrt_na_irr](https://doi.org/10.48670/moi-00031)
-  * **CORA**: [cmems_obs-ins_glo_phy-temp-sal_my_cora_irr](https://data.marine.copernicus.eu/product/INSITU_GLO_PHY_TS_DISCRETE_MY_013_001)
-
-
-#### Number of files
-
-```{r, t_netcdf_arc, echo = FALSE, message = FALSE, warning = FALSE}
-
-df_tbl <- tibble(`Code` = c("AR", "GL", "CORA"),
-                 `# Files` = c(190, 551, 18123),
-                 `# Files with Time QC` = c(190, 551, 18123),
-                 `# Files with Position QC` = c(190, 551, 18123),
-                 `# Files with PRES` = c(188, 347, 16723))
-
-kbl_table(df_tbl) %>% kable_styling(font_size = 12)
-
+```{r, eda_netcdf, results = 'asis'}
+src <- knitr::knit_expand(t_eda_netcdf)
+res <- knitr::knit_child(text = src, quiet = TRUE)
+cat(res, sep = '\n')
 ```
-
-:::
-
-::: {.panel}
-
-### Baltic Sea
-
-#### Data ID
-
-  * **BO** & **GL**: [cmems_obs-ins_bal_phybgcwav_mynrt_na_irr](https://doi.org/10.48670/moi-00032)
-  * **CORA**: [cmems_obs-ins_glo_phy-temp-sal_my_cora_irr](https://data.marine.copernicus.eu/product/INSITU_GLO_PHY_TS_DISCRETE_MY_013_001)
- 
-
-#### Number of files
-  
-```{r, t_netcdf_bal, echo = FALSE, message = FALSE, warning = FALSE}
-
-df_tbl <- tibble(`Code` = c("BO", "GL", "CORA"),
-                 `# Files` = c(753, 8, 11978),
-                 `# Files with Time QC` = c(753, 8, 11978),
-                 `# Files with Position QC` = c(461, 8, 11978),
-                 `# Files with PRES` = c(576, 8, 11971))
-
-kbl_table(df_tbl) %>% kable_styling(font_size = 12)
-
-```
-
-:::
-
-::: {.panel}
-
-### Mediterranean Sea
-
-#### Data ID
-
-  * **MO** & **GL**: [cmems_obs-ins_med_phybgcwav_mynrt_na_irr](https://doi.org/10.48670/moi-00044)
-  * **CORA**: [cmems_obs-ins_glo_phy-temp-sal_my_cora_irr](https://data.marine.copernicus.eu/product/INSITU_GLO_PHY_TS_DISCRETE_MY_013_001)
-
-
-#### Number of files
-
-```{r, t_netcdf_med, echo = FALSE, message = FALSE, warning = FALSE}
-
-df_tbl <- tibble(`Code` = c("MO", "GL", "CORA"),
-                 `# Files` = c(79, 187, 7424),
-                 `# Files with Time QC` = c(79, 187, 7424),
-                 `# Files with Position QC` = c(79, 186, 7424),
-                 `# Files with PRES` = c(79, 114, 7363))
-
-kbl_table(df_tbl) %>% kable_styling(font_size = 12)
-
-```
-
-:::
-:::
 
 ---
 
+## Exported Parquet Datasets
+```{r, eda_parquet, results = 'asis'}
+src <- knitr::knit_expand(t_eda_parquet)
+res <- knitr::knit_child(text = src, quiet = TRUE)
+cat(res, sep = '\n')
+```
+
+---
+
+## Duplicate Profiles
+```{r, eda_duplicate, results = 'asis'}
+src <- knitr::knit_expand(t_eda_duplicate)
+res <- knitr::knit_child(text = src, quiet = TRUE)
+cat(res, sep = '\n')
+```
+
+---
+
+## Distributions of QC 1 & 4 Flags Over Time
+```{r, eda_qc_over_time, results = 'asis'}
+src <- knitr::knit_expand(t_eda_qc_over_time)
+cat(src, sep = '\n')
+```
+
+---
