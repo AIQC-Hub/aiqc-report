@@ -14,7 +14,7 @@ r_funcs <- c("libraries.Rmd", "common.Rmd")
 ```{r, import, child=file.path(r_func_path, r_funcs)}
 ```
 
-## Summary Reports
+## Regional Summary Reports
 
   * [Arctic Ocean Summary Report](https://aiqc-hub.github.io/arc-report/)
   * [Baltic Sea Summary Report](https://aiqc-hub.github.io/bal-report/)
@@ -43,6 +43,15 @@ cat(res, sep = '\n')
 ## Duplicate Profiles
 ```{r, eda_duplicate, results = 'asis'}
 src <- knitr::knit_expand(t_eda_duplicate)
+res <- knitr::knit_child(text = src, quiet = TRUE)
+cat(res, sep = '\n')
+```
+
+---
+
+## NRT vs CORA
+```{r, nrt_vs_cora, results = 'asis'}
+src <- knitr::knit_expand(t_eda_nrt_vs_cora)
 res <- knitr::knit_child(text = src, quiet = TRUE)
 cat(res, sep = '\n')
 ```

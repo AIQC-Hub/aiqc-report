@@ -21,11 +21,12 @@ t_eda_parquet <- file.path(template_path, "eda_parquet.Rmd")
 t_eda_duplicate <- file.path(template_path, "eda_duplicate.Rmd")
 t_eda_qc_over_time <- file.path(template_path, "eda_qc_over_time.Rmd")
 t_eda_qc4_fraction <- file.path(template_path, "eda_qc4_fraction.Rmd")
+t_eda_nrt_vs_cora <- file.path(template_path, "eda_nrt_vs_cora.Rmd")
 
 # Kable wrapper
 kbl_table <- function(x) {
-  kbl(x) %>% kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive")) %>%
-    kable_styling(full_width = TRUE)
+  kbl(x, format.args = list(big.mark = ",")) %>%
+    kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"))
 }
 
 # Common funcitons
