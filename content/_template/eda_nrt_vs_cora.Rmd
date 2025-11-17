@@ -1,0 +1,91 @@
+### Detection criteria
+
+::: {.panelset}
+::: {.panel}
+
+#### Strict criteria
+
+The following variables must match:
+
+ - Platform (`platform_code`)
+ - Timestamp (`profile_timestamp`)
+ - Truncated longitude (`round(longitude, 3)`)
+ - Truncated latitude (`round(latitude, 3)`)
+ - Number of observations per profile
+
+:::
+
+::: {.panel}
+
+#### Relaxed criteria
+
+The following variables must match:
+
+ - Platform (`platform_code`)
+ - Timestamp (`profile_timestamp`)
+ - Truncated longitude (`round(longitude)`)
+ - Truncated latitude (`round(latitude)`)
+
+:::
+:::
+
+### Number of matched profiles
+
+::: {.panelset}
+::: {.panel}
+
+#### Arctic Ocean
+
+```{r, t_nrt_vs_core_arc, echo = FALSE, message = FALSE, warning = FALSE}
+
+df_tbl <- tibble(`Code` = c("NRT (AR) vs CORA", "NRT (GL) vs CORA"),
+                 `# Profiles` = c(297876, 207372),
+                 `# Strict criteria` = c(60368,  96228),
+                 `Strict (%)` = c("20.27%", "46.4%"),
+                 `# Relaxed criteria` = c(67009, 110731),
+                 `Relaxed (%)` = c("22.5%", "53.4%"))
+
+kbl_table(df_tbl) %>% kable_styling(font_size = 12)
+
+```
+
+:::
+
+::: {.panel}
+
+#### Baltic Sea
+
+```{r, t_nrt_vs_core_bal, echo = FALSE, message = FALSE, warning = FALSE}
+
+df_tbl <- tibble(`Code` = c("NRT (BO) vs CORA", "NRT (GL) vs CORA"),
+                 `# Profiles` = c(107063, 6699),
+                 `# Strict criteria` = c(80788,  1685),
+                 `Strict (%)` = c("75.46%", "25.15%"),
+                 `# Relaxed criteria` = c(97395, 1910),
+                 `Relaxed (%)` = c("90.97%", "28.51%"))
+
+kbl_table(df_tbl) %>% kable_styling(font_size = 12)
+
+```
+
+:::
+
+::: {.panel}
+
+#### Mediterranean Sea
+
+```{r, t_nrt_vs_core_med, echo = FALSE, message = FALSE, warning = FALSE}
+
+df_tbl <- tibble(`Code` = c("NRT (MO) vs CORA", "NRT (GL) vs CORA"),
+                 `# Profiles` = c(1633, 96728),
+                 `# Strict criteria` = c(136,  31276),
+                 `Strict (%)` = c("8.33%", "32.33%"),
+                 `# Relaxed criteria` = c(289, 40247),
+                 `Relaxed (%)` = c("17.7%", "41.61%"))
+
+kbl_table(df_tbl) %>% kable_styling(font_size = 12)
+
+```
+
+:::
+:::
