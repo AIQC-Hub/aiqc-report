@@ -5,9 +5,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+## [0.3.3] - 2025-11-17
+### Added
+- NRT vs CORA section to EDA page
+
 ## [0.3.2] - 2025-11-16
 ### Added
-- Analysis summary sections to the main page
+- Analysis summary sections to EDA page
 
 ## [0.3.1] - 2025-11-16
 ### Changed
