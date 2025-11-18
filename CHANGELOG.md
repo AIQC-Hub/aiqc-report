@@ -5,6 +5,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+## [0.3.5] - 2025-11-18
+### Added
+- Scroll bars to all tables
+
 ## [0.3.4] - 2025-11-17
 ### Added
 - Side contents menu to EDA page
