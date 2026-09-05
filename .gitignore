@@ -7,3 +7,6 @@ _site
 .idea
 data
 docs
+content/docs/
+content/_freeze/
+Rplots.pdf

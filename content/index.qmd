@@ -1,0 +1,60 @@
+---
+title: "Exploratory Data Analysis"
+description: |
+  The site provides a collection of resources and summary reports containing statistics and other relevant information about the datasets.
+---
+
+```{r, setup, include = FALSE}
+knitr::opts_chunk$set(echo=FALSE)
+
+# Common functions
+library(reportlib)
+r_func_path <- "./_func"
+```
+
+## Regional Summary Reports
+
+  * [Arctic Ocean Summary Report](https://aiqc-hub.github.io/arc-report/)
+  * [Baltic Sea Summary Report](https://aiqc-hub.github.io/bal-report/)
+  * [Mediterranean Sea Summary Report](https://aiqc-hub.github.io/med-report/)
+
+---
+
+## Original NetCDF Datasets
+```{r, eda_netcdf, child = file.path(r_func_path, "eda_netcdf.Rmd")}
+```
+
+---
+
+## Exported Parquet Datasets
+```{r, eda_parquet, child = file.path(r_func_path, "eda_parquet.Rmd")}
+```
+
+---
+
+## Duplicate Profiles and NRT vs CORA
+
+Both analyses are part of the `ctddump` pipeline that writes the Parquet files, and its own
+reports carry them for the current export rather than repeating the numbers here:
+
+  * [ctddump: CTD data summary reports](https://aiqc-hub.github.io/ctddump-report-example/index.html)
+
+There is one report per region and product. **Deduplication** counts the profiles that repeat
+within a platform and across platforms; **Comparison** matches a near-real-time product against
+CORA and GL and reports how much of their platform and profile coverage overlaps. Each report
+also shows the source files it read, the counts after conversion to Parquet, and the cleaning
+stages that precede both analyses.
+
+---
+
+## Fraction of QC4 Flags per Profile
+```{r, eda_qc4_fraction, child = file.path(r_func_path, "eda_qc4_fraction.Rmd")}
+```
+
+---
+
+## Distributions of QC 1 & 4 Flags Over Time
+```{r, eda_qc_over_time, child = file.path(r_func_path, "eda_qc_over_time.Rmd")}
+```
+
+---

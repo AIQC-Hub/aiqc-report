@@ -1,5 +1,4 @@
-::: {.panelset}
-::: {.panel}
+::: {.panel-tabset}
 
 ### Arctic Ocean
 
@@ -15,10 +14,6 @@
 
 ![](./images/p_qc4_fraction_ar_cora.png)
 
-:::
-
-::: {.panel}
-
 ### Baltic Sea
 
 #### BO
@@ -32,10 +27,6 @@
 #### CORA
 
 ![](./images/p_qc4_fraction_bo_cora.png)
-
-:::
-
-::: {.panel}
 
 ### Mediterranean Sea
 
@@ -51,5 +42,4 @@
 
 ![](./images/p_qc4_fraction_mo_cora.png)
 
-:::
 :::
