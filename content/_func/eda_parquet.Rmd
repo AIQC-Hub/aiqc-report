@@ -2,8 +2,7 @@ All nine Parquet files have been uploaded to Zenodo under the following DOI:
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17619571.svg)](https://doi.org/10.5281/zenodo.17619571)
 
-::: {.panelset}
-::: {.panel}
+::: {.panel-tabset}
 
 ### Arctic Ocean
 
@@ -22,10 +21,6 @@ kbl_table(df_tbl) %>% kable_styling(font_size = 12)
 
 ```
 
-:::
-
-::: {.panel}
-
 ### Baltic Sea
 
 ```{r, t_data_resource_bal, echo = FALSE, message = FALSE, warning = FALSE}
@@ -43,12 +38,7 @@ kbl_table(df_tbl) %>% kable_styling(font_size = 12)
 
 ```
 
-:::
-
-::: {.panel}
-
 ### Mediterranean Sea
-
 
 ```{r, t_data_resource_med, echo = FALSE, message = FALSE, warning = FALSE}
 
@@ -65,5 +55,4 @@ kbl_table(df_tbl) %>% kable_styling(font_size = 12)
 
 ```
 
-:::
 :::

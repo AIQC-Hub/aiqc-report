@@ -1,0 +1,47 @@
+# Quarto reuses a page's computed output until the page changes, so a rebuild
+# after an unrelated edit costs seconds instead of minutes. What it hashes is
+# the .qmd alone, and almost all of our logic lives elsewhere -- reportlib and
+# _func/ -- so build.sh stamps those in and clears _freeze/ when they move.
+execute:
+  freeze: auto
+
+project:
+  type: website
+  output-dir: docs
+  render:
+    - "*.qmd"
+  resources:
+    - "images/**"
+
+website:
+  title: "Exploratory Data Analysis"
+  description: |
+    AIQC Exploratory Data Analysis
+  navbar:
+    logo: images/logo.png
+    logo-href: https://aiqc-hub.github.io/aiqc-report/
+    logo-alt: "AIQC"
+    # Quarto folds the site title into the same brand link as the logo, so with
+    # logo-href set the title pointed at the portal too and nothing led home.
+    # Distill kept them apart: logo -> portal, title -> index. Suppress the
+    # brand title and put it back as an ordinary left-hand nav item.
+    title: false
+    left:
+      - text: "Exploratory Data Analysis"
+        href: index.qmd
+    tools:
+      - icon: github
+        href: https://github.com/AIQC-Hub/aiqc-report
+        text: "Source on GitHub"
+    right:
+      - text: "Arctic Ocean"
+        href: https://aiqc-hub.github.io/arc-report/
+      - text: "Baltic Sea"
+        href: https://aiqc-hub.github.io/bal-report/
+      - text: "Mediterranean Sea"
+        href: https://aiqc-hub.github.io/med-report/
+
+format:
+  html:
+    toc: true
+    toc-depth: 2

@@ -1,5 +1,4 @@
-::: {.panelset}
-::: {.panel}
+::: {.panel-tabset}
 
 ### Arctic Ocean
 
@@ -7,7 +6,6 @@
 
   * **AR** & **GL**: [cmems_obs-ins_arc_phybgcwav_mynrt_na_irr](https://doi.org/10.48670/moi-00031)
   * **CORA**: [cmems_obs-ins_glo_phy-temp-sal_my_cora_irr](https://data.marine.copernicus.eu/product/INSITU_GLO_PHY_TS_DISCRETE_MY_013_001)
-
 
 #### Number of files
 
@@ -22,10 +20,6 @@ df_tbl <- tibble(`Code` = c("AR", "GL", "CORA"),
 kbl_table(df_tbl) %>% kable_styling(font_size = 12)
 
 ```
-
-:::
-
-::: {.panel}
 
 ### Baltic Sea
 
@@ -49,17 +43,12 @@ kbl_table(df_tbl) %>% kable_styling(font_size = 12)
 
 ```
 
-:::
-
-::: {.panel}
-
 ### Mediterranean Sea
 
 #### Data ID
 
   * **MO** & **GL**: [cmems_obs-ins_med_phybgcwav_mynrt_na_irr](https://doi.org/10.48670/moi-00044)
   * **CORA**: [cmems_obs-ins_glo_phy-temp-sal_my_cora_irr](https://data.marine.copernicus.eu/product/INSITU_GLO_PHY_TS_DISCRETE_MY_013_001)
-
 
 #### Number of files
 
@@ -75,5 +64,4 @@ kbl_table(df_tbl) %>% kable_styling(font_size = 12)
 
 ```
 
-:::
 :::

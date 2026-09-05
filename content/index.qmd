@@ -1,0 +1,57 @@
+---
+title: "Exploratory Data Analysis"
+description: |
+  The site provides a collection of resources and summary reports containing statistics and other relevant information about the datasets.
+---
+
+```{r, setup, include = FALSE}
+knitr::opts_chunk$set(echo=FALSE)
+
+# Common functions
+library(reportlib)
+r_func_path <- "./_func"
+```
+
+## Regional Summary Reports
+
+  * [Arctic Ocean Summary Report](https://aiqc-hub.github.io/arc-report/)
+  * [Baltic Sea Summary Report](https://aiqc-hub.github.io/bal-report/)
+  * [Mediterranean Sea Summary Report](https://aiqc-hub.github.io/med-report/)
+
+---
+
+## Original NetCDF Datasets
+```{r, eda_netcdf, child = file.path(r_func_path, "eda_netcdf.Rmd")}
+```
+
+---
+
+## Exported Parquet Datasets
+```{r, eda_parquet, child = file.path(r_func_path, "eda_parquet.Rmd")}
+```
+
+---
+
+## Duplicate Profiles
+```{r, eda_duplicate, child = file.path(r_func_path, "eda_duplicate.Rmd")}
+```
+
+---
+
+## NRT vs CORA
+```{r, nrt_vs_cora, child = file.path(r_func_path, "eda_nrt_vs_cora.Rmd")}
+```
+
+---
+
+## Fraction of QC4 Flags per Profile
+```{r, eda_qc4_fraction, child = file.path(r_func_path, "eda_qc4_fraction.Rmd")}
+```
+
+---
+
+## Distributions of QC 1 & 4 Flags Over Time
+```{r, eda_qc_over_time, child = file.path(r_func_path, "eda_qc_over_time.Rmd")}
+```
+
+---

@@ -1,7 +1,6 @@
 ### Detection criteria
 
-::: {.panelset}
-::: {.panel}
+::: {.panel-tabset}
 
 #### Strict criteria
 
@@ -13,10 +12,6 @@ The following variables must match:
  - Truncated latitude (`round(latitude, 3)`)
  - Number of observations per profile
 
-:::
-
-::: {.panel}
-
 #### Relaxed criteria
 
 The following variables must match:
@@ -27,12 +22,10 @@ The following variables must match:
  - Truncated latitude (`round(latitude)`)
 
 :::
-:::
 
 ### Number of matched profiles
 
-::: {.panelset}
-::: {.panel}
+::: {.panel-tabset}
 
 #### Arctic Ocean
 
@@ -49,10 +42,6 @@ kbl_table(df_tbl) %>% kable_styling(font_size = 12)
 
 ```
 
-:::
-
-::: {.panel}
-
 #### Baltic Sea
 
 ```{r, t_nrt_vs_core_bal, echo = FALSE, message = FALSE, warning = FALSE}
@@ -67,10 +56,6 @@ df_tbl <- tibble(`Code` = c("NRT (BO) vs CORA", "NRT (GL) vs CORA"),
 kbl_table(df_tbl) %>% kable_styling(font_size = 12)
 
 ```
-
-:::
-
-::: {.panel}
 
 #### Mediterranean Sea
 
@@ -87,5 +72,4 @@ kbl_table(df_tbl) %>% kable_styling(font_size = 12)
 
 ```
 
-:::
 :::

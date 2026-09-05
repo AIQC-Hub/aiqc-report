@@ -1,7 +1,6 @@
 ### Detection criteria
 
-::: {.panelset}
-::: {.panel}
+::: {.panel-tabset}
 
 #### Duplicate profiles within platforms
 
@@ -11,10 +10,6 @@ The following variables must match:
  - Timestamp (`profile_timestamp`)
  - Rounded longitude (`round(longitude, 3)`)
  - Rounded latitude (`round(latitude, 3)`)
-
-:::
-
-::: {.panel}
 
 #### Duplicate profiles across platforms
 
@@ -29,12 +24,10 @@ The following variable must unmatch:
  - Platform (`platform_code`)
 
 :::
-:::
 
 ### Number of duplicate profiles
 
-::: {.panelset}
-::: {.panel}
+::: {.panel-tabset}
 
 #### Arctic Ocean
 
@@ -51,10 +44,6 @@ kbl_table(df_tbl) %>% kable_styling(font_size = 12)
 
 ```
 
-:::
-
-::: {.panel}
-
 #### Baltic Sea
 
 ```{r, t_duplicate_bal, echo = FALSE, message = FALSE, warning = FALSE}
@@ -69,10 +58,6 @@ df_tbl <- tibble(`Code` = c("BO", "GL", "CORA"),
 kbl_table(df_tbl) %>% kable_styling(font_size = 12)
 
 ```
-
-:::
-
-::: {.panel}
 
 #### Mediterranean Sea
 
@@ -89,5 +74,4 @@ kbl_table(df_tbl) %>% kable_styling(font_size = 12)
 
 ```
 
-:::
 :::
