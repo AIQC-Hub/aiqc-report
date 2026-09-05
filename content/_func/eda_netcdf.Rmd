@@ -12,10 +12,10 @@
 ```{r, t_netcdf_arc, echo = FALSE, message = FALSE, warning = FALSE}
 
 df_tbl <- tibble(`Code` = c("AR", "GL", "CORA"),
-                 `# Files` = c(190, 551, 18123),
-                 `# Files with Time QC` = c(190, 551, 18123),
-                 `# Files with Position QC` = c(190, 551, 18123),
-                 `# Files with PRES` = c(188, 347, 16723))
+                 `# Files` = c(204, 560, 20975),
+                 `# Files with Time QC` = c(204, 560, 20975),
+                 `# Files with Position QC` = c(195, 560, 20975),
+                 `# Files with PRES` = c(202, 350, 17402))
 
 kbl_table(df_tbl) %>% kable_styling(font_size = 12)
 
@@ -34,10 +34,10 @@ kbl_table(df_tbl) %>% kable_styling(font_size = 12)
 ```{r, t_netcdf_bal, echo = FALSE, message = FALSE, warning = FALSE}
 
 df_tbl <- tibble(`Code` = c("BO", "CORA"),
-                 `# Files` = c(753, 11978),
-                 `# Files with Time QC` = c(753, 11978),
-                 `# Files with Position QC` = c(461, 11978),
-                 `# Files with PRES` = c(576, 11971))
+                 `# Files` = c(753, 12482),
+                 `# Files with Time QC` = c(753, 12482),
+                 `# Files with Position QC` = c(461, 12482),
+                 `# Files with PRES` = c(576, 12473))
 
 kbl_table(df_tbl) %>% kable_styling(font_size = 12)
 
@@ -55,10 +55,10 @@ kbl_table(df_tbl) %>% kable_styling(font_size = 12)
 ```{r, t_netcdf_med, echo = FALSE, message = FALSE, warning = FALSE}
 
 df_tbl <- tibble(`Code` = c("MO", "GL", "CORA"),
-                 `# Files` = c(79, 187, 7424),
-                 `# Files with Time QC` = c(79, 187, 7424),
-                 `# Files with Position QC` = c(79, 186, 7424),
-                 `# Files with PRES` = c(79, 114, 7363))
+                 `# Files` = c(79, 187, 7905),
+                 `# Files with Time QC` = c(79, 187, 7905),
+                 `# Files with Position QC` = c(79, 186, 7905),
+                 `# Files with PRES` = c(79, 114, 7849))
 
 kbl_table(df_tbl) %>% kable_styling(font_size = 12)
 

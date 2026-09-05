@@ -32,6 +32,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
   temperature and salinity densities in particular no longer pile up almost entirely at a
   proportion of 1. `nrt_bo_gl` has no summary to draw from, so the two Baltic GL figures are a
   single "No data available to display." panel until that dataset exists again.
+- The **Original NetCDF Datasets** counts come from the `ctddump` reports' File summary, so
+  they describe the source files behind the current export. The Arctic and CORA numbers all
+  move (AR 190 -> 204 files, Arctic CORA 18,123 -> 20,975); Baltic BO and both Mediterranean
+  NRT rows were already right. That the reports match this export was checked at the other end:
+  their post-deduplication counts for `nrt_ar_ar`, 295,156 profiles and 79,134,055 observations,
+  are exactly what the Parquet file holds.
 - The **Exported Parquet Datasets** tables now describe the files `ctddump` + `seastamp`
   produce, not the retired R pipeline's. Names lose the `netcdf_` prefix and the `_2` suffix
   (`nrt_ar_ar.parquet`, `cora_ar.parquet`, ...), and every size, platform, profile and
