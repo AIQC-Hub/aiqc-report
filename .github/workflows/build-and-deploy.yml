@@ -1,4 +1,4 @@
-name: Build and Deploy Distill Site
+name: Build and Deploy Quarto Site
 
 # Run this workflow on pushes to the main branch
 on:
@@ -39,36 +39,36 @@ jobs:
           r-version: '4.4'
 
       # 3. Cache and install R package dependencies
-      # This action reads your DESCRIPTION file and installs all listed packages
+      # This action reads DESCRIPTION, so there is no second list to keep in
+      # step here: everything but rmarkdown comes from reportlib. reportlib is
+      # pinned by tag so a change there cannot silently alter a published site.
       - name: Install R dependencies
         uses: r-lib/actions/setup-r-dependencies@v2
         with:
           packages:
             any::rmarkdown
-            any::distill
-            any::fontawesome
-            any::kableExtra
-            any::DT
-            any::tidyverse
-            any::xaringanExtra
+            github::AIQC-Hub/reportlib@v0.1.10
 
-      # 4. Build the distill site using an R command
+      # 4. Set up Quarto
+      - name: Setup Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
+      # 5. Build the site
       - name: Build site
-        run: R -e 'rmarkdown::render_site(input = "content", encoding = "UTF-8")'
+        run: quarto render content
 
-      # 5. Configure GitHub Pages
+      # 6. Configure GitHub Pages
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
-      # 6. Upload the built site as an artifact
+      # 7. Upload the built site as an artifact
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # This MUST match the `output_dir` from your _site.yml
-          # The default for distill is '_site'. We use 'docs' here based on your description.
+          # Must match `project: output-dir` in content/_quarto.yml
           path: './content/docs'
 
-      # 7. Deploy the artifact to GitHub Pages
+      # 8. Deploy the artifact to GitHub Pages
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

@@ -1,97 +1,56 @@
-::: {.panelset}
-::: {.panel}
+::: {.panel-tabset}
 
 ### Arctic Ocean
 
-::: {.panelset}
-::: {.panel}
+::: {.panel-tabset}
 
 #### AR
 
 ![](./images/p_qc_over_time_ar_rg.png)
 
-:::
-
-::: {.panel}
-
 #### GL
 
 ![](./images/p_qc_over_time_ar_gl.png)
-
-:::
-
-::: {.panel}
 
 #### CORA
 
 ![](./images/p_qc_over_time_ar_cora.png)
 
 :::
-:::
-
-:::
-
-::: {.panel}
 
 ### Baltic Sea
 
-::: {.panelset}
-::: {.panel}
+::: {.panel-tabset}
 
 #### BO
 
 ![](./images/p_qc_over_time_bo_rg.png)
 
-:::
-
-::: {.panel}
-
 #### GL
 
 ![](./images/p_qc_over_time_bo_gl.png)
-
-:::
-
-::: {.panel}
 
 #### CORA
 
 ![](./images/p_qc_over_time_bo_cora.png)
 
 :::
-:::
-
-:::
-
-::: {.panel}
 
 ### Mediterranean Sea
 
-::: {.panelset}
-::: {.panel}
+::: {.panel-tabset}
 
 #### MO
 
 ![](./images/p_qc_over_time_mo_rg.png)
 
-:::
-
-::: {.panel}
-
 #### GL
 
 ![](./images/p_qc_over_time_mo_gl.png)
 
-:::
-
-::: {.panel}
-
 #### CORA
 
 ![](./images/p_qc_over_time_mo_cora.png)
-
-:::
-:::
 
 :::
 :::

@@ -1,0 +1,80 @@
+The counts below come from the File summary of the
+[`ctddump` reports](https://aiqc-hub.github.io/ctddump-report-example/index.html), one per
+region and product, and describe the source files behind the current Parquet export.
+
+::: {.panel-tabset}
+
+### Arctic Ocean
+
+#### Data ID
+
+  * **AR** & **GL**: [cmems_obs-ins_arc_phybgcwav_mynrt_na_irr](https://doi.org/10.48670/moi-00031)
+  * **CORA**: [cmems_obs-ins_glo_phy-temp-sal_my_cora_irr](https://data.marine.copernicus.eu/product/INSITU_GLO_PHY_TS_DISCRETE_MY_013_001)
+
+#### Number of files
+
+```{r, t_netcdf_arc, echo = FALSE, message = FALSE, warning = FALSE}
+
+df_tbl <- tibble(`Code` = c("AR", "GL", "CORA"),
+                 `# Files` = c(204, 560, 20975),
+                 `# Files with TEMP` = c(203, 552, 20975),
+                 `# Files with PSAL` = c(194, 552, 20963),
+                 `# Files with PRES` = c(202, 350, 17402),
+                 `# Files with DEPH` = c(2, 380, 20817),
+                 `# Files with Time QC` = c(204, 560, 20975),
+                 `# Files with Position QC` = c(195, 560, 20975))
+
+kbl_table(df_tbl) %>% kable_styling(font_size = 12)
+
+```
+
+### Baltic Sea
+
+#### Data ID
+
+  * **BO**: [cmems_obs-ins_bal_phybgcwav_mynrt_na_irr](https://doi.org/10.48670/moi-00032)
+  * **CORA**: [cmems_obs-ins_glo_phy-temp-sal_my_cora_irr](https://data.marine.copernicus.eu/product/INSITU_GLO_PHY_TS_DISCRETE_MY_013_001)
+ 
+
+#### Number of files
+  
+```{r, t_netcdf_bal, echo = FALSE, message = FALSE, warning = FALSE}
+
+df_tbl <- tibble(`Code` = c("BO", "CORA"),
+                 `# Files` = c(753, 12482),
+                 `# Files with TEMP` = c(753, 12482),
+                 `# Files with PSAL` = c(753, 12482),
+                 `# Files with PRES` = c(576, 12473),
+                 `# Files with DEPH` = c(177, 11973),
+                 `# Files with Time QC` = c(753, 12482),
+                 `# Files with Position QC` = c(461, 12482))
+
+kbl_table(df_tbl) %>% kable_styling(font_size = 12)
+
+```
+
+### Mediterranean Sea
+
+#### Data ID
+
+  * **MO** & **GL**: [cmems_obs-ins_med_phybgcwav_mynrt_na_irr](https://doi.org/10.48670/moi-00044)
+  * **CORA**: [cmems_obs-ins_glo_phy-temp-sal_my_cora_irr](https://data.marine.copernicus.eu/product/INSITU_GLO_PHY_TS_DISCRETE_MY_013_001)
+
+#### Number of files
+
+```{r, t_netcdf_med, echo = FALSE, message = FALSE, warning = FALSE}
+
+df_tbl <- tibble(`Code` = c("MO", "GL", "CORA"),
+                 `# Files` = c(79, 187, 7905),
+                 `# Files with TEMP` = c(47, 185, 7905),
+                 `# Files with PSAL` = c(79, 179, 7904),
+                 `# Files with PRES` = c(79, 114, 7849),
+                 `# Files with DEPH` = c(1, 155, 7869),
+                 `# Files with Time QC` = c(79, 187, 7905),
+                 `# Files with Position QC` = c(79, 186, 7905))
+
+kbl_table(df_tbl) %>% kable_styling(font_size = 12)
+
+```
+
+:::
