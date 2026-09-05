@@ -1,6 +1,6 @@
 Package: aiqc-report
 Title: AIQC Exploratory Data Analysis
-Version: 0.4.0
+Version: 0.4.1
 Authors@R: person("Takaya", "Saito", email = "takaya.saito@outlook.com", role = c("aut", "cre"))
 Description: Quarto source for the AIQC portal: it links the three regional in
     situ summary reports and carries the exploratory analysis behind them.
