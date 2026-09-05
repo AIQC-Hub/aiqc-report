@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+## [0.4.0] - 2026-09-06
+
 Everything below was re-rendered end to end against `reportlib` v0.1.10 on 2026-09-06, from an
 empty `content/_freeze/` and `content/docs/`: the page and its 19 figures in 11s, no chunk error
 and no unresolved link or image, and every published PNG byte-identical to `content/images/`.
