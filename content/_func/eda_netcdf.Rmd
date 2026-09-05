@@ -25,7 +25,7 @@ kbl_table(df_tbl) %>% kable_styling(font_size = 12)
 
 #### Data ID
 
-  * **BO** & **GL**: [cmems_obs-ins_bal_phybgcwav_mynrt_na_irr](https://doi.org/10.48670/moi-00032)
+  * **BO**: [cmems_obs-ins_bal_phybgcwav_mynrt_na_irr](https://doi.org/10.48670/moi-00032)
   * **CORA**: [cmems_obs-ins_glo_phy-temp-sal_my_cora_irr](https://data.marine.copernicus.eu/product/INSITU_GLO_PHY_TS_DISCRETE_MY_013_001)
  
 
@@ -33,11 +33,11 @@ kbl_table(df_tbl) %>% kable_styling(font_size = 12)
   
 ```{r, t_netcdf_bal, echo = FALSE, message = FALSE, warning = FALSE}
 
-df_tbl <- tibble(`Code` = c("BO", "GL", "CORA"),
-                 `# Files` = c(753, 8, 11978),
-                 `# Files with Time QC` = c(753, 8, 11978),
-                 `# Files with Position QC` = c(461, 8, 11978),
-                 `# Files with PRES` = c(576, 8, 11971))
+df_tbl <- tibble(`Code` = c("BO", "CORA"),
+                 `# Files` = c(753, 11978),
+                 `# Files with Time QC` = c(753, 11978),
+                 `# Files with Position QC` = c(461, 11978),
+                 `# Files with PRES` = c(576, 11971))
 
 kbl_table(df_tbl) %>% kable_styling(font_size = 12)
 

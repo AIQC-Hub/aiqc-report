@@ -45,6 +45,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
   current data, so a single section now links to
   <https://aiqc-hub.github.io/ctddump-report-example/index.html> and says what those reports
   cover. `_func/eda_duplicate.Rmd` and `_func/eda_nrt_vs_cora.Rmd` are gone.
+- The Baltic **GL** row from **Original NetCDF Datasets**, and the GL mention beside the Baltic
+  data ID. Copernicus publishes no GL product for the Baltic, so the row described eight source
+  files for a dataset the pipeline no longer has.
 - Every Zenodo reference from **Exported Parquet Datasets** -- the DOI badge and the sentence
   that introduced it. The Zenodo deposit still holds the parquet files the retired R pipeline
   exported, so both pointed readers at superseded data.
