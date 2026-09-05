@@ -1,3 +1,7 @@
+The counts below come from the File summary of the
+[`ctddump` reports](https://aiqc-hub.github.io/ctddump-report-example/index.html), one per
+region and product, and describe the source files behind the current Parquet export.
+
 ::: {.panel-tabset}
 
 ### Arctic Ocean
