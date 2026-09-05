@@ -23,6 +23,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - The navbar title links to this site's home page rather than to the portal URL, and the logo
   gains `AIQC` alt text. Quarto folds logo and title into a single brand link, which `logo-href`
   would otherwise claim in full.
+- The **Exported Parquet Datasets** tables now describe the files `ctddump` + `seastamp`
+  produce, not the retired R pipeline's. Names lose the `netcdf_` prefix and the `_2` suffix
+  (`nrt_ar_ar.parquet`, `cora_ar.parquet`, ...), and every size, platform, profile and
+  observation count was remeasured off the files on disk. The Baltic GL row is gone: Copernicus
+  publishes no GL product for the Baltic, so there are eight files now rather than nine. Profile
+  and platform counts cross-check exactly against the per-dataset summary parquet.
 
 ### Removed
 - Every Zenodo reference from **Exported Parquet Datasets** -- the DOI badge and the sentence

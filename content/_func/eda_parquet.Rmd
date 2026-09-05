@@ -5,13 +5,13 @@
 ```{r, t_data_resource_arc, echo = FALSE, message = FALSE, warning = FALSE}
 
 df_tbl <- tibble(`Code` = c("AR", "GL", "CORA"),
-                 `Filename` = c("netcdf_nrt_ar_2.parquet",
-                                "netcdf_nrt_ar_gl_2.parquet",
-                                "netcdf_cora_ar_2.parquet"),
-                 Size = c("695.43 MB", "1.98 GB", "1.06 GB"),
-                 `# Platforms` = c(190, 551, 736),
-                 `# Profiles` = c(339751, 742809, 446321),
-                 `# Observations` = c(87991564, 273695664, 127506287))
+                 `Filename` = c("nrt_ar_ar.parquet",
+                                "nrt_ar_gl.parquet",
+                                "cora_ar.parquet"),
+                 Size = c("583.00 MB", "328.49 MB", "828.37 MB"),
+                 `# Platforms` = c(191, 538, 747),
+                 `# Profiles` = c(295156, 173481, 412867),
+                 `# Observations` = c(79134055, 50392172, 117998376))
 
 kbl_table(df_tbl) %>% kable_styling(font_size = 12)
 
@@ -21,14 +21,13 @@ kbl_table(df_tbl) %>% kable_styling(font_size = 12)
 
 ```{r, t_data_resource_bal, echo = FALSE, message = FALSE, warning = FALSE}
 
-df_tbl <- tibble(`Code` = c("BO", "GL", "CORA"),
-                 `Filename` = c("netcdf_nrt_bo_2.parquet",
-                                "netcdf_nrt_bo_gl_2.parquet",
-                                "netcdf_cora_bo_2.parquet"),
-                 Size = c("64.29 MB", "170.93 MB", "163.22 MB"),
-                 `# Platforms` = c(753, 8, 900),
-                 `# Profiles` = c(112962, 48080, 228053),
-                 `# Observations` = c(9334806, 26436908, 19076635))
+df_tbl <- tibble(`Code` = c("BO", "CORA"),
+                 `Filename` = c("nrt_bo_bo.parquet",
+                                "cora_bo.parquet"),
+                 Size = c("46.11 MB", "89.42 MB"),
+                 `# Platforms` = c(741, 631),
+                 `# Profiles` = c(86266, 155326),
+                 `# Observations` = c(7734361, 15179626))
 
 kbl_table(df_tbl) %>% kable_styling(font_size = 12)
 
@@ -39,13 +38,13 @@ kbl_table(df_tbl) %>% kable_styling(font_size = 12)
 ```{r, t_data_resource_med, echo = FALSE, message = FALSE, warning = FALSE}
 
 df_tbl <- tibble(`Code` = c("MO", "GL", "CORA"),
-                 `Filename` = c("netcdf_nrt_mo_2.parquet",
-                               "netcdf_nrt_mo_gl_2.parquet",
-                               "netcdf_cora_mo_2.parquet"),
-                 Size = c("1.91 MB", "1.20 GB", "216.39 MB"),
-                 `# Platforms` = c(10, 187, 191),
-                 `# Profiles` = c(1655, 434183, 85053),
-                 `# Observations` = c(363495, 169154995, 26447548))
+                 `Filename` = c("nrt_mo_mo.parquet",
+                                "nrt_mo_gl.parquet",
+                                "cora_mo.parquet"),
+                 Size = c("1.25 MB", "182.82 MB", "180.33 MB"),
+                 `# Platforms` = c(9, 175, 181),
+                 `# Profiles` = c(1560, 73028, 71816),
+                 `# Observations` = c(303868, 29862720, 29329436))
 
 kbl_table(df_tbl) %>% kable_styling(font_size = 12)
 
