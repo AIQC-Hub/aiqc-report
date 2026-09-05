@@ -24,6 +24,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
   gains `AIQC` alt text. Quarto folds logo and title into a single brand link, which `logo-href`
   would otherwise claim in full.
 
+### Removed
+- Every Zenodo reference from **Exported Parquet Datasets** -- the DOI badge and the sentence
+  that introduced it. The Zenodo deposit still holds the parquet files the retired R pipeline
+  exported, so both pointed readers at superseded data.
+
 
 ## [0.3.4] - 2025-11-17
 ### Added

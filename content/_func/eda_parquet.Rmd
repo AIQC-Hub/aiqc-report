@@ -1,7 +1,3 @@
-All nine Parquet files have been uploaded to Zenodo under the following DOI:
-
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17619571.svg)](https://doi.org/10.5281/zenodo.17619571)
-
 ::: {.panel-tabset}
 
 ### Arctic Ocean
