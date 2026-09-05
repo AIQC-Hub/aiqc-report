@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ## [Unreleased]
 ### Added
 - A **Source on GitHub** link in the navbar, pointing at this repo.
+- `scripts/build_figures.R`, which regenerates the 18 QC figures in `content/images/` from the
+  profile summaries the regional sites read. The figures had been made once by a script outside
+  this repo and committed; the script is now here, filters exactly as the pages do, and takes
+  `AIQC_DATA_DIR`.
 - `build.sh`, what RStudio's Build pane now runs, with the same freeze stamp the regional sites
   use: `content/_quarto.yml` sets `freeze: auto`, and the stamp clears `content/_freeze/` when
   the installed `reportlib`, `content/_func/` or `content/images/` moves.
@@ -23,6 +27,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - The navbar title links to this site's home page rather than to the portal URL, and the logo
   gains `AIQC` alt text. Quarto folds logo and title into a single brand link, which `logo-href`
   would otherwise claim in full.
+- The **Fraction of QC4 Flags per Profile** and **Distributions of QC 1 & 4 Flags Over Time**
+  figures are redrawn from the current summaries. Same plots, new data: the Arctic AR
+  temperature and salinity densities in particular no longer pile up almost entirely at a
+  proportion of 1. `nrt_bo_gl` has no summary to draw from, so the two Baltic GL figures are a
+  single "No data available to display." panel until that dataset exists again.
 - The **Exported Parquet Datasets** tables now describe the files `ctddump` + `seastamp`
   produce, not the retired R pipeline's. Names lose the `netcdf_` prefix and the `_2` suffix
   (`nrt_ar_ar.parquet`, `cora_ar.parquet`, ...), and every size, platform, profile and
