@@ -47,7 +47,7 @@ jobs:
         with:
           packages:
             any::rmarkdown
-            github::AIQC-Hub/reportlib@v0.1.10
+            github::AIQC-Hub/reportlib@v0.1.11
 
       # 4. Set up Quarto
       - name: Setup Quarto

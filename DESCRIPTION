@@ -9,6 +9,6 @@ Encoding: UTF-8
 Imports:
     rmarkdown
 Remotes:
-    github::AIQC-Hub/reportlib@v0.1.10
+    github::AIQC-Hub/reportlib@v0.1.11
 Depends:
     reportlib

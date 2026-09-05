@@ -64,7 +64,7 @@ kableExtra and the rest — belongs to `reportlib`.
 
 ```r
 install.packages("rmarkdown")
-remotes::install_github("AIQC-Hub/reportlib@v0.1.10")
+remotes::install_github("AIQC-Hub/reportlib@v0.1.11")
 ```
 
 CI (`.github/workflows/build-and-deploy.yml`) runs on push to `main`: `setup-r-dependencies` reads

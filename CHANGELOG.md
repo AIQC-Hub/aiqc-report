@@ -68,6 +68,16 @@ and no unresolved link or image, and every published PNG byte-identical to `cont
   that introduced it. The Zenodo deposit still holds the parquet files the retired R pipeline
   exported, so both pointed readers at superseded data.
 
+### Fixed
+- The table scroll bars added in the previous release survive the move to `reportlib`.
+  They lived in `content/_func/common.Rmd`, which this migration deletes, and the package was
+  branched from before that commit -- so wide `kable` and `DT` tables would have gone back to
+  clipping. `kbl_table()` and `create_dt_summary_tab()` carry them now; the pin moves to
+  `reportlib` v0.1.11.
+
+## [0.3.5] - 2025-11-18
+### Added
+- Scroll bars to all tables
 
 ## [0.3.4] - 2025-11-17
 ### Added
