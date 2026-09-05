@@ -31,6 +31,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
   and platform counts cross-check exactly against the per-dataset summary parquet.
 
 ### Removed
+- The **Duplicate Profiles** and **NRT vs CORA** sections, whose tables counted profiles in the
+  retired R pipeline's export. Both analyses belong to `ctddump`, which reports them for the
+  current data, so a single section now links to
+  <https://aiqc-hub.github.io/ctddump-report-example/index.html> and says what those reports
+  cover. `_func/eda_duplicate.Rmd` and `_func/eda_nrt_vs_cora.Rmd` are gone.
 - Every Zenodo reference from **Exported Parquet Datasets** -- the DOI badge and the sentence
   that introduced it. The Zenodo deposit still holds the parquet files the retired R pipeline
   exported, so both pointed readers at superseded data.
