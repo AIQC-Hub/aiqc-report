@@ -5,6 +5,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+## [0.4.2] - 2026-09-06
+### Added
+- The Zenodo DOI badge is back in **Exported Parquet Datasets**, pointing at
+  [10.5281/zenodo.22546478](https://doi.org/10.5281/zenodo.22546478). v0.4.0 dropped it because
+  the deposit then held the retired R pipeline's export, so the badge sent readers to superseded
+  data; the new deposit holds the eight `seastamp` files the tables below describe, with byte
+  sizes matching the current export exactly. The sentence says *eight* files rather than the old
+  *nine* -- `nrt_bo_gl` is gone, Copernicus publishes no GL product for the Baltic.
+
+
 ## [0.4.1] - 2026-09-06
 ### Fixed
 - CI builds on R 4.5 instead of 4.4. `reportlib` pulls `ggpubr` for `theme_pubr()`, and
